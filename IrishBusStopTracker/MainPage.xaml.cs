@@ -34,25 +34,29 @@ namespace IrishBusStopTracker
 		{
 			this.InitializeComponent();
 
+			string[] BusStopID = new string[] { "522691", "522961", "522811", "524351"  };
 
-			HttpClient client = new HttpClient();
-			client.BaseAddress = new Uri("https://data.dublinked.ie/cgi-bin/rtpi/realtimebusinformation?stopid=524351&format=json");
-			client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
-			HttpResponseMessage response = client.GetAsync("https://data.dublinked.ie/cgi-bin/rtpi/realtimebusinformation?stopid=524351&format=json").Result;
-			var result = response.Content.ReadAsStringAsync().Result;
-			var s = Newtonsoft.Json.JsonConvert.DeserializeObject(result);
+			for (int i = 0; i < BusStopID.Length; i++)
+			{
 
-			var obj = JsonConvert.DeserializeObject<RootObject>(result);
+				HttpClient client = new HttpClient();
+				client.BaseAddress = new Uri("https://data.dublinked.ie/cgi-bin/rtpi/realtimebusinformation?stopid=" + BusStopID[i] + "&format=json");
+				client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+				HttpResponseMessage response = client.GetAsync("https://data.dublinked.ie/cgi-bin/rtpi/realtimebusinformation?stopid=" + BusStopID[i] + "&format=json").Result;
+				var result = response.Content.ReadAsStringAsync().Result;
+				var s = Newtonsoft.Json.JsonConvert.DeserializeObject(result);
 
-			Debug.WriteLine(obj);
+				var obj = JsonConvert.DeserializeObject<RootObject>(result);
 
-			string s1 = obj.ToString();
+				string s1 = obj.ToString();
 
-			string[] ssize = s1.Split(null);
+				string[] ssize = s1.Split(null);
 
-			listOfStop.Add(new Stop { StopID = obj.Stopid, Route = ssize[0], ArrivalTime = ssize[1] + " " + ssize[2], Destination = ssize[3] });
+				listOfStop.Add(new Stop { StopID = obj.Stopid, Route = ssize[0], ArrivalTime = ssize[1] + " " + ssize[2], Destination = ssize[3] });
 
-			MyListView.ItemsSource = listOfStop;
+				MyListView.ItemsSource = listOfStop;
+
+			}
 		}
 	}
 
