@@ -44,7 +44,13 @@ namespace IrishBusStopTracker
 
 			var obj = JsonConvert.DeserializeObject<RootObject>(result);
 
-			listOfStop.Add(new Stop { StopID = obj.Stopid});
+			Debug.WriteLine(obj);
+
+			string s1 = obj.ToString();
+
+			string[] ssize = s1.Split(null);
+
+			listOfStop.Add(new Stop { StopID = obj.Stopid, Route = ssize[0], ArrivalTime = ssize[1] + " " + ssize[2], Destination = ssize[3] });
 
 			MyListView.ItemsSource = listOfStop;
 		}
@@ -53,5 +59,8 @@ namespace IrishBusStopTracker
 	public class Stop
 	{
 		public string StopID { get; set; }
+		public string Route { get; set; }
+		public string ArrivalTime { get; set; }
+		public string Destination { get; set; }
 	}
 }

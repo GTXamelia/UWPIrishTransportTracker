@@ -12,7 +12,12 @@
         <ListView x:ConnectionId='1' Name="MyListView">
             <ListView.ItemTemplate>
                 <DataTemplate>
-                    <TextBlock Text="{Binding Name}"></TextBlock>
+                    <StackPanel>
+                        <TextBlock Text="{Binding StopID}"></TextBlock>
+                        <TextBlock Text="{Binding Route}"/>
+                        <TextBlock Text="{Binding ArrivalTime}"/>
+                        <TextBlock Text="{Binding Destination}"/>
+                    </StackPanel>
                 </DataTemplate>
 
             </ListView.ItemTemplate>

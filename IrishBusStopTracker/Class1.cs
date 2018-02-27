@@ -25,7 +25,14 @@ namespace IrishBusStopTracker
 		public string Route { get; set; }
 		public string Sourcetimestamp { get; set; }
 		public string Monitored { get; set; }
-	}
+
+		public override string ToString()
+		{
+			return string.Format("{0} {1} {2} {3} ", Route, Arrivaldatetime, Duetime, Destination);
+
+		}
+
+}
 
 	// This class contains header information about the JSON data
 	public class RootObject
@@ -36,5 +43,11 @@ namespace IrishBusStopTracker
 		public string Stopid { get; set; }
 		public string Timestamp { get; set; }
 		public List<Result> Results { get; set; }
+
+		public override string ToString()
+		{
+			// Returns vars from Results class
+			return string.Format("{0}", string.Join("", Results));
+		}
 	}
 }
