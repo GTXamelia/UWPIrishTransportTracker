@@ -34,7 +34,7 @@ namespace IrishBusStopTracker
 		{
 			this.InitializeComponent();
 
-			string[] BusStopID = new string[] { "522691", "522961", "522811", "524351"  };
+			string[] BusStopID = new string[] { "522691", "522961", "522811", "524351" };
 
 			for (int i = 0; i < BusStopID.Length; i++)
 			{
@@ -44,13 +44,10 @@ namespace IrishBusStopTracker
 				client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
 				HttpResponseMessage response = client.GetAsync("https://data.dublinked.ie/cgi-bin/rtpi/realtimebusinformation?stopid=" + BusStopID[i] + "&format=json").Result;
 				var result = response.Content.ReadAsStringAsync().Result;
-				var s = Newtonsoft.Json.JsonConvert.DeserializeObject(result);
 
 				var obj = JsonConvert.DeserializeObject<RootObject>(result);
 
-				string s1 = obj.ToString();
-
-				string[] ssize = s1.Split(null);
+				string[] ssize = (obj.ToString()).Split(null);
 
 				listOfStop.Add(new Stop { StopID = obj.Stopid, Route = ssize[0], ArrivalTime = ssize[1] + " " + ssize[2], Destination = ssize[3] });
 
