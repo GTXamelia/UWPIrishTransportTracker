@@ -34,9 +34,12 @@ namespace IrishBusStopTracker
 		{
 			this.InitializeComponent();
 
-			string[] BusStopID = new string[] { "522691", "522961", "522811", "524351" };
+			// Loop values
+			int i,j,k;
 
-			for (int i = 0; i < BusStopID.Length; i++)
+			string[] BusStopID = new string[] { "522691"};
+
+			for (i = 0; i < BusStopID.Length; i++)
 			{
 
 				HttpClient client = new HttpClient();
@@ -47,10 +50,29 @@ namespace IrishBusStopTracker
 
 				var obj = JsonConvert.DeserializeObject<RootObject>(result);
 
-				string[] ssize = (obj.ToString()).Split(null);
+				string[] ssize = (obj.ToString()).Split(new char[0]);
 
-				
-				listOfStop.Add(new Stop { StopID = obj.Stopid, SubHeader = "Bus: " + i, Route = ssize[0], ArrivalTime = ssize[1] + " " + ssize[2], Destination = ssize[3] });
+				Debug.WriteLine(ssize.ToString());
+
+				for (j = 0; j < BusStopID.Length; j++) { 
+
+					try
+					{
+						for (k = 0; k < obj.Numberofresults; k++)
+						{
+							
+								listOfStop.Add(new Stop { StopID = obj.Stopid, Route = ssize[0], ArrivalTime = ssize[1], Duetime = ssize[2], Destination = ssize[3] });
+							
+								//listOfStop.Add(new Stop { StopID = obj.Stopid, Route = "Test", ArrivalTime = ssize[1], Duetime = ssize[2], Destination = ssize[3 * (j + 1)] });
+						}
+					}
+					catch (IndexOutOfRangeException e)
+					{
+
+					}
+
+				}
+
 
 				//MyListView.ItemsSource = listOfStop;
 
@@ -62,9 +84,9 @@ namespace IrishBusStopTracker
 	public class Stop
 	{
 		public string StopID { get; set; }
-		public string SubHeader { get; set; }
 		public string Route { get; set; }
 		public string ArrivalTime { get; set; }
+		public string Duetime { get; set; }
 		public string Destination { get; set; }
 	}
 }

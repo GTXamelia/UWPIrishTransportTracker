@@ -28,6 +28,13 @@ namespace IrishBusStopTracker
 
 		public override string ToString()
 		{
+
+
+			Arrivaldatetime = Arrivaldatetime.Replace(" ", "-");
+			Destination = Destination.Replace(" ", "-");
+
+
+
 			return string.Format("{0} {1} {2} {3} ", Route, Arrivaldatetime, Duetime, Destination);
 
 		}
