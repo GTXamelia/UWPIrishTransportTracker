@@ -56,20 +56,10 @@ namespace IrishBusStopTracker
 
 				for (j = 0; j < BusStopID.Length; j++) { 
 
-					try
-					{
 						for (k = 0; k < obj.Numberofresults; k++)
 						{
-							
-								listOfStop.Add(new Stop { StopID = obj.Stopid, Route = ssize[0], ArrivalTime = ssize[1], Duetime = ssize[2], Destination = ssize[3] });
-							
-								//listOfStop.Add(new Stop { StopID = obj.Stopid, Route = "Test", ArrivalTime = ssize[1], Duetime = ssize[2], Destination = ssize[3 * (j + 1)] });
+							listOfStop.Add(new Stop { StopID = obj.Stopid, Route = ssize[0 + (k * 4)], ArrivalTime = ssize[1 + (k * 4)], Duetime = ssize[2 + (k * 4)], Destination = ssize[3 + (k * 4)] });
 						}
-					}
-					catch (IndexOutOfRangeException e)
-					{
-
-					}
 
 				}
 
