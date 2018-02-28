@@ -54,8 +54,6 @@ namespace IrishBusStopTracker
 
 				string[] ssize = (obj.ToString()).Split(new char[0]);
 
-				Debug.WriteLine(ssize.ToString());
-
 				for (j = 0; j < BusStopID.Length; j++) { 
 
 					for (k = 0; k < obj.Numberofresults; k++)
