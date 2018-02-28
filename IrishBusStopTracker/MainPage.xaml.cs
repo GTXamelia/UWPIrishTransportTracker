@@ -58,11 +58,22 @@ namespace IrishBusStopTracker
 
 				for (j = 0; j < BusStopID.Length; j++) { 
 
-						for (k = 0; k < obj.Numberofresults; k++)
+					for (k = 0; k < obj.Numberofresults; k++)
+					{
+
+						if (ssize[2 + (k * 4)].Contains("Due"))
 						{
 							listOfStop.Add(new Stop { StopID = obj.Stopid, Route = ssize[0 + (k * 4)], ArrivalTime = ssize[1 + (k * 4)], Duetime = ssize[2 + (k * 4)], Destination = ssize[3 + (k * 4)] });
 						}
-
+						else if (Int32.Parse(ssize[2 + (k * 4)]) == 1)
+						{
+							listOfStop.Add(new Stop { StopID = obj.Stopid, Route = ssize[0 + (k * 4)], ArrivalTime = ssize[1 + (k * 4)], Duetime = ssize[2 + (k * 4)] + " Minute", Destination = ssize[3 + (k * 4)] });
+						}
+						else
+						{
+							listOfStop.Add(new Stop { StopID = obj.Stopid, Route = ssize[0 + (k * 4)], ArrivalTime = ssize[1 + (k * 4)], Duetime = ssize[2 + (k * 4)] + " Minutes", Destination = ssize[3 + (k * 4)] });
+						}
+					}
 				}
 
 				MyGridView.ItemsSource = listOfStop;
