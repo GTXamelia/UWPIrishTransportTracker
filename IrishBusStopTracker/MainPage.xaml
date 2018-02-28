@@ -55,27 +55,10 @@
                         </DataTemplate>
                     </GridView.ItemTemplate>
                 </GridView>
-        </ScrollViewer>
-
+            </ScrollViewer>
+            
         </StackPanel>
-
-
-
-
-                <!-- Out of date (Keeping for refrence) -->
-        <ListView Name="MyListView">
-            <ListView.ItemTemplate>
-                <DataTemplate>
-                    <StackPanel>
-                        <TextBlock Text="{Binding StopID}"></TextBlock>
-                        <TextBlock Text="{Binding Route}"/>
-                        <TextBlock Text="{Binding ArrivalTime}"/>
-                        <TextBlock Text="{Binding Destination}"/>
-                    </StackPanel>
-                </DataTemplate>
-
-            </ListView.ItemTemplate>
-        </ListView>
-
+        
     </Grid>
+    
 </Page>
