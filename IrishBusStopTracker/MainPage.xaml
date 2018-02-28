@@ -9,11 +9,45 @@
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
+        <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+            <GridView Name="MyGridView"
+                  IsItemClickEnabled="True"
+                  IsSwipeEnabled="true"
+                  SelectionMode="Single">
+
+                <GridView.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <WrapGrid Orientation="Vertical"/>
+                    </ItemsPanelTemplate>
+                </GridView.ItemsPanel>
+
+                <GridView.ItemTemplate>
+                    <DataTemplate>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="200"/>
+                                <ColumnDefinition Width="200"/>
+                                <ColumnDefinition Width="200"/>
+                            </Grid.ColumnDefinitions>
+
+                            <TextBlock Grid.Column="0" Text="{Binding Route}"/>
+                            <TextBlock Grid.Column="1" Text="{Binding ArrivalTime}"/>
+                            <TextBlock Grid.Column="2" Text="{Binding Destination}"/>
+                        </Grid>
+                    </DataTemplate>
+                </GridView.ItemTemplate>
+            </GridView>
+
+        </Grid>
+
+        <!-- Out of date (Keeping for refrence) -->
         <ListView Name="MyListView">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <StackPanel>
                         <TextBlock Text="{Binding StopID}"></TextBlock>
+                        <TextBlock Text="{Binding SubHeader}"/>
                         <TextBlock Text="{Binding Route}"/>
                         <TextBlock Text="{Binding ArrivalTime}"/>
                         <TextBlock Text="{Binding Destination}"/>

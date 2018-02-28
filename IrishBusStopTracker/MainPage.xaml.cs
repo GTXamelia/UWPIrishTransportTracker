@@ -49,10 +49,12 @@ namespace IrishBusStopTracker
 
 				string[] ssize = (obj.ToString()).Split(null);
 
-				listOfStop.Add(new Stop { StopID = obj.Stopid, Route = ssize[0], ArrivalTime = ssize[1] + " " + ssize[2], Destination = ssize[3] });
+				
+				listOfStop.Add(new Stop { StopID = obj.Stopid, SubHeader = "Bus: " + i, Route = ssize[0], ArrivalTime = ssize[1] + " " + ssize[2], Destination = ssize[3] });
 
-				MyListView.ItemsSource = listOfStop;
+				//MyListView.ItemsSource = listOfStop;
 
+				MyGridView.ItemsSource = listOfStop;
 			}
 		}
 	}
@@ -60,6 +62,7 @@ namespace IrishBusStopTracker
 	public class Stop
 	{
 		public string StopID { get; set; }
+		public string SubHeader { get; set; }
 		public string Route { get; set; }
 		public string ArrivalTime { get; set; }
 		public string Destination { get; set; }
