@@ -23,9 +23,6 @@ using System.Diagnostics;
 
 namespace IrishBusStopTracker
 {
-	/// <summary>
-	/// An empty page that can be used on its own or navigated to within a Frame.
-	/// </summary>
 	public sealed partial class MainPage : Page
 	{
 		private List<Stop> listOfStop = new List<Stop>();
@@ -42,7 +39,7 @@ namespace IrishBusStopTracker
 			// 522811 - GMIT Dublin Road (Galway)
 			// 524351 - Opposite Glenina Heights (Galway)
 
-			string[] BusStopID = new string[] { "522691" };
+			string[] BusStopID = new string[] { "522691", "522961", "522811", "524351" };
 
 			for (i = 0; i < BusStopID.Length; i++)
 			{

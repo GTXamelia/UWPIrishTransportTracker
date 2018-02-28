@@ -25,7 +25,7 @@
                 <TextBlock Grid.Column="3" Text="Destination"/>
             </Grid>
 
-            <ScrollViewer>
+            <ScrollViewer VerticalScrollBarVisibility="Auto" VerticalScrollMode="Enabled" Height="1000">
                 <GridView Name="MyGridView"
                       IsItemClickEnabled="True"
                       IsSwipeEnabled="true"

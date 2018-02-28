@@ -25,8 +25,8 @@
                 <TextBlock Grid.Column="3" Text="Destination"/>
             </Grid>
 
-            <ScrollViewer>
-                <GridView x:ConnectionId='2' Name="MyGridView"
+            <ScrollViewer VerticalScrollBarVisibility="Auto" VerticalScrollMode="Enabled" Height="1000">
+                <GridView x:ConnectionId='1' Name="MyGridView"
                       IsItemClickEnabled="True"
                       IsSwipeEnabled="true"
                       SelectionMode="Single">
@@ -55,28 +55,11 @@
                         </DataTemplate>
                     </GridView.ItemTemplate>
                 </GridView>
-        </ScrollViewer>
-
+            </ScrollViewer>
+            
         </StackPanel>
-
-
-
-
-                <!-- Out of date (Keeping for refrence) -->
-        <ListView x:ConnectionId='1' Name="MyListView">
-            <ListView.ItemTemplate>
-                <DataTemplate>
-                    <StackPanel>
-                        <TextBlock Text="{Binding StopID}"></TextBlock>
-                        <TextBlock Text="{Binding Route}"/>
-                        <TextBlock Text="{Binding ArrivalTime}"/>
-                        <TextBlock Text="{Binding Destination}"/>
-                    </StackPanel>
-                </DataTemplate>
-
-            </ListView.ItemTemplate>
-        </ListView>
-
+        
     </Grid>
+    
 </Page>
 
