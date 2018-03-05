@@ -6,6 +6,19 @@
     RequestedTheme="Light">
 
     <Application.Resources>
+
+        <GroupStyle x:Key="listViewGroupStyle">
+            <GroupStyle.HeaderTemplate>
+                <DataTemplate>
+                    <Grid Background="#cd1c38" Width="500">
+                        <Image Source="http://www.buseireann.ie/img/logo-bus-eireann.png" />
+                        <TextBlock Text='{Binding Key}' Foreground="Black" Margin="10"
+                           Style="{StaticResource SubheaderTextBlockStyle}" />
+                    </Grid>
+                </DataTemplate>
+            </GroupStyle.HeaderTemplate>
+        </GroupStyle>
+
         <DataTemplate x:Key="listViewItemTemplate">
             <StackPanel Width="500" Margin="20">
 
@@ -18,20 +31,10 @@
                     </GridView>
 
                 </StackPanel>
- 
+
             </StackPanel>
         </DataTemplate>
-
-        <GroupStyle x:Key="listViewGroupStyle">
-            <GroupStyle.HeaderTemplate>
-                <DataTemplate>
-                    <Grid Background="LightGray">
-                        <TextBlock Text='{Binding Key}' Foreground="Black" Margin="10"
-                           Style="{StaticResource SubheaderTextBlockStyle}" />
-                    </Grid>
-                </DataTemplate>
-            </GroupStyle.HeaderTemplate>
-        </GroupStyle>
+        
     </Application.Resources>
 
 

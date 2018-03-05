@@ -72,6 +72,8 @@ namespace IrishBusStopTracker
 					}
 				}
 
+
+
 				var resultCVS = from act in listOfStop group act by act.StopID into grp orderby grp.Key select grp;
 				cvsActivities.Source = resultCVS;
 
