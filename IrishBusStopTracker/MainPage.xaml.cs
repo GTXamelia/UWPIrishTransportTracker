@@ -72,10 +72,22 @@ namespace IrishBusStopTracker
 					}
 				}
 
-				MyGridView.ItemsSource = listOfStop;
+				var resultCVS = from act in listOfStop group act by act.StopID into grp orderby grp.Key select grp;
+				cvsActivities.Source = resultCVS;
+
+				//MyGridView.ItemsSource = listOfStop;
 			}
 		}
 	}
+
+	public class ListGroupStyleSelector : GroupStyleSelector
+	{
+		protected override GroupStyle SelectGroupStyleCore(object group, uint level)
+		{
+			return (GroupStyle)App.Current.Resources["listViewGroupStyle"];
+		}
+	}
+
 
 	public class Stop
 	{

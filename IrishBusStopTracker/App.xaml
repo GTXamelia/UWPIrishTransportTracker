@@ -5,4 +5,30 @@
     xmlns:local="using:IrishBusStopTracker"
     RequestedTheme="Light">
 
+    <Application.Resources>
+        <DataTemplate x:Key="listViewItemTemplate">
+            <StackPanel Width="350" Margin="10">
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="{Binding Route}" FontWeight="Bold" Style="{StaticResource BaseTextBlockStyle}"
+                       Margin="2,0,0,0"/>
+                    <TextBlock Text="{Binding Duetime}" Style="{StaticResource BodyTextBlockStyle}" TextWrapping="NoWrap"
+                       Margin="20,0,0,0"/>
+                </StackPanel>
+ 
+            </StackPanel>
+        </DataTemplate>
+
+        <GroupStyle x:Key="listViewGroupStyle">
+            <GroupStyle.HeaderTemplate>
+                <DataTemplate>
+                    <Grid Background="LightGray"  >
+                        <TextBlock Text='{Binding Key}' Foreground="Black" Margin="10"
+                           Style="{StaticResource SubheaderTextBlockStyle}" />
+                    </Grid>
+                </DataTemplate>
+            </GroupStyle.HeaderTemplate>
+        </GroupStyle>
+    </Application.Resources>
+
+
 </Application>
