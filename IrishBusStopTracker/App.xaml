@@ -10,9 +10,9 @@
         <GroupStyle x:Key="listViewGroupStyle">
             <GroupStyle.HeaderTemplate>
                 <DataTemplate>
-                    <Grid Background="#cd1c38" Width="500">
-                        <Image Source="http://www.buseireann.ie/img/logo-bus-eireann.png" />
-                        <TextBlock Text='{Binding Key}' Foreground="Black" Margin="10"
+                    <Grid Background="#cd1c38" Width="350">
+                        <Image Source="http://www.buseireann.ie/img/logo-bus-eireann.png" Width="250" Height="50"/>
+                        <TextBlock Text='{Binding Key}' Foreground="Black" Margin="5"
                            Style="{StaticResource SubheaderTextBlockStyle}" />
                     </Grid>
                 </DataTemplate>
@@ -20,17 +20,25 @@
         </GroupStyle>
 
         <DataTemplate x:Key="listViewItemTemplate">
-            <StackPanel Width="500" Margin="20">
 
-                <StackPanel Orientation="Horizontal">
+            <StackPanel Width="300" Margin="1" Orientation="Horizontal">
 
-                    <GridView>
-                        <TextBlock Text="{Binding Route}" FontWeight="Bold" Style="{StaticResource BaseTextBlockStyle}" Width="100"/>
-                        <TextBlock Text="{Binding Destination}" Style="{StaticResource BodyTextBlockStyle}" Width="100"/>
-                        <TextBlock Text="{Binding Duetime}" Style="{StaticResource BodyTextBlockStyle}" Width="100"/>
-                    </GridView>
+                <GridView>
 
-                </StackPanel>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="50"/>
+                            <ColumnDefinition Width="100"/>
+                            <ColumnDefinition Width="100"/>
+                        </Grid.ColumnDefinitions>
+
+
+                        <TextBlock Grid.Column="0" Text="{Binding Route}" FontWeight="Bold" Style="{StaticResource BaseTextBlockStyle}"/>
+                        <TextBlock Grid.Column="1" Text="{Binding Destination}" Style="{StaticResource BodyTextBlockStyle}"/>
+                        <TextBlock Grid.Column="2" Text="{Binding Duetime}" Style="{StaticResource BodyTextBlockStyle}"/>
+
+                    </Grid>
+                </GridView>
 
             </StackPanel>
         </DataTemplate>

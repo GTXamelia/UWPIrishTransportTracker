@@ -11,7 +11,7 @@
             <GroupStyle.HeaderTemplate>
                 <DataTemplate>
                     <Grid Background="#cd1c38" Width="500">
-                        <Image Source="http://www.buseireann.ie/img/logo-bus-eireann.png" />
+                        <Image Source="http://www.buseireann.ie/img/logo-bus-eireann.png" Width="250" Height="50"/>
                         <TextBlock Text='{Binding Key}' Foreground="Black" Margin="10"
                            Style="{StaticResource SubheaderTextBlockStyle}" />
                     </Grid>
@@ -25,6 +25,7 @@
                 <StackPanel Orientation="Horizontal">
 
                     <GridView>
+                        <Image Source="http://connachttribune.ie/wp-content/uploads/2016/12/bus-eireann-city-1.jpg" Width="250" Height="50"/>
                         <TextBlock Text="{Binding Route}" FontWeight="Bold" Style="{StaticResource BaseTextBlockStyle}" Width="100"/>
                         <TextBlock Text="{Binding Destination}" Style="{StaticResource BodyTextBlockStyle}" Width="100"/>
                         <TextBlock Text="{Binding Duetime}" Style="{StaticResource BodyTextBlockStyle}" Width="100"/>

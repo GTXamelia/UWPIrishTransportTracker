@@ -21,7 +21,7 @@
                 <ListView ItemsSource="{Binding Source={StaticResource cvsActivities}}"
                 ItemTemplate="{StaticResource listViewItemTemplate}"
                 GroupStyleSelector="{StaticResource listGroupStyleSelector}"
-                Margin="120" Width="500" />
+                Margin="120" Width="350" />
 
             </ScrollViewer>
 
