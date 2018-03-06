@@ -33,8 +33,13 @@
                             <ColumnDefinition Width="100"/>
                         </Grid.ColumnDefinitions>
 
-                        <Image Grid.Column="0" Source="http://www.dublinevents.com/images/listing/pic3/658-bus-eireann-3.jpg"/>
-                        <TextBlock Grid.Column="1" Text="{Binding Route}" FontWeight="Bold" />
+                        <!-- <Image Grid.Column="0" Source="http://www.dublinevents.com/images/listing/pic3/658-bus-eireann-3.jpg"/> -->
+                        <Ellipse Grid.Column="0" Height="50">
+                            <Ellipse.Fill>
+                                <ImageBrush  ImageSource="{Binding ImageOperator}" />
+                            </Ellipse.Fill>
+                        </Ellipse>
+                        <TextBlock Grid.Column="1" Text="{Binding Route}" Style="{StaticResource BodyTextBlockStyle}" FontWeight="Bold" />
                         <TextBlock Grid.Column="2" Text="{Binding Destination}" Style="{StaticResource BodyTextBlockStyle}"/>
                         <TextBlock Grid.Column="3" Text="{Binding Duetime}" Style="{StaticResource BodyTextBlockStyle}"/>
 

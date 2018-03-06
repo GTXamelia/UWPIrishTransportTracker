@@ -32,16 +32,15 @@ namespace IrishBusStopTracker
 			this.InitializeComponent();
 
 			// Loop values
-			int i,k;
-
-			int LoopStopper = 0;
+			int i, k;
+			string imageBusOp;
 
 			// 522691 - gHotel Dublin Road (Galway)
 			// 522961 - Opposite Londis Dublin Road (Galway)
 			// 522811 - GMIT Dublin Road (Galway)
 			// 524351 - Opposite Glenina Heights (Galway)
 
-			string[] BusStopID = new string[] { "522691"};
+			string[] BusStopID = new string[] { "522691", "522961", "522811", "524351" };
 
 			for (i = 0; i < BusStopID.Length; i++)
 			{
@@ -56,35 +55,29 @@ namespace IrishBusStopTracker
 
 				string[] ssize = (obj.ToString()).Split(new char[0]);
 
-				if (obj.Numberofresults >= 10)
-				{
-					LoopStopper = 10;
-				}
-				else
-				{
-					obj.Numberofresults = LoopStopper;
-				}
 
-				for (k = 0; k < LoopStopper; k++)
+				for (k = 0; k < obj.Numberofresults; k++)
 				{
-					if (ssize[2 + (k * 4)].Contains(":"))
+					if (ssize[0 + (k * 4)].Length < 3 || ssize[0 + (k * 4)].Contains("X"))
 					{
-						String test = DateTime.Now.ToString("HH:mm:ss");
-
-
-						listOfStop.Add(new Stop { StopID = obj.Stopid, Route = ssize[0 + (k * 4)], ArrivalTime = ssize[1 + (k * 4)], Duetime = test, Destination = ssize[3 + (k * 4)] });
-					}
-					else if (ssize[2 + (k * 4)].Contains("Due"))
-					{
-						listOfStop.Add(new Stop { StopID = obj.Stopid, Route = ssize[0 + (k * 4)], ArrivalTime = ssize[1 + (k * 4)], Duetime = ssize[2 + (k * 4)], Destination = ssize[3 + (k * 4)] });
-					}
-					else if (Int32.Parse(ssize[2 + (k * 4)]) == 1)
-					{
-						listOfStop.Add(new Stop { StopID = obj.Stopid, Route = ssize[0 + (k * 4)], ArrivalTime = ssize[1 + (k * 4)], Duetime = ssize[2 + (k * 4)] + " Minute", Destination = ssize[3 + (k * 4)] });
+						imageBusOp = "http://www.buseireann.ie/img/pictures/1405694022_content_main.jpg";
 					}
 					else
 					{
-						listOfStop.Add(new Stop { StopID = obj.Stopid, Route = ssize[0 + (k * 4)], ArrivalTime = ssize[1 + (k * 4)], Duetime = ssize[2 + (k * 4)] + " Minutes", Destination = ssize[3 + (k * 4)] });
+						imageBusOp = "https://c2.staticflickr.com/8/7354/13473687104_6f57f4749f_b.jpg";
+					}
+
+					if (ssize[2 + (k * 4)].Contains("Due"))
+					{
+						listOfStop.Add(new Stop { StopID = obj.Stopid, Route = ssize[0 + (k * 4)], ArrivalTime = ssize[1 + (k * 4)], Duetime = ssize[2 + (k * 4)], Destination = ssize[3 + (k * 4)], ImageOperator = imageBusOp });
+					}
+					else if (Int32.Parse(ssize[2 + (k * 4)]) == 1)
+					{
+						listOfStop.Add(new Stop { StopID = obj.Stopid, Route = ssize[0 + (k * 4)], ArrivalTime = ssize[1 + (k * 4)], Duetime = ssize[2 + (k * 4)] + " Minute", Destination = ssize[3 + (k * 4)], ImageOperator = imageBusOp });
+					}
+					else
+					{
+						listOfStop.Add(new Stop { StopID = obj.Stopid, Route = ssize[0 + (k * 4)], ArrivalTime = ssize[1 + (k * 4)], Duetime = ssize[2 + (k * 4)] + " Minutes", Destination = ssize[3 + (k * 4)], ImageOperator = imageBusOp });
 					}
 				}
 
@@ -114,5 +107,6 @@ namespace IrishBusStopTracker
 		public string ArrivalTime { get; set; }
 		public string Duetime { get; set; }
 		public string Destination { get; set; }
+		public string ImageOperator { get; set; }
 	}
 }
