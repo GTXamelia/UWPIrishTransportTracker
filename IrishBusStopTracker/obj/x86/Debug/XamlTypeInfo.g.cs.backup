@@ -132,19 +132,15 @@ namespace IrishBusStopTracker.IrishBusStopTracker_XamlTypeInfo
 
         private void InitTypeTables()
         {
-            _typeNameTable = new string[5];
-            _typeNameTable[0] = "IrishBusStopTracker.ListGroupStyleSelector";
-            _typeNameTable[1] = "Windows.UI.Xaml.Controls.GroupStyleSelector";
-            _typeNameTable[2] = "IrishBusStopTracker.MainPage";
-            _typeNameTable[3] = "Windows.UI.Xaml.Controls.Page";
-            _typeNameTable[4] = "Windows.UI.Xaml.Controls.UserControl";
+            _typeNameTable = new string[3];
+            _typeNameTable[0] = "IrishBusStopTracker.MainPage";
+            _typeNameTable[1] = "Windows.UI.Xaml.Controls.Page";
+            _typeNameTable[2] = "Windows.UI.Xaml.Controls.UserControl";
 
-            _typeTable = new global::System.Type[5];
-            _typeTable[0] = typeof(global::IrishBusStopTracker.ListGroupStyleSelector);
-            _typeTable[1] = typeof(global::Windows.UI.Xaml.Controls.GroupStyleSelector);
-            _typeTable[2] = typeof(global::IrishBusStopTracker.MainPage);
-            _typeTable[3] = typeof(global::Windows.UI.Xaml.Controls.Page);
-            _typeTable[4] = typeof(global::Windows.UI.Xaml.Controls.UserControl);
+            _typeTable = new global::System.Type[3];
+            _typeTable[0] = typeof(global::IrishBusStopTracker.MainPage);
+            _typeTable[1] = typeof(global::Windows.UI.Xaml.Controls.Page);
+            _typeTable[2] = typeof(global::Windows.UI.Xaml.Controls.UserControl);
         }
 
         private int LookupTypeIndexByName(string typeName)
@@ -179,8 +175,7 @@ namespace IrishBusStopTracker.IrishBusStopTracker_XamlTypeInfo
             return -1;
         }
 
-        private object Activate_0_ListGroupStyleSelector() { return new global::IrishBusStopTracker.ListGroupStyleSelector(); }
-        private object Activate_2_MainPage() { return new global::IrishBusStopTracker.MainPage(); }
+        private object Activate_0_MainPage() { return new global::IrishBusStopTracker.MainPage(); }
 
         private global::Windows.UI.Xaml.Markup.IXamlType CreateXamlType(int typeIndex)
         {
@@ -192,29 +187,18 @@ namespace IrishBusStopTracker.IrishBusStopTracker_XamlTypeInfo
             switch (typeIndex)
             {
 
-            case 0:   //  IrishBusStopTracker.ListGroupStyleSelector
-                userType = new global::IrishBusStopTracker.IrishBusStopTracker_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.GroupStyleSelector"));
-                userType.Activator = Activate_0_ListGroupStyleSelector;
-                userType.SetIsLocalType();
-                xamlType = userType;
-                break;
-
-            case 1:   //  Windows.UI.Xaml.Controls.GroupStyleSelector
-                xamlType = new global::IrishBusStopTracker.IrishBusStopTracker_XamlTypeInfo.XamlSystemBaseType(typeName, type);
-                break;
-
-            case 2:   //  IrishBusStopTracker.MainPage
+            case 0:   //  IrishBusStopTracker.MainPage
                 userType = new global::IrishBusStopTracker.IrishBusStopTracker_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_2_MainPage;
+                userType.Activator = Activate_0_MainPage;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 3:   //  Windows.UI.Xaml.Controls.Page
+            case 1:   //  Windows.UI.Xaml.Controls.Page
                 xamlType = new global::IrishBusStopTracker.IrishBusStopTracker_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 4:   //  Windows.UI.Xaml.Controls.UserControl
+            case 2:   //  Windows.UI.Xaml.Controls.UserControl
                 xamlType = new global::IrishBusStopTracker.IrishBusStopTracker_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
             }

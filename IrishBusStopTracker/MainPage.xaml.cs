@@ -40,7 +40,7 @@ namespace IrishBusStopTracker
 			// 522811 - GMIT Dublin Road (Galway)
 			// 524351 - Opposite Glenina Heights (Galway)
 
-			string[] BusStopID = new string[] { "2", "522961", "522811", "524351" };
+			string[] BusStopID = new string[] { "2", "GALWY", "GLGRY", "524351" };
 
 			for (i = 0; i < BusStopID.Length; i++)
 			{
@@ -70,6 +70,10 @@ namespace IrishBusStopTracker
 					{
 						imageBusOp = "http://www.echo.ie/images/Dublin_Bus_27_stock.jpg";
 					}
+					else
+					{
+						imageBusOp = "https://st2.depositphotos.com/3068703/6369/v/950/depositphotos_63698389-stock-illustration-no-bus-sign-icon-great.jpg";
+					}
 
 					if (ssize[2 + (k * 5)].Contains("Due"))
 					{
@@ -85,15 +89,13 @@ namespace IrishBusStopTracker
 					}
 				}
 
-
-
 				var resultCVS = from act in listOfStop group act by act.StopID into grp orderby grp.Key select grp;
 				cvsActivities.Source = resultCVS;
-
-				//MyGridView.ItemsSource = listOfStop;
 			}
+
 		}
 	}
+	
 
 	public class ListGroupStyleSelector : GroupStyleSelector
 	{

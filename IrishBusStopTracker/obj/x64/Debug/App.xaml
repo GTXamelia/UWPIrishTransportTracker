@@ -32,8 +32,7 @@
                             <ColumnDefinition Width="100"/>
                             <ColumnDefinition Width="100"/>
                         </Grid.ColumnDefinitions>
-
-                        <!-- <Image Grid.Column="0" Source="http://www.dublinevents.com/images/listing/pic3/658-bus-eireann-3.jpg"/> -->
+                        
                         <Ellipse Grid.Column="0" Height="50">
                             <Ellipse.Fill>
                                 <ImageBrush  ImageSource="{Binding ImageOperator}" />

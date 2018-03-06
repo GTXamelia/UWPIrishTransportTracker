@@ -7,57 +7,23 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
+    <Page.Resources>
+        <CollectionViewSource x:ConnectionId='1' x:Name="cvsActivities" IsSourceGrouped="True"/>
+        <local:ListGroupStyleSelector x:Key="listGroupStyleSelector"/>
+    </Page.Resources>
+
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
         <StackPanel>
 
-            <Grid>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="50"/>
-                    <ColumnDefinition Width="150"/>
-                    <ColumnDefinition Width="100"/>
-                    <ColumnDefinition Width="100"/>
-                </Grid.ColumnDefinitions>
-
-                <TextBlock Grid.Column="0" Text="Bus"/>
-                <TextBlock Grid.Column="1" Text="Arrival"/>
-                <TextBlock Grid.Column="2" Text="Due"/>
-                <TextBlock Grid.Column="3" Text="Destination"/>
-            </Grid>
-
             <ScrollViewer VerticalScrollBarVisibility="Auto" VerticalScrollMode="Enabled" Height="1000">
-                <GridView x:ConnectionId='1' Name="MyGridView"
-                      IsItemClickEnabled="True"
-                      IsSwipeEnabled="true"
-                      SelectionMode="Single">
 
-                    <GridView.ItemsPanel>
-                        <ItemsPanelTemplate>
-                            <WrapGrid Orientation="Vertical"/>
-                        </ItemsPanelTemplate>
-                    </GridView.ItemsPanel>
+                <ListView ItemsSource="{Binding Source={StaticResource cvsActivities}}"
+                ItemTemplate="{StaticResource listViewItemTemplate}"
+                Margin="120" Width="350" />
 
-                    <GridView.ItemTemplate>
-                        <DataTemplate>
-                            <Grid>
-                                <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="50"/>
-                                    <ColumnDefinition Width="150"/>
-                                    <ColumnDefinition Width="100"/>
-                                    <ColumnDefinition Width="100"/>
-                                </Grid.ColumnDefinitions>
-
-                                <TextBlock Grid.Column="0" Text="{Binding Route}"/>
-                                <TextBlock Grid.Column="1" Text="{Binding ArrivalTime}"/>
-                                <TextBlock Grid.Column="2" Text="{Binding Duetime}"/>
-                                <TextBlock Grid.Column="3" Text="{Binding Destination}"/>
-                            </Grid>
-                        </DataTemplate>
-                    </GridView.ItemTemplate>
-                    
-                </GridView>
             </ScrollViewer>
-            
+
         </StackPanel>
         
     </Grid>
