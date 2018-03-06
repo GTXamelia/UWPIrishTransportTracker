@@ -32,14 +32,16 @@ namespace IrishBusStopTracker
 			this.InitializeComponent();
 
 			// Loop values
-			int i,j,k;
+			int i,k;
+
+			int LoopStopper = 0;
 
 			// 522691 - gHotel Dublin Road (Galway)
 			// 522961 - Opposite Londis Dublin Road (Galway)
 			// 522811 - GMIT Dublin Road (Galway)
 			// 524351 - Opposite Glenina Heights (Galway)
 
-			string[] BusStopID = new string[] { "522691", "522961", "522811", "524351" };
+			string[] BusStopID = new string[] { "522691"};
 
 			for (i = 0; i < BusStopID.Length; i++)
 			{
@@ -54,11 +56,25 @@ namespace IrishBusStopTracker
 
 				string[] ssize = (obj.ToString()).Split(new char[0]);
 
-
-				for (k = 0; k < obj.Numberofresults; k++)
+				if (obj.Numberofresults >= 10)
 				{
+					LoopStopper = 10;
+				}
+				else
+				{
+					obj.Numberofresults = LoopStopper;
+				}
 
-					if (ssize[2 + (k * 4)].Contains("Due"))
+				for (k = 0; k < LoopStopper; k++)
+				{
+					if (ssize[2 + (k * 4)].Contains(":"))
+					{
+						String test = DateTime.Now.ToString("HH:mm:ss");
+
+
+						listOfStop.Add(new Stop { StopID = obj.Stopid, Route = ssize[0 + (k * 4)], ArrivalTime = ssize[1 + (k * 4)], Duetime = test, Destination = ssize[3 + (k * 4)] });
+					}
+					else if (ssize[2 + (k * 4)].Contains("Due"))
 					{
 						listOfStop.Add(new Stop { StopID = obj.Stopid, Route = ssize[0 + (k * 4)], ArrivalTime = ssize[1 + (k * 4)], Duetime = ssize[2 + (k * 4)], Destination = ssize[3 + (k * 4)] });
 					}

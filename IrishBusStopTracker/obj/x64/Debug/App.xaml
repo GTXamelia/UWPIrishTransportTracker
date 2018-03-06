@@ -10,9 +10,9 @@
         <GroupStyle x:Key="listViewGroupStyle">
             <GroupStyle.HeaderTemplate>
                 <DataTemplate>
-                    <Grid Background="#cd1c38" Width="500">
+                    <Grid Background="#cd1c38" Width="350">
                         <Image Source="http://www.buseireann.ie/img/logo-bus-eireann.png" Width="250" Height="50"/>
-                        <TextBlock Text='{Binding Key}' Foreground="Black" Margin="10"
+                        <TextBlock Text='{Binding Key}' Foreground="Black" Margin="5"
                            Style="{StaticResource SubheaderTextBlockStyle}" />
                     </Grid>
                 </DataTemplate>
@@ -20,18 +20,26 @@
         </GroupStyle>
 
         <DataTemplate x:Key="listViewItemTemplate">
-            <StackPanel Width="500" Margin="20">
 
-                <StackPanel Orientation="Horizontal">
+            <StackPanel Width="300" Margin="1" Orientation="Horizontal">
 
-                    <GridView>
-                        <Image Source="http://connachttribune.ie/wp-content/uploads/2016/12/bus-eireann-city-1.jpg" Width="250" Height="50"/>
-                        <TextBlock Text="{Binding Route}" FontWeight="Bold" Style="{StaticResource BaseTextBlockStyle}" Width="100"/>
-                        <TextBlock Text="{Binding Destination}" Style="{StaticResource BodyTextBlockStyle}" Width="100"/>
-                        <TextBlock Text="{Binding Duetime}" Style="{StaticResource BodyTextBlockStyle}" Width="100"/>
-                    </GridView>
+                <GridView>
 
-                </StackPanel>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="50"/>
+                            <ColumnDefinition Width="50"/>
+                            <ColumnDefinition Width="100"/>
+                            <ColumnDefinition Width="100"/>
+                        </Grid.ColumnDefinitions>
+
+                        <Image Grid.Column="0" Source="http://www.dublinevents.com/images/listing/pic3/658-bus-eireann-3.jpg"/>
+                        <TextBlock Grid.Column="1" Text="{Binding Route}" FontWeight="Bold" />
+                        <TextBlock Grid.Column="2" Text="{Binding Destination}" Style="{StaticResource BodyTextBlockStyle}"/>
+                        <TextBlock Grid.Column="3" Text="{Binding Duetime}" Style="{StaticResource BodyTextBlockStyle}"/>
+
+                    </Grid>
+                </GridView>
 
             </StackPanel>
         </DataTemplate>

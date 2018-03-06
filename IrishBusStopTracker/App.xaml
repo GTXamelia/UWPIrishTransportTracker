@@ -28,14 +28,15 @@
                     <Grid>
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="50"/>
+                            <ColumnDefinition Width="50"/>
                             <ColumnDefinition Width="100"/>
                             <ColumnDefinition Width="100"/>
                         </Grid.ColumnDefinitions>
 
-
-                        <TextBlock Grid.Column="0" Text="{Binding Route}" FontWeight="Bold" Style="{StaticResource BaseTextBlockStyle}"/>
-                        <TextBlock Grid.Column="1" Text="{Binding Destination}" Style="{StaticResource BodyTextBlockStyle}"/>
-                        <TextBlock Grid.Column="2" Text="{Binding Duetime}" Style="{StaticResource BodyTextBlockStyle}"/>
+                        <Image Grid.Column="0" Source="http://www.dublinevents.com/images/listing/pic3/658-bus-eireann-3.jpg"/>
+                        <TextBlock Grid.Column="1" Text="{Binding Route}" FontWeight="Bold" />
+                        <TextBlock Grid.Column="2" Text="{Binding Destination}" Style="{StaticResource BodyTextBlockStyle}"/>
+                        <TextBlock Grid.Column="3" Text="{Binding Duetime}" Style="{StaticResource BodyTextBlockStyle}"/>
 
                     </Grid>
                 </GridView>
