@@ -33,14 +33,14 @@ namespace IrishBusStopTracker
 
 			// Loop values
 			int i, k;
-			string imageBusOp;
+			string imageBusOp = "";
 
 			// 522691 - gHotel Dublin Road (Galway)
 			// 522961 - Opposite Londis Dublin Road (Galway)
 			// 522811 - GMIT Dublin Road (Galway)
 			// 524351 - Opposite Glenina Heights (Galway)
 
-			string[] BusStopID = new string[] { "522691", "522961", "522811", "524351" };
+			string[] BusStopID = new string[] { "2", "522961", "522811", "524351" };
 
 			for (i = 0; i < BusStopID.Length; i++)
 			{
@@ -58,26 +58,30 @@ namespace IrishBusStopTracker
 
 				for (k = 0; k < obj.Numberofresults; k++)
 				{
-					if (ssize[0 + (k * 4)].Length < 3 || ssize[0 + (k * 4)].Contains("X"))
+					if (ssize[0 + (k * 5)].Contains("X"))
 					{
 						imageBusOp = "http://www.buseireann.ie/img/pictures/1405694022_content_main.jpg";
 					}
-					else
+					else if (ssize[4 + (k * 5)].Contains("BE"))
 					{
 						imageBusOp = "https://c2.staticflickr.com/8/7354/13473687104_6f57f4749f_b.jpg";
 					}
-
-					if (ssize[2 + (k * 4)].Contains("Due"))
+					else if (ssize[4 + (k * 5)].Contains("bac"))
 					{
-						listOfStop.Add(new Stop { StopID = obj.Stopid, Route = ssize[0 + (k * 4)], ArrivalTime = ssize[1 + (k * 4)], Duetime = ssize[2 + (k * 4)], Destination = ssize[3 + (k * 4)], ImageOperator = imageBusOp });
+						imageBusOp = "http://www.echo.ie/images/Dublin_Bus_27_stock.jpg";
 					}
-					else if (Int32.Parse(ssize[2 + (k * 4)]) == 1)
+
+					if (ssize[2 + (k * 5)].Contains("Due"))
 					{
-						listOfStop.Add(new Stop { StopID = obj.Stopid, Route = ssize[0 + (k * 4)], ArrivalTime = ssize[1 + (k * 4)], Duetime = ssize[2 + (k * 4)] + " Minute", Destination = ssize[3 + (k * 4)], ImageOperator = imageBusOp });
+						listOfStop.Add(new Stop { StopID = obj.Stopid, Route = ssize[0 + (k * 5)], ArrivalTime = ssize[1 + (k * 5)], Duetime = ssize[2 + (k * 5)], Destination = ssize[3 + (k * 5)], ImageOperator = imageBusOp });
+					}
+					else if (Int32.Parse(ssize[2 + (k * 5)]) == 1)
+					{
+						listOfStop.Add(new Stop { StopID = obj.Stopid, Route = ssize[0 + (k * 5)], ArrivalTime = ssize[1 + (k * 5)], Duetime = ssize[2 + (k * 5)] + " Minute", Destination = ssize[3 + (k * 5)], ImageOperator = imageBusOp });
 					}
 					else
 					{
-						listOfStop.Add(new Stop { StopID = obj.Stopid, Route = ssize[0 + (k * 4)], ArrivalTime = ssize[1 + (k * 4)], Duetime = ssize[2 + (k * 4)] + " Minutes", Destination = ssize[3 + (k * 4)], ImageOperator = imageBusOp });
+						listOfStop.Add(new Stop { StopID = obj.Stopid, Route = ssize[0 + (k * 5)], ArrivalTime = ssize[1 + (k * 5)], Duetime = ssize[2 + (k * 5)] + " Minutes", Destination = ssize[3 + (k * 5)], ImageOperator = imageBusOp });
 					}
 				}
 

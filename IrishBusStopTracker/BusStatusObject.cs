@@ -31,7 +31,7 @@ namespace IrishBusStopTracker
 			Arrivaldatetime = Arrivaldatetime.Replace(" ", "-");// Removes spaces from date/time (Arrivaldatetime)
 			Destination = Destination.Replace(" ", "-"); // Removes potential space from destination (Destination)
 
-			return string.Format("{0} {1} {2} {3} ", Route, Arrivaldatetime, Duetime, Destination);
+			return string.Format("{0} {1} {2} {3} {4} ", Route, Arrivaldatetime, Duetime, Destination, Operator);
 		}
 	}
 
