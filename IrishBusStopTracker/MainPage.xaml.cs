@@ -19,8 +19,6 @@ using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 using System.Diagnostics;
 
-// The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
-
 namespace IrishBusStopTracker
 {
 	public sealed partial class MainPage : Page
@@ -34,13 +32,14 @@ namespace IrishBusStopTracker
 			// Loop values
 			int i, k;
 			string imageBusOp = "";
+			int BusStatus = 0;
 
 			// 522691 - gHotel Dublin Road (Galway)
 			// 522961 - Opposite Londis Dublin Road (Galway)
 			// 522811 - GMIT Dublin Road (Galway)
 			// 524351 - Opposite Glenina Heights (Galway)
 
-			string[] BusStopID = new string[] { "2", "GALWY", "GLGRY", "524351" };
+			string[] BusStopID = new string[] { "522691", "522961", "GLGRY", "524351" };
 
 			for (i = 0; i < BusStopID.Length; i++)
 			{
@@ -55,44 +54,56 @@ namespace IrishBusStopTracker
 
 				string[] ssize = (obj.ToString()).Split(new char[0]);
 
+				try { 
 
-				for (k = 0; k < obj.Numberofresults; k++)
+					for (k = 0; k < obj.Numberofresults; k++)
+					{
+						if (ssize[0 + (k * 5)].Contains("X"))
+						{
+							imageBusOp = "http://www.buseireann.ie/img/pictures/1405694022_content_main.jpg";
+						}
+						else if (ssize[4 + (k * 5)].Contains("BE"))
+						{
+							imageBusOp = "https://c2.staticflickr.com/8/7354/13473687104_6f57f4749f_b.jpg";
+						}
+						else if (ssize[4 + (k * 5)].Contains("bac"))
+						{
+							imageBusOp = "http://www.echo.ie/images/Dublin_Bus_27_stock.jpg";
+						}
+						else
+						{
+							imageBusOp = "https://st2.depositphotos.com/3068703/6369/v/950/depositphotos_63698389-stock-ilglustration-no-bus-sign-icon-great.jpg";
+						}
+
+						if (ssize[2 + (k * 5)].Contains("Due"))
+						{
+							listOfStop.Add(new Stop { StopID = obj.Stopid, Route = ssize[0 + (k * 5)], ArrivalTime = ssize[1 + (k * 5)], Duetime = ssize[2 + (k * 5)], Destination = ssize[3 + (k * 5)], ImageOperator = imageBusOp });
+						}
+						else if (Int32.Parse(ssize[2 + (k * 5)]) == 1)
+						{
+							listOfStop.Add(new Stop { StopID = obj.Stopid, Route = ssize[0 + (k * 5)], ArrivalTime = ssize[1 + (k * 5)], Duetime = ssize[2 + (k * 5)] + " Minute", Destination = ssize[3 + (k * 5)], ImageOperator = imageBusOp });
+						}
+						else
+						{
+							listOfStop.Add(new Stop { StopID = obj.Stopid, Route = ssize[0 + (k * 5)], ArrivalTime = ssize[1 + (k * 5)], Duetime = ssize[2 + (k * 5)] + " Minutes", Destination = ssize[3 + (k * 5)], ImageOperator = imageBusOp });
+						}
+					}
+
+				}
+				catch(Exception e)
 				{
-					if (ssize[0 + (k * 5)].Contains("X"))
-					{
-						imageBusOp = "http://www.buseireann.ie/img/pictures/1405694022_content_main.jpg";
-					}
-					else if (ssize[4 + (k * 5)].Contains("BE"))
-					{
-						imageBusOp = "https://c2.staticflickr.com/8/7354/13473687104_6f57f4749f_b.jpg";
-					}
-					else if (ssize[4 + (k * 5)].Contains("bac"))
-					{
-						imageBusOp = "http://www.echo.ie/images/Dublin_Bus_27_stock.jpg";
-					}
-					else
-					{
-						imageBusOp = "https://st2.depositphotos.com/3068703/6369/v/950/depositphotos_63698389-stock-illustration-no-bus-sign-icon-great.jpg";
-					}
+					BusStatus++;
 
-					if (ssize[2 + (k * 5)].Contains("Due"))
+					if (BusStatus == 1)
 					{
-						listOfStop.Add(new Stop { StopID = obj.Stopid, Route = ssize[0 + (k * 5)], ArrivalTime = ssize[1 + (k * 5)], Duetime = ssize[2 + (k * 5)], Destination = ssize[3 + (k * 5)], ImageOperator = imageBusOp });
-					}
-					else if (Int32.Parse(ssize[2 + (k * 5)]) == 1)
-					{
-						listOfStop.Add(new Stop { StopID = obj.Stopid, Route = ssize[0 + (k * 5)], ArrivalTime = ssize[1 + (k * 5)], Duetime = ssize[2 + (k * 5)] + " Minute", Destination = ssize[3 + (k * 5)], ImageOperator = imageBusOp });
-					}
-					else
-					{
-						listOfStop.Add(new Stop { StopID = obj.Stopid, Route = ssize[0 + (k * 5)], ArrivalTime = ssize[1 + (k * 5)], Duetime = ssize[2 + (k * 5)] + " Minutes", Destination = ssize[3 + (k * 5)], ImageOperator = imageBusOp });
+						imageBusOp = "https://st2.depositphotos.com/3068703/6369/v/950/depositphotos_63698389-stock-ilglustration-no-bus-sign-icon-great.jpg";
+						listOfStop.Add(new Stop { Route = "No", Destination = "busses", Duetime = "operating", ImageOperator = imageBusOp });
 					}
 				}
 
 				var resultCVS = from act in listOfStop group act by act.StopID into grp orderby grp.Key select grp;
 				cvsActivities.Source = resultCVS;
 			}
-
 		}
 	}
 	
