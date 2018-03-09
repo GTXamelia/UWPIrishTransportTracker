@@ -27,6 +27,7 @@ namespace IrishBusStopTracker
 			// 522961 - Opposite Londis Dublin Road (Galway)
 			// 522811 - GMIT Dublin Road (Galway)
 			// 524351 - Opposite Glenina Heights (Galway)
+			// GALWY  - Galway Train Station
 
 			string[] BusStopID = new string[] { "522691", "522961", "GLGRY", "524351" };
 
@@ -59,6 +60,10 @@ namespace IrishBusStopTracker
 						{
 							imageBusOp = "http://www.echo.ie/images/Dublin_Bus_27_stock.jpg";
 						}
+						else if (ssize[4 + (k * ObjectRetrieval)].Contains("ir"))
+						{
+							imageBusOp = "https://www.railjournal.com/media/k2/items/cache/8625251b6ea82455a3caf137b4aea8ab_XL.jpg?t=943938000";
+						}
 						else
 						{
 							imageBusOp = "https://st2.depositphotos.com/3068703/6369/v/950/depositphotos_63698389-stock-ilglustration-no-bus-sign-icon-great.jpg";
@@ -68,7 +73,7 @@ namespace IrishBusStopTracker
 						{
 							listOfStop.Add(new Stop { StopID = obj.Stopid, Route = ssize[0 + (k * ObjectRetrieval)], ArrivalTime = ssize[1 + (k * ObjectRetrieval)], Duetime = ssize[2 + (k * ObjectRetrieval)], Destination = ssize[3 + (k * ObjectRetrieval)], ImageOperator = imageBusOp });
 						}
-						else if (Int32.Parse(ssize[2 + (k * 5)]) == 1)
+						else if (Int32.Parse(ssize[2 + (k * ObjectRetrieval)]) == 1)
 						{
 							listOfStop.Add(new Stop { StopID = obj.Stopid, Route = ssize[0 + (k * ObjectRetrieval)], ArrivalTime = ssize[1 + (k * ObjectRetrieval)], Duetime = ssize[2 + (k * ObjectRetrieval)] + " Minute", Destination = ssize[3 + (k * ObjectRetrieval)], ImageOperator = imageBusOp });
 						}
