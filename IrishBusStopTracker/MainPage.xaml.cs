@@ -1,23 +1,11 @@
 ﻿using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.IO;
 using System.Linq;
 using System.Net.Http;
 using System.Net.Http.Headers;
-using System.Runtime.InteropServices.WindowsRuntime;
-using System.Threading.Tasks;
-using Windows.Foundation;
-using Windows.Foundation.Collections;
-using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
-using Windows.UI.Xaml.Controls.Primitives;
-using Windows.UI.Xaml.Data;
-using Windows.UI.Xaml.Input;
-using Windows.UI.Xaml.Media;
-using Windows.UI.Xaml.Navigation;
-using System.Diagnostics;
+
 
 namespace IrishBusStopTracker
 {
@@ -33,6 +21,7 @@ namespace IrishBusStopTracker
 			int i, k;
 			string imageBusOp = "";
 			int BusStatus = 0;
+			int ObjectRetrieval = 5;
 
 			// 522691 - gHotel Dublin Road (Galway)
 			// 522961 - Opposite Londis Dublin Road (Galway)
@@ -58,15 +47,15 @@ namespace IrishBusStopTracker
 
 					for (k = 0; k < obj.Numberofresults; k++)
 					{
-						if (ssize[0 + (k * 5)].Contains("X"))
+						if (ssize[0 + (k * ObjectRetrieval)].Contains("X"))
 						{
 							imageBusOp = "http://www.buseireann.ie/img/pictures/1405694022_content_main.jpg";
 						}
-						else if (ssize[4 + (k * 5)].Contains("BE"))
+						else if (ssize[4 + (k * ObjectRetrieval)].Contains("BE"))
 						{
 							imageBusOp = "https://c2.staticflickr.com/8/7354/13473687104_6f57f4749f_b.jpg";
 						}
-						else if (ssize[4 + (k * 5)].Contains("bac"))
+						else if (ssize[4 + (k * ObjectRetrieval)].Contains("bac"))
 						{
 							imageBusOp = "http://www.echo.ie/images/Dublin_Bus_27_stock.jpg";
 						}
@@ -75,17 +64,17 @@ namespace IrishBusStopTracker
 							imageBusOp = "https://st2.depositphotos.com/3068703/6369/v/950/depositphotos_63698389-stock-ilglustration-no-bus-sign-icon-great.jpg";
 						}
 
-						if (ssize[2 + (k * 5)].Contains("Due"))
+						if (ssize[2 + (k * ObjectRetrieval)].Contains("Due"))
 						{
-							listOfStop.Add(new Stop { StopID = obj.Stopid, Route = ssize[0 + (k * 5)], ArrivalTime = ssize[1 + (k * 5)], Duetime = ssize[2 + (k * 5)], Destination = ssize[3 + (k * 5)], ImageOperator = imageBusOp });
+							listOfStop.Add(new Stop { StopID = obj.Stopid, Route = ssize[0 + (k * ObjectRetrieval)], ArrivalTime = ssize[1 + (k * ObjectRetrieval)], Duetime = ssize[2 + (k * ObjectRetrieval)], Destination = ssize[3 + (k * ObjectRetrieval)], ImageOperator = imageBusOp });
 						}
 						else if (Int32.Parse(ssize[2 + (k * 5)]) == 1)
 						{
-							listOfStop.Add(new Stop { StopID = obj.Stopid, Route = ssize[0 + (k * 5)], ArrivalTime = ssize[1 + (k * 5)], Duetime = ssize[2 + (k * 5)] + " Minute", Destination = ssize[3 + (k * 5)], ImageOperator = imageBusOp });
+							listOfStop.Add(new Stop { StopID = obj.Stopid, Route = ssize[0 + (k * ObjectRetrieval)], ArrivalTime = ssize[1 + (k * ObjectRetrieval)], Duetime = ssize[2 + (k * ObjectRetrieval)] + " Minute", Destination = ssize[3 + (k * ObjectRetrieval)], ImageOperator = imageBusOp });
 						}
 						else
 						{
-							listOfStop.Add(new Stop { StopID = obj.Stopid, Route = ssize[0 + (k * 5)], ArrivalTime = ssize[1 + (k * 5)], Duetime = ssize[2 + (k * 5)] + " Minutes", Destination = ssize[3 + (k * 5)], ImageOperator = imageBusOp });
+							listOfStop.Add(new Stop { StopID = obj.Stopid, Route = ssize[0 + (k * ObjectRetrieval)], ArrivalTime = ssize[1 + (k * ObjectRetrieval)], Duetime = ssize[2 + (k * ObjectRetrieval)] + " Minutes", Destination = ssize[3 + (k * ObjectRetrieval)], ImageOperator = imageBusOp });
 						}
 					}
 
