@@ -67,6 +67,12 @@
       <RootProperty Name="Resources" />
     </RootType>
     <RootType FullName="Microsoft.Xaml.DirectUI.ProxyTypes.ThemeResourceExtension" />
+    <RootType FullName="Windows.UI.Xaml.Controls.Button">
+      <RootProperty Name="Content" />
+      <RootProperty Name="HorizontalAlignment" />
+      <RootProperty Name="VerticalAlignment" />
+      <RootEvent Name="Click" />
+    </RootType>
     <RootType FullName="IrishBusStopTracker.BlankPage1" />
     <RootType FullName="Windows.UI.Xaml.Data.CollectionViewSource">
       <RootProperty Name="IsSourceGrouped" />
@@ -82,9 +88,9 @@
       <RootProperty Name="ItemsSource" />
       <RootProperty Name="ItemTemplate" />
       <RootProperty Name="GroupStyleSelector" />
-      <RootProperty Name="Margin" />
       <RootProperty Name="Width" />
+      <RootProperty Name="Height" />
     </RootType>
-    <RootType FullName="IrishBusStopTracker.MainPage" />
+    <RootType FullName="IrishBusStopTracker.ListBus" />
   </Roots.RootTypes>
 </Roots>

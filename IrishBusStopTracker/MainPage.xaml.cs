@@ -1,19 +1,21 @@
 ﻿using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Net.Http;
 using System.Net.Http.Headers;
+using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 
 
 namespace IrishBusStopTracker
 {
-	public sealed partial class MainPage : Page
+	public sealed partial class ListBus : Page
 	{
-		private List<Stop> listOfStop = new List<Stop>();
+		private List<BusStop> listOfStop = new List<BusStop>();
 
-		public MainPage()
+		public ListBus()
 		{
 			this.InitializeComponent();
 
@@ -71,15 +73,15 @@ namespace IrishBusStopTracker
 
 						if (ssize[2 + (k * ObjectRetrieval)].Contains("Due"))
 						{
-							listOfStop.Add(new Stop { StopID = obj.Stopid, Route = ssize[0 + (k * ObjectRetrieval)], ArrivalTime = ssize[1 + (k * ObjectRetrieval)], Duetime = ssize[2 + (k * ObjectRetrieval)], Destination = ssize[3 + (k * ObjectRetrieval)], ImageOperator = imageBusOp });
+							listOfStop.Add(new BusStop { StopID = obj.Stopid, Route = ssize[0 + (k * ObjectRetrieval)], ArrivalTime = ssize[1 + (k * ObjectRetrieval)], Duetime = ssize[2 + (k * ObjectRetrieval)], Destination = ssize[3 + (k * ObjectRetrieval)], ImageOperator = imageBusOp });
 						}
 						else if (Int32.Parse(ssize[2 + (k * ObjectRetrieval)]) == 1)
 						{
-							listOfStop.Add(new Stop { StopID = obj.Stopid, Route = ssize[0 + (k * ObjectRetrieval)], ArrivalTime = ssize[1 + (k * ObjectRetrieval)], Duetime = ssize[2 + (k * ObjectRetrieval)] + " Minute", Destination = ssize[3 + (k * ObjectRetrieval)], ImageOperator = imageBusOp });
+							listOfStop.Add(new BusStop { StopID = obj.Stopid, Route = ssize[0 + (k * ObjectRetrieval)], ArrivalTime = ssize[1 + (k * ObjectRetrieval)], Duetime = ssize[2 + (k * ObjectRetrieval)] + " Minute", Destination = ssize[3 + (k * ObjectRetrieval)], ImageOperator = imageBusOp });
 						}
 						else
 						{
-							listOfStop.Add(new Stop { StopID = obj.Stopid, Route = ssize[0 + (k * ObjectRetrieval)], ArrivalTime = ssize[1 + (k * ObjectRetrieval)], Duetime = ssize[2 + (k * ObjectRetrieval)] + " Minutes", Destination = ssize[3 + (k * ObjectRetrieval)], ImageOperator = imageBusOp });
+							listOfStop.Add(new BusStop { StopID = obj.Stopid, Route = ssize[0 + (k * ObjectRetrieval)], ArrivalTime = ssize[1 + (k * ObjectRetrieval)], Duetime = ssize[2 + (k * ObjectRetrieval)] + " Minutes", Destination = ssize[3 + (k * ObjectRetrieval)], ImageOperator = imageBusOp });
 						}
 					}
 
@@ -91,7 +93,7 @@ namespace IrishBusStopTracker
 					if (BusStatus == 1)
 					{
 						imageBusOp = "https://st2.depositphotos.com/3068703/6369/v/950/depositphotos_63698389-stock-ilglustration-no-bus-sign-icon-great.jpg";
-						listOfStop.Add(new Stop { Route = "No", Destination = "busses", Duetime = "operating", ImageOperator = imageBusOp });
+						listOfStop.Add(new BusStop { Route = "No", Destination = "busses", Duetime = "operating", ImageOperator = imageBusOp });
 					}
 				}
 
@@ -99,6 +101,15 @@ namespace IrishBusStopTracker
 				cvsActivities.Source = resultCVS;
 			}
 		}
+
+		private void Button_Click(object sender, RoutedEventArgs e)
+		{
+
+			Debug.WriteLine("Test!");
+
+			this.Frame.Navigate(typeof(BlankPage1));
+		}
+
 	}
 	
 
@@ -110,8 +121,10 @@ namespace IrishBusStopTracker
 		}
 	}
 
+	
 
-	public class Stop
+
+	public class BusStop
 	{
 		public string StopID { get; set; }
 		public string Route { get; set; }

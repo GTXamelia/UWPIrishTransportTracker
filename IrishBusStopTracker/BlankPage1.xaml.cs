@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
@@ -26,5 +27,14 @@ namespace IrishBusStopTracker
         {
             this.InitializeComponent();
         }
-    }
+
+		private void Button_Click(object sender, RoutedEventArgs e)
+		{
+
+			Debug.WriteLine("Test!");
+
+			this.Frame.Navigate(typeof(ListBus));
+		}
+
+	}
 }
