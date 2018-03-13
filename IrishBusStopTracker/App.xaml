@@ -25,13 +25,14 @@
                 <GridView>
 
                     <Grid>
+                        
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="50"/>
                             <ColumnDefinition Width="50"/>
                             <ColumnDefinition Width="100"/>
                             <ColumnDefinition Width="100"/>
                         </Grid.ColumnDefinitions>
-                        
+
                         <Ellipse Grid.Column="0" Height="50">
                             <Ellipse.Fill>
                                 <ImageBrush  ImageSource="{Binding ImageOperator}" />
@@ -46,8 +47,7 @@
 
             </StackPanel>
         </DataTemplate>
-        
-    </Application.Resources>
 
+    </Application.Resources>
 
 </Application>
