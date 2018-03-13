@@ -12,22 +12,16 @@
         <local:ListGroupStyleSelector x:Key="listGroupStyleSelector"/>
     </Page.Resources>
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-
-        <StackPanel>
-            <Button x:ConnectionId='2' Content="Page1"                      HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
-            <ScrollViewer VerticalScrollBarVisibility="Auto" VerticalScrollMode="Enabled" Height="1000">
-
-                <ListView ItemsSource="{Binding Source={StaticResource cvsActivities}}"
-                ItemTemplate="{StaticResource listViewItemTemplate}"
-                GroupStyleSelector="{StaticResource listGroupStyleSelector}" Width="350" Height="866" />
-
-            </ScrollViewer>
-            
-
-        </StackPanel>
+    <StackPanel HorizontalAlignment="center">
         
-    </Grid>
-    
+        <Image Source="http://www.buseireann.ie/img/logo-transport-for-ireland-large.png" Margin="115,0,0,0" Width="250" Height="50"/>
+
+        <Button x:ConnectionId='2' Content="Transport"                       Margin="5" Width="300"  Foreground="Green"/>
+
+        <Button x:ConnectionId='3' Content="Trains"                       Margin="5" Width="300"  Foreground="Green"/>
+
+    </StackPanel>
+
+
 </Page>
 

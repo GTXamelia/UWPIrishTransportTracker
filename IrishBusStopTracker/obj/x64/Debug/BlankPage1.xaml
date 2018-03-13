@@ -1,5 +1,5 @@
 ﻿<Page
-    x:Class="IrishBusStopTracker.BlankPage1"
+    x:Class="IrishBusStopTracker.ListTransport"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:IrishBusStopTracker"
@@ -7,8 +7,27 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
+    <Page.Resources>
+        <CollectionViewSource x:ConnectionId='1' x:Name="cvsActivities" IsSourceGrouped="True"/>
+        <local:ListGroupStyleSelector x:Key="listGroupStyleSelector"/>
+    </Page.Resources>
+
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <Button x:ConnectionId='1' Content="Page1"                      HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+
+        <StackPanel>
+            <Button x:ConnectionId='2' Content="Page1"                      HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+            <ScrollViewer VerticalScrollBarVisibility="Auto" VerticalScrollMode="Enabled" Height="1000">
+
+                <ListView ItemsSource="{Binding Source={StaticResource cvsActivities}}"
+                ItemTemplate="{StaticResource listViewItemTemplate}"
+                GroupStyleSelector="{StaticResource listGroupStyleSelector}" Width="350" Height="866" />
+
+            </ScrollViewer>
+
+
+        </StackPanel>
+
     </Grid>
+
 </Page>
 
