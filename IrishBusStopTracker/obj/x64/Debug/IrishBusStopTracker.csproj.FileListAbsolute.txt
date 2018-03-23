@@ -1,5 +1,4 @@
 C:\Users\Cian Gannon\source\repos\IrishBusStopTracker\IrishBusStopTracker\bin\x64\Debug\App.xbf
-C:\Users\Cian Gannon\source\repos\IrishBusStopTracker\IrishBusStopTracker\bin\x64\Debug\BlankPage1.xbf
 C:\Users\Cian Gannon\source\repos\IrishBusStopTracker\IrishBusStopTracker\bin\x64\Debug\MainPage.xbf
 C:\Users\Cian Gannon\source\repos\IrishBusStopTracker\IrishBusStopTracker\bin\x64\Debug\IrishBusStopTracker.xr.xml
 C:\Users\Cian Gannon\source\repos\IrishBusStopTracker\IrishBusStopTracker\bin\x64\Debug\IrishBusStopTracker.exe
@@ -131,16 +130,12 @@ C:\Users\Cian Gannon\source\repos\IrishBusStopTracker\IrishBusStopTracker\bin\x6
 C:\Users\Cian Gannon\source\repos\IrishBusStopTracker\IrishBusStopTracker\bin\x64\Debug\System.Xml.XmlSerializer.dll
 C:\Users\Cian Gannon\source\repos\IrishBusStopTracker\IrishBusStopTracker\obj\x64\Debug\App.g.i.cs
 C:\Users\Cian Gannon\source\repos\IrishBusStopTracker\IrishBusStopTracker\obj\x64\Debug\App.g.cs
-C:\Users\Cian Gannon\source\repos\IrishBusStopTracker\IrishBusStopTracker\obj\x64\Debug\BlankPage1.g.i.cs
-C:\Users\Cian Gannon\source\repos\IrishBusStopTracker\IrishBusStopTracker\obj\x64\Debug\BlankPage1.g.cs
 C:\Users\Cian Gannon\source\repos\IrishBusStopTracker\IrishBusStopTracker\obj\x64\Debug\MainPage.g.i.cs
 C:\Users\Cian Gannon\source\repos\IrishBusStopTracker\IrishBusStopTracker\obj\x64\Debug\MainPage.g.cs
 C:\Users\Cian Gannon\source\repos\IrishBusStopTracker\IrishBusStopTracker\obj\x64\Debug\XamlTypeInfo.g.cs
 C:\Users\Cian Gannon\source\repos\IrishBusStopTracker\IrishBusStopTracker\obj\x64\Debug\App.xaml
-C:\Users\Cian Gannon\source\repos\IrishBusStopTracker\IrishBusStopTracker\obj\x64\Debug\BlankPage1.xaml
 C:\Users\Cian Gannon\source\repos\IrishBusStopTracker\IrishBusStopTracker\obj\x64\Debug\MainPage.xaml
 C:\Users\Cian Gannon\source\repos\IrishBusStopTracker\IrishBusStopTracker\obj\x64\Debug\App.xbf
-C:\Users\Cian Gannon\source\repos\IrishBusStopTracker\IrishBusStopTracker\obj\x64\Debug\BlankPage1.xbf
 C:\Users\Cian Gannon\source\repos\IrishBusStopTracker\IrishBusStopTracker\obj\x64\Debug\MainPage.xbf
 C:\Users\Cian Gannon\source\repos\IrishBusStopTracker\IrishBusStopTracker\obj\x64\Debug\XamlSaveStateFile.xml
 C:\Users\Cian Gannon\source\repos\IrishBusStopTracker\IrishBusStopTracker\obj\x64\Debug\IrishBusStopTracker.csproj.CoreCompileInputs.cache
@@ -227,3 +222,8 @@ C:\Users\Cian Gannon\source\repos\IrishBusStopTracker\IrishBusStopTracker\obj\x6
 C:\Users\Cian Gannon\source\repos\IrishBusStopTracker\IrishBusStopTracker\obj\x64\Debug\MultipleQualifiersPerDimensionFound.txt
 C:\Users\Cian Gannon\source\repos\IrishBusStopTracker\IrishBusStopTracker\obj\x64\Debug\ProjectArchitectures.txt
 C:\Users\Cian Gannon\source\repos\IrishBusStopTracker\IrishBusStopTracker\obj\x64\Debug\IrishBusStopTracker.csprojResolveAssemblyReference.cache
+C:\Users\Cian Gannon\source\repos\IrishBusStopTracker\IrishBusStopTracker\bin\x64\Debug\BusMenu.xbf
+C:\Users\Cian Gannon\source\repos\IrishBusStopTracker\IrishBusStopTracker\obj\x64\Debug\BusMenu.g.i.cs
+C:\Users\Cian Gannon\source\repos\IrishBusStopTracker\IrishBusStopTracker\obj\x64\Debug\BusMenu.g.cs
+C:\Users\Cian Gannon\source\repos\IrishBusStopTracker\IrishBusStopTracker\obj\x64\Debug\BusMenu.xaml
+C:\Users\Cian Gannon\source\repos\IrishBusStopTracker\IrishBusStopTracker\obj\x64\Debug\BusMenu.xbf

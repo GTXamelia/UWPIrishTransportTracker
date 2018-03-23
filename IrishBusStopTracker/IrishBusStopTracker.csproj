@@ -95,8 +95,8 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
-    <Compile Include="BlankPage1.xaml.cs">
-      <DependentUpon>BlankPage1.xaml</DependentUpon>
+    <Compile Include="BusMenu.xaml.cs">
+      <DependentUpon>BusMenu.xaml</DependentUpon>
     </Compile>
     <Compile Include="BusStatusObject.cs" />
     <Compile Include="MainPage.xaml.cs">
@@ -125,7 +125,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Page Include="BlankPage1.xaml">
+    <Page Include="BusMenu.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
