@@ -16,7 +16,7 @@
 
         <StackPanel>
             <Button Content="Page1" Click="Button_Click" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
-            <ScrollViewer VerticalScrollBarVisibility="Auto" VerticalScrollMode="Enabled" Height="1000">
+            <ScrollViewer VerticalScrollMode="Auto" HorizontalScrollMode="Disabled">
 
                 <ListView ItemsSource="{Binding Source={StaticResource cvsActivities}}"
                 ItemTemplate="{StaticResource listViewItemTemplate}"

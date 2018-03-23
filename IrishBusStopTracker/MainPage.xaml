@@ -18,7 +18,7 @@
 
         <Button Content="Transport" Click="Button_Click"  Margin="5" Width="300"  Foreground="Green"/>
 
-        <Button Content="Trains" Click="Button_Click"  Margin="5" Width="300"  Foreground="Green"/>
+        <Button Content="Trains" Click="Button_Click1"  Margin="5" Width="300"  Foreground="Green"/>
 
     </StackPanel>
 

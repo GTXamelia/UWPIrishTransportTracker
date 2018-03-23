@@ -27,5 +27,10 @@ namespace IrishBusStopTracker
 			this.Frame.Navigate(typeof(ListTransport));
 		}
 
+		private void Button_Click1(object sender, RoutedEventArgs e)
+		{
+			Debug.WriteLine("Test Output");
+		}
+
 	}
 }
