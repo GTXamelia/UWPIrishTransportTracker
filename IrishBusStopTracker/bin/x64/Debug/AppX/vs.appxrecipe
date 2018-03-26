@@ -19,7 +19,7 @@
     <DeployOptionalPackages>false</DeployOptionalPackages>
     <WindowsSdkPath>C:\Program Files %28x86%29\Windows Kits\10\</WindowsSdkPath>
     <LayoutDir>C:\Users\Cian Gannon\source\repos\IrishBusStopTracker\IrishBusStopTracker\bin\x64\Debug\AppX</LayoutDir>
-    <RegisteredManifestChecksum>DC43463F91093A57146D2ECBAEA8E4962BF206B701870F70FD475736B0DCC653</RegisteredManifestChecksum>
+    <RegisteredManifestChecksum>9B154AC77931FA0226BAAAB5FC9F52A1CEFA2868D14AEC70AD5C0DE454A48202</RegisteredManifestChecksum>
     <RegisteredPackageMoniker>d6259cd8-b429-4488-a6c7-0c39ad11362c_1.0.0.0_x64__c7134k7xr19tw</RegisteredPackageMoniker>
     <RegisteredUserModeAppID>d6259cd8-b429-4488-a6c7-0c39ad11362c_c7134k7xr19tw!App</RegisteredUserModeAppID>
     <RegisteredPackageID>d6259cd8-b429-4488-a6c7-0c39ad11362c</RegisteredPackageID>
@@ -31,13 +31,13 @@
     <AppXManifest Include="C:\Users\Cian Gannon\source\repos\IrishBusStopTracker\IrishBusStopTracker\bin\x64\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-03-23T18:03:10.942</Modified>
+      <Modified>2018-03-26T17:14:45.567</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\Cian Gannon\source\repos\IrishBusStopTracker\IrishBusStopTracker\bin\x64\Debug\IrishBusStopTracker.exe">
       <PackagePath>entrypoint\IrishBusStopTracker.exe</PackagePath>
-      <Modified>2018-03-23T18:03:09.507</Modified>
+      <Modified>2018-03-26T17:14:44.697</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Cian Gannon\.nuget\packages\microsoft.csharp\4.3.0\lib\netcore50\Microsoft.CSharp.dll">
       <PackagePath>Microsoft.CSharp.dll</PackagePath>
@@ -519,43 +519,242 @@
       <PackagePath>System.Xml.XmlSerializer.dll</PackagePath>
       <Modified>2016-06-11T22:15:04.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Cian Gannon\source\repos\IrishBusStopTracker\IrishBusStopTracker\Properties\Default.rd.xml">
-      <PackagePath>Properties\Default.rd.xml</PackagePath>
-      <Modified>2018-02-22T20:23:38.866</Modified>
+    <AppxPackagedFile Include="C:\Users\Cian Gannon\source\repos\IrishBusStopTracker\IrishBusStopTracker\Assets\Large310x310Logo.scale-100.png">
+      <PackagePath>Assets\Large310x310Logo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2018-03-26T17:10:12.378</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Cian Gannon\source\repos\IrishBusStopTracker\IrishBusStopTracker\Assets\LockScreenLogo.scale-200.png">
-      <PackagePath>Assets\LockScreenLogo.scale-200.png</PackagePath>
-      <Modified>2018-02-19T21:47:45.496</Modified>
+    <AppxPackagedFile Include="C:\Users\Cian Gannon\source\repos\IrishBusStopTracker\IrishBusStopTracker\Assets\Large310x310Logo.scale-125.png">
+      <PackagePath>Assets\Large310x310Logo.scale-125.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2018-03-26T17:10:12.431</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Cian Gannon\source\repos\IrishBusStopTracker\IrishBusStopTracker\Assets\Large310x310Logo.scale-150.png">
+      <PackagePath>Assets\Large310x310Logo.scale-150.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2018-03-26T17:10:12.499</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Cian Gannon\source\repos\IrishBusStopTracker\IrishBusStopTracker\Assets\Large310x310Logo.scale-200.png">
+      <PackagePath>Assets\Large310x310Logo.scale-200.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2018-03-26T17:10:12.607</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Cian Gannon\source\repos\IrishBusStopTracker\IrishBusStopTracker\Assets\Large310x310Logo.scale-400.png">
+      <PackagePath>Assets\Large310x310Logo.scale-400.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2018-03-26T17:10:12.950</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Cian Gannon\source\repos\IrishBusStopTracker\IrishBusStopTracker\Assets\Medium150x150Logo.scale-100.png">
+      <PackagePath>Assets\Medium150x150Logo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2018-03-26T17:09:49.257</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Cian Gannon\source\repos\IrishBusStopTracker\IrishBusStopTracker\Assets\Medium150x150Logo.scale-125.png">
+      <PackagePath>Assets\Medium150x150Logo.scale-125.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2018-03-26T17:09:49.284</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Cian Gannon\source\repos\IrishBusStopTracker\IrishBusStopTracker\Assets\Medium150x150Logo.scale-150.png">
+      <PackagePath>Assets\Medium150x150Logo.scale-150.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2018-03-26T17:09:49.311</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Cian Gannon\source\repos\IrishBusStopTracker\IrishBusStopTracker\Assets\Medium150x150Logo.scale-200.png">
+      <PackagePath>Assets\Medium150x150Logo.scale-200.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2018-03-26T17:09:49.349</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Cian Gannon\source\repos\IrishBusStopTracker\IrishBusStopTracker\Assets\Medium150x150Logo.scale-400.png">
+      <PackagePath>Assets\Medium150x150Logo.scale-400.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2018-03-26T17:09:49.454</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Cian Gannon\source\repos\IrishBusStopTracker\IrishBusStopTracker\Assets\Small71x71Logo.scale-100.png">
+      <PackagePath>Assets\Small71x71Logo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2018-03-26T17:09:35.805</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Cian Gannon\source\repos\IrishBusStopTracker\IrishBusStopTracker\Assets\Small71x71Logo.scale-125.png">
+      <PackagePath>Assets\Small71x71Logo.scale-125.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2018-03-26T17:09:35.821</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Cian Gannon\source\repos\IrishBusStopTracker\IrishBusStopTracker\Assets\Small71x71Logo.scale-150.png">
+      <PackagePath>Assets\Small71x71Logo.scale-150.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2018-03-26T17:09:35.839</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Cian Gannon\source\repos\IrishBusStopTracker\IrishBusStopTracker\Assets\Small71x71Logo.scale-200.png">
+      <PackagePath>Assets\Small71x71Logo.scale-200.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2018-03-26T17:09:35.858</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Cian Gannon\source\repos\IrishBusStopTracker\IrishBusStopTracker\Assets\Small71x71Logo.scale-400.png">
+      <PackagePath>Assets\Small71x71Logo.scale-400.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2018-03-26T17:09:35.892</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Cian Gannon\source\repos\IrishBusStopTracker\IrishBusStopTracker\Assets\SplashScreen.scale-100.png">
+      <PackagePath>Assets\SplashScreen.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2018-03-26T16:54:24.182</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Cian Gannon\source\repos\IrishBusStopTracker\IrishBusStopTracker\Assets\SplashScreen.scale-125.png">
+      <PackagePath>Assets\SplashScreen.scale-125.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2018-03-26T16:54:24.153</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Cian Gannon\source\repos\IrishBusStopTracker\IrishBusStopTracker\Assets\SplashScreen.scale-150.png">
+      <PackagePath>Assets\SplashScreen.scale-150.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2018-03-26T16:54:24.121</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Cian Gannon\source\repos\IrishBusStopTracker\IrishBusStopTracker\Assets\SplashScreen.scale-200.png">
       <PackagePath>Assets\SplashScreen.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-02-19T21:47:45.496</Modified>
+      <Modified>2018-03-26T16:54:24.082</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Cian Gannon\source\repos\IrishBusStopTracker\IrishBusStopTracker\Assets\Square150x150Logo.scale-200.png">
-      <PackagePath>Assets\Square150x150Logo.scale-200.png</PackagePath>
+    <AppxPackagedFile Include="C:\Users\Cian Gannon\source\repos\IrishBusStopTracker\IrishBusStopTracker\Assets\SplashScreen.scale-400.png">
+      <PackagePath>Assets\SplashScreen.scale-400.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-02-19T21:47:45.496</Modified>
+      <Modified>2018-03-26T16:54:24.028</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Cian Gannon\source\repos\IrishBusStopTracker\IrishBusStopTracker\Assets\Square310x310Logo.scale-200.png">
+      <PackagePath>Assets\Square310x310Logo.scale-200.png</PackagePath>
+      <Modified>2018-03-26T16:54:23.695</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Cian Gannon\source\repos\IrishBusStopTracker\IrishBusStopTracker\Assets\Square310x310Logo.scale-400.png">
+      <PackagePath>Assets\Square310x310Logo.scale-400.png</PackagePath>
+      <Modified>2018-03-26T16:54:23.796</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Cian Gannon\source\repos\IrishBusStopTracker\IrishBusStopTracker\Assets\Square44x44Logo.altform-unplated_targetsize-16.png">
+      <PackagePath>Assets\Square44x44Logo.altform-unplated_targetsize-16.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2018-03-26T17:09:07.219</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Cian Gannon\source\repos\IrishBusStopTracker\IrishBusStopTracker\Assets\Square44x44Logo.altform-unplated_targetsize-256.png">
+      <PackagePath>Assets\Square44x44Logo.altform-unplated_targetsize-256.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2018-03-26T17:09:07.344</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Cian Gannon\source\repos\IrishBusStopTracker\IrishBusStopTracker\Assets\Square44x44Logo.altform-unplated_targetsize-32.png">
+      <PackagePath>Assets\Square44x44Logo.altform-unplated_targetsize-32.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2018-03-26T17:09:07.274</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Cian Gannon\source\repos\IrishBusStopTracker\IrishBusStopTracker\Assets\Square44x44Logo.altform-unplated_targetsize-48.png">
+      <PackagePath>Assets\Square44x44Logo.altform-unplated_targetsize-48.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2018-03-26T17:09:07.300</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Cian Gannon\source\repos\IrishBusStopTracker\IrishBusStopTracker\Assets\Square44x44Logo.scale-100.png">
+      <PackagePath>Assets\Square44x44Logo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2018-03-26T17:09:06.889</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Cian Gannon\source\repos\IrishBusStopTracker\IrishBusStopTracker\Assets\Square44x44Logo.scale-125.png">
+      <PackagePath>Assets\Square44x44Logo.scale-125.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2018-03-26T17:09:06.925</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Cian Gannon\source\repos\IrishBusStopTracker\IrishBusStopTracker\Assets\Square44x44Logo.scale-150.png">
+      <PackagePath>Assets\Square44x44Logo.scale-150.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2018-03-26T17:09:06.955</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Cian Gannon\source\repos\IrishBusStopTracker\IrishBusStopTracker\Assets\Square44x44Logo.scale-200.png">
       <PackagePath>Assets\Square44x44Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-02-19T21:47:45.496</Modified>
+      <Modified>2018-03-26T17:09:06.985</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Cian Gannon\source\repos\IrishBusStopTracker\IrishBusStopTracker\Assets\Square44x44Logo.scale-400.png">
+      <PackagePath>Assets\Square44x44Logo.scale-400.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2018-03-26T17:09:07.028</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Cian Gannon\source\repos\IrishBusStopTracker\IrishBusStopTracker\Assets\Square44x44Logo.targetsize-16.png">
+      <PackagePath>Assets\Square44x44Logo.targetsize-16.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2018-03-26T17:09:07.058</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Cian Gannon\source\repos\IrishBusStopTracker\IrishBusStopTracker\Assets\Square44x44Logo.targetsize-24.png">
+      <PackagePath>Assets\Square44x44Logo.targetsize-24.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2018-03-26T17:09:07.088</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Cian Gannon\source\repos\IrishBusStopTracker\IrishBusStopTracker\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-24_altform-unplated.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-02-19T21:47:45.496</Modified>
+      <Modified>2018-03-26T17:09:07.247</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Cian Gannon\source\repos\IrishBusStopTracker\IrishBusStopTracker\Assets\StoreLogo.png">
-      <PackagePath>Assets\StoreLogo.png</PackagePath>
+    <AppxPackagedFile Include="C:\Users\Cian Gannon\source\repos\IrishBusStopTracker\IrishBusStopTracker\Assets\Square44x44Logo.targetsize-256.png">
+      <PackagePath>Assets\Square44x44Logo.targetsize-256.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-02-19T21:47:45.496</Modified>
+      <Modified>2018-03-26T17:09:07.190</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Cian Gannon\source\repos\IrishBusStopTracker\IrishBusStopTracker\Assets\Square44x44Logo.targetsize-32.png">
+      <PackagePath>Assets\Square44x44Logo.targetsize-32.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2018-03-26T17:09:07.118</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Cian Gannon\source\repos\IrishBusStopTracker\IrishBusStopTracker\Assets\Square44x44Logo.targetsize-48.png">
+      <PackagePath>Assets\Square44x44Logo.targetsize-48.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2018-03-26T17:09:07.145</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Cian Gannon\source\repos\IrishBusStopTracker\IrishBusStopTracker\Assets\StoreLogo.scale-100.png">
+      <PackagePath>Assets\StoreLogo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2018-03-26T17:11:22.182</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Cian Gannon\source\repos\IrishBusStopTracker\IrishBusStopTracker\Assets\StoreLogo.scale-125.png">
+      <PackagePath>Assets\StoreLogo.scale-125.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2018-03-26T17:11:22.213</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Cian Gannon\source\repos\IrishBusStopTracker\IrishBusStopTracker\Assets\StoreLogo.scale-150.png">
+      <PackagePath>Assets\StoreLogo.scale-150.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2018-03-26T17:11:22.250</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Cian Gannon\source\repos\IrishBusStopTracker\IrishBusStopTracker\Assets\StoreLogo.scale-200.png">
+      <PackagePath>Assets\StoreLogo.scale-200.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2018-03-26T17:11:22.284</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Cian Gannon\source\repos\IrishBusStopTracker\IrishBusStopTracker\Assets\StoreLogo.scale-400.png">
+      <PackagePath>Assets\StoreLogo.scale-400.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2018-03-26T17:11:22.328</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Cian Gannon\source\repos\IrishBusStopTracker\IrishBusStopTracker\Assets\Wide310x150Logo.scale-100.png">
+      <PackagePath>Assets\Wide310x150Logo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2018-03-26T16:54:23.883</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Cian Gannon\source\repos\IrishBusStopTracker\IrishBusStopTracker\Assets\Wide310x150Logo.scale-125.png">
+      <PackagePath>Assets\Wide310x150Logo.scale-125.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2018-03-26T16:54:23.864</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Cian Gannon\source\repos\IrishBusStopTracker\IrishBusStopTracker\Assets\Wide310x150Logo.scale-150.png">
+      <PackagePath>Assets\Wide310x150Logo.scale-150.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2018-03-26T16:54:23.843</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Cian Gannon\source\repos\IrishBusStopTracker\IrishBusStopTracker\Assets\Wide310x150Logo.scale-200.png">
       <PackagePath>Assets\Wide310x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-02-19T21:47:45.496</Modified>
+      <Modified>2018-03-26T16:54:23.821</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Cian Gannon\source\repos\IrishBusStopTracker\IrishBusStopTracker\Assets\Wide310x150Logo.scale-400.png">
+      <PackagePath>Assets\Wide310x150Logo.scale-400.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2018-03-26T16:54:23.796</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Cian Gannon\source\repos\IrishBusStopTracker\IrishBusStopTracker\Properties\Default.rd.xml">
+      <PackagePath>Properties\Default.rd.xml</PackagePath>
+      <Modified>2018-02-22T20:23:38.866</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Cian Gannon\source\repos\IrishBusStopTracker\IrishBusStopTracker\bin\x64\Debug\IrishBusStopTracker.xr.xml">
       <PackagePath>IrishBusStopTracker.xr.xml</PackagePath>
@@ -568,11 +767,11 @@
     <AppxPackagedFile Include="C:\Users\Cian Gannon\source\repos\IrishBusStopTracker\IrishBusStopTracker\bin\x64\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-03-23T18:03:10.523</Modified>
+      <Modified>2018-03-26T17:14:45.300</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Cian Gannon\source\repos\IrishBusStopTracker\IrishBusStopTracker\bin\x64\Debug\Core\IrishBusStopTracker.exe">
       <PackagePath>IrishBusStopTracker.exe</PackagePath>
-      <Modified>2018-03-23T18:03:10.928</Modified>
+      <Modified>2018-03-26T17:14:45.560</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

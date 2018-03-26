@@ -19,4 +19,15 @@
     <AuthenticationMode>Universal</AuthenticationMode>
     <RemoteDebugEnabled>false</RemoteDebugEnabled>
   </PropertyGroup>
+  <PropertyGroup>
+    <SmallTileSource>C:\Users\Cian Gannon\Pictures\UWP\Square44x44Logo.scale-400.png</SmallTileSource>
+    <MediumTileSource>C:\Users\Cian Gannon\Pictures\UWP\Square44x44Logo.scale-400.png</MediumTileSource>
+    <WideTileSource>C:\Users\Cian Gannon\Pictures\UWP\Wide310x150Logo.scale-400.png</WideTileSource>
+    <LargeTileSource>C:\Users\Cian Gannon\Pictures\UWP\StoreLogo.scale-400.png</LargeTileSource>
+    <AppIconSource>C:\Users\Cian Gannon\Pictures\UWP\Square310x310Logo.scale-400.png</AppIconSource>
+    <SplashScreenSource>C:\Users\Cian Gannon\Pictures\UWP\SplashScreen.scale-400.png</SplashScreenSource>
+    <Source>C:\Users\Cian Gannon\source\repos\IrishBusStopTracker\IrishBusStopTracker\Assets\Store\StoreLogo.scale-400.png</Source>
+    <PackageLogoSource>C:\Users\Cian Gannon\Pictures\UWP\Square310x310Logo.scale-400.png</PackageLogoSource>
+    <ProjectView>ProjectFiles</ProjectView>
+  </PropertyGroup>
 </Project>
