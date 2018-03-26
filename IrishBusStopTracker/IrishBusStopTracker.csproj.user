@@ -28,6 +28,6 @@
     <SplashScreenSource>C:\Users\Cian Gannon\Pictures\UWP\SplashScreen.scale-400.png</SplashScreenSource>
     <Source>C:\Users\Cian Gannon\source\repos\IrishBusStopTracker\IrishBusStopTracker\Assets\Store\StoreLogo.scale-400.png</Source>
     <PackageLogoSource>C:\Users\Cian Gannon\Pictures\UWP\Square310x310Logo.scale-400.png</PackageLogoSource>
-    <ProjectView>ProjectFiles</ProjectView>
+    <ProjectView>ShowAllFiles</ProjectView>
   </PropertyGroup>
 </Project>

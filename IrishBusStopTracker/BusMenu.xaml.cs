@@ -86,17 +86,24 @@ namespace IrishBusStopTracker
 						}
 					}
 
+					if(obj.Numberofresults == 0)
+					{
+						BusStatus++;
+					}
+
 				}
 				catch (Exception e)
 				{
 					BusStatus++;
-
-					if (BusStatus == 1)
-					{
-						imageBusOp = "https://scontent-dub4-1.xx.fbcdn.net/v/t1.0-9/29025830_1727100117346019_1771119452012675072_n.jpg?oh=fd2dad187d5fdfe393123ae90fde4f21&oe=5B30FAAD";
-						listOfStop.Add(new Transport { Route = "No", Destination = "busses", Duetime = "operating", ImageOperator = imageBusOp });
-					}
 				}
+
+				if (BusStopID.Length == BusStatus)
+				{
+					imageBusOp = "https://scontent-dub4-1.xx.fbcdn.net/v/t1.0-9/29025830_1727100117346019_1771119452012675072_n.jpg?oh=fd2dad187d5fdfe393123ae90fde4f21&oe=5B30FAAD";
+					listOfStop.Add(new Transport { Route = "No", Destination = "busses", Duetime = "operating", ImageOperator = imageBusOp });
+				}
+
+				Debug.WriteLine("Obj: " + BusStopID.Length + " Counter: " + BusStatus);
 
 				var resultCVS = from act in listOfStop group act by act.StopID into grp orderby grp.Key select grp;
 				cvsActivities.Source = resultCVS;

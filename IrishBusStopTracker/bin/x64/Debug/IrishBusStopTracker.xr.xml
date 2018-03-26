@@ -83,12 +83,11 @@
       <RootEvent Name="Click" />
     </RootType>
     <RootType FullName="IrishBusStopTracker.AddTransport" />
-    <RootType FullName="Microsoft.Xaml.DirectUI.ProxyTypes.ThemeResourceExtension" />
-    <RootType FullName="IrishBusStopTracker.Assets.AddTransport" />
     <RootType FullName="Windows.UI.Xaml.Data.CollectionViewSource">
       <RootProperty Name="IsSourceGrouped" />
     </RootType>
     <RootType FullName="IrishBusStopTracker.ListGroupStyleSelector" />
+    <RootType FullName="Microsoft.Xaml.DirectUI.ProxyTypes.ThemeResourceExtension" />
     <RootType FullName="Windows.UI.Xaml.Controls.ScrollViewer">
       <RootProperty Name="VerticalScrollMode" />
       <RootProperty Name="HorizontalScrollMode" />

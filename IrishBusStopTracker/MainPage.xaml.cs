@@ -17,8 +17,6 @@ namespace IrishBusStopTracker
 		public ListBus()
 		{
 			this.InitializeComponent();
-
-			
 		}
 
 		private void Add_Transport(object sender, RoutedEventArgs e)

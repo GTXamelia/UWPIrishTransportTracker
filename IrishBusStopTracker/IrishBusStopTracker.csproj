@@ -98,9 +98,6 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Assets\AddTransport.xaml.cs">
-      <DependentUpon>AddTransport.xaml</DependentUpon>
-    </Compile>
     <Compile Include="BusMenu.xaml.cs">
       <DependentUpon>BusMenu.xaml</DependentUpon>
     </Compile>
@@ -172,10 +169,6 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Page Include="AddTransport.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Assets\AddTransport.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
