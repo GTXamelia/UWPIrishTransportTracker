@@ -132,21 +132,23 @@ namespace IrishBusStopTracker.IrishBusStopTracker_XamlTypeInfo
 
         private void InitTypeTables()
         {
-            _typeNameTable = new string[6];
-            _typeNameTable[0] = "IrishBusStopTracker.ListGroupStyleSelector";
-            _typeNameTable[1] = "Windows.UI.Xaml.Controls.GroupStyleSelector";
-            _typeNameTable[2] = "IrishBusStopTracker.ListTransport";
-            _typeNameTable[3] = "Windows.UI.Xaml.Controls.Page";
-            _typeNameTable[4] = "Windows.UI.Xaml.Controls.UserControl";
-            _typeNameTable[5] = "IrishBusStopTracker.ListBus";
+            _typeNameTable = new string[7];
+            _typeNameTable[0] = "IrishBusStopTracker.Assets.AddTransport";
+            _typeNameTable[1] = "Windows.UI.Xaml.Controls.Page";
+            _typeNameTable[2] = "Windows.UI.Xaml.Controls.UserControl";
+            _typeNameTable[3] = "IrishBusStopTracker.ListGroupStyleSelector";
+            _typeNameTable[4] = "Windows.UI.Xaml.Controls.GroupStyleSelector";
+            _typeNameTable[5] = "IrishBusStopTracker.ListTransport";
+            _typeNameTable[6] = "IrishBusStopTracker.ListBus";
 
-            _typeTable = new global::System.Type[6];
-            _typeTable[0] = typeof(global::IrishBusStopTracker.ListGroupStyleSelector);
-            _typeTable[1] = typeof(global::Windows.UI.Xaml.Controls.GroupStyleSelector);
-            _typeTable[2] = typeof(global::IrishBusStopTracker.ListTransport);
-            _typeTable[3] = typeof(global::Windows.UI.Xaml.Controls.Page);
-            _typeTable[4] = typeof(global::Windows.UI.Xaml.Controls.UserControl);
-            _typeTable[5] = typeof(global::IrishBusStopTracker.ListBus);
+            _typeTable = new global::System.Type[7];
+            _typeTable[0] = typeof(global::IrishBusStopTracker.Assets.AddTransport);
+            _typeTable[1] = typeof(global::Windows.UI.Xaml.Controls.Page);
+            _typeTable[2] = typeof(global::Windows.UI.Xaml.Controls.UserControl);
+            _typeTable[3] = typeof(global::IrishBusStopTracker.ListGroupStyleSelector);
+            _typeTable[4] = typeof(global::Windows.UI.Xaml.Controls.GroupStyleSelector);
+            _typeTable[5] = typeof(global::IrishBusStopTracker.ListTransport);
+            _typeTable[6] = typeof(global::IrishBusStopTracker.ListBus);
         }
 
         private int LookupTypeIndexByName(string typeName)
@@ -181,9 +183,10 @@ namespace IrishBusStopTracker.IrishBusStopTracker_XamlTypeInfo
             return -1;
         }
 
-        private object Activate_0_ListGroupStyleSelector() { return new global::IrishBusStopTracker.ListGroupStyleSelector(); }
-        private object Activate_2_ListTransport() { return new global::IrishBusStopTracker.ListTransport(); }
-        private object Activate_5_ListBus() { return new global::IrishBusStopTracker.ListBus(); }
+        private object Activate_0_AddTransport() { return new global::IrishBusStopTracker.Assets.AddTransport(); }
+        private object Activate_3_ListGroupStyleSelector() { return new global::IrishBusStopTracker.ListGroupStyleSelector(); }
+        private object Activate_5_ListTransport() { return new global::IrishBusStopTracker.ListTransport(); }
+        private object Activate_6_ListBus() { return new global::IrishBusStopTracker.ListBus(); }
 
         private global::Windows.UI.Xaml.Markup.IXamlType CreateXamlType(int typeIndex)
         {
@@ -195,35 +198,42 @@ namespace IrishBusStopTracker.IrishBusStopTracker_XamlTypeInfo
             switch (typeIndex)
             {
 
-            case 0:   //  IrishBusStopTracker.ListGroupStyleSelector
+            case 0:   //  IrishBusStopTracker.Assets.AddTransport
+                userType = new global::IrishBusStopTracker.IrishBusStopTracker_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_0_AddTransport;
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 1:   //  Windows.UI.Xaml.Controls.Page
+                xamlType = new global::IrishBusStopTracker.IrishBusStopTracker_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                break;
+
+            case 2:   //  Windows.UI.Xaml.Controls.UserControl
+                xamlType = new global::IrishBusStopTracker.IrishBusStopTracker_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                break;
+
+            case 3:   //  IrishBusStopTracker.ListGroupStyleSelector
                 userType = new global::IrishBusStopTracker.IrishBusStopTracker_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.GroupStyleSelector"));
-                userType.Activator = Activate_0_ListGroupStyleSelector;
+                userType.Activator = Activate_3_ListGroupStyleSelector;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 1:   //  Windows.UI.Xaml.Controls.GroupStyleSelector
+            case 4:   //  Windows.UI.Xaml.Controls.GroupStyleSelector
                 xamlType = new global::IrishBusStopTracker.IrishBusStopTracker_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 2:   //  IrishBusStopTracker.ListTransport
+            case 5:   //  IrishBusStopTracker.ListTransport
                 userType = new global::IrishBusStopTracker.IrishBusStopTracker_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_2_ListTransport;
+                userType.Activator = Activate_5_ListTransport;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 3:   //  Windows.UI.Xaml.Controls.Page
-                xamlType = new global::IrishBusStopTracker.IrishBusStopTracker_XamlTypeInfo.XamlSystemBaseType(typeName, type);
-                break;
-
-            case 4:   //  Windows.UI.Xaml.Controls.UserControl
-                xamlType = new global::IrishBusStopTracker.IrishBusStopTracker_XamlTypeInfo.XamlSystemBaseType(typeName, type);
-                break;
-
-            case 5:   //  IrishBusStopTracker.ListBus
+            case 6:   //  IrishBusStopTracker.ListBus
                 userType = new global::IrishBusStopTracker.IrishBusStopTracker_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_5_ListBus;
+                userType.Activator = Activate_6_ListBus;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;

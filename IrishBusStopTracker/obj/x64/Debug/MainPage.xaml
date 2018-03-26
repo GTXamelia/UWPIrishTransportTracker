@@ -16,10 +16,12 @@
         
         <Image Source="http://www.buseireann.ie/img/logo-transport-for-ireland-large.png" Margin="115,0,0,0" Width="250" Height="50"/>
 
-        <Button x:ConnectionId='2' Content="Transport"                       Margin="5" Width="300"  Foreground="Green"/>
+        <Button x:ConnectionId='2' Content="Add Transport"                        Margin="5" Width="300"  Foreground="Green"/>
 
-        <Button x:ConnectionId='3' Content="Trains"                        Margin="5" Width="300"  Foreground="Green"/>
+        <Button x:ConnectionId='3' Content="View Bus Stops"                      Margin="5" Width="300"  Foreground="Green"/>
 
+        <Button x:ConnectionId='4' Content="View Train Stations"                      Margin="5" Width="300"  Foreground="Green"/>
+        
     </StackPanel>
 
 

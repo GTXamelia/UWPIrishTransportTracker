@@ -13,7 +13,6 @@ namespace IrishBusStopTracker
 {
 	public sealed partial class ListBus : Page
 	{
-		private List<Transport> listOfStop = new List<Transport>();
 
 		public ListBus()
 		{
