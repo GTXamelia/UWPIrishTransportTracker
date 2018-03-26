@@ -8,14 +8,14 @@
     mc:Ignorable="d">
 
     <Page.Resources>
-        <CollectionViewSource x:Name="cvsActivities" IsSourceGrouped="True"/>
+        <CollectionViewSource x:ConnectionId='1' x:Name="cvsActivities" IsSourceGrouped="True"/>
         <local:ListGroupStyleSelector x:Key="listGroupStyleSelector"/>
     </Page.Resources>
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
         <StackPanel>
-            <Button Content="Main Menu" Click="Button_Click" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Width="350"/>
+            <Button x:ConnectionId='2' Content="Main Menu"                      HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Width="350"/>
             <ScrollViewer VerticalScrollMode="Auto" HorizontalScrollMode="Disabled">
 
                 <ListView ItemsSource="{Binding Source={StaticResource cvsActivities}}"
@@ -30,3 +30,4 @@
     </Grid>
 
 </Page>
+

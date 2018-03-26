@@ -19,7 +19,7 @@
     <DeployOptionalPackages>false</DeployOptionalPackages>
     <WindowsSdkPath>C:\Program Files %28x86%29\Windows Kits\10\</WindowsSdkPath>
     <LayoutDir>C:\Users\Cian Gannon\source\repos\IrishBusStopTracker\IrishBusStopTracker\bin\x64\Debug\AppX</LayoutDir>
-    <RegisteredManifestChecksum>A3C9481671B552DCC7183441CD94F6EF65FFDB3F53FB715DCB1D679FDFD6EB9E</RegisteredManifestChecksum>
+    <RegisteredManifestChecksum>987007F3EFFAF84C93ADD1EB37B0F1E6EF65D85CD2F6008C56401921FB48B701</RegisteredManifestChecksum>
     <RegisteredPackageMoniker>d6259cd8-b429-4488-a6c7-0c39ad11362c_1.0.0.0_x64__c7134k7xr19tw</RegisteredPackageMoniker>
     <RegisteredUserModeAppID>d6259cd8-b429-4488-a6c7-0c39ad11362c_c7134k7xr19tw!App</RegisteredUserModeAppID>
     <RegisteredPackageID>d6259cd8-b429-4488-a6c7-0c39ad11362c</RegisteredPackageID>
@@ -31,13 +31,13 @@
     <AppXManifest Include="C:\Users\Cian Gannon\source\repos\IrishBusStopTracker\IrishBusStopTracker\bin\x64\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-03-26T18:43:50.843</Modified>
+      <Modified>2018-03-26T19:03:39.827</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\Cian Gannon\source\repos\IrishBusStopTracker\IrishBusStopTracker\bin\x64\Debug\IrishBusStopTracker.exe">
       <PackagePath>entrypoint\IrishBusStopTracker.exe</PackagePath>
-      <Modified>2018-03-26T18:43:49.953</Modified>
+      <Modified>2018-03-26T19:03:38.998</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Cian Gannon\.nuget\packages\microsoft.csharp\4.3.0\lib\netcore50\Microsoft.CSharp.dll">
       <PackagePath>Microsoft.CSharp.dll</PackagePath>
@@ -758,7 +758,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Cian Gannon\source\repos\IrishBusStopTracker\IrishBusStopTracker\bin\x64\Debug\IrishBusStopTracker.xr.xml">
       <PackagePath>IrishBusStopTracker.xr.xml</PackagePath>
-      <Modified>2018-03-26T18:43:49.733</Modified>
+      <Modified>2018-03-26T19:03:38.781</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.16299.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
@@ -767,11 +767,11 @@
     <AppxPackagedFile Include="C:\Users\Cian Gannon\source\repos\IrishBusStopTracker\IrishBusStopTracker\bin\x64\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-03-26T18:43:50.565</Modified>
+      <Modified>2018-03-26T19:03:39.599</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Cian Gannon\source\repos\IrishBusStopTracker\IrishBusStopTracker\bin\x64\Debug\Core\IrishBusStopTracker.exe">
       <PackagePath>IrishBusStopTracker.exe</PackagePath>
-      <Modified>2018-03-26T18:43:50.837</Modified>
+      <Modified>2018-03-26T19:03:39.823</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

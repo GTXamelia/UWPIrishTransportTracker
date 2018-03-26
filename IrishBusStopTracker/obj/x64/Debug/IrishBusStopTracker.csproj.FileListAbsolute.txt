@@ -232,3 +232,8 @@ C:\Users\Cian Gannon\source\repos\IrishBusStopTracker\IrishBusStopTracker\obj\x6
 C:\Users\Cian Gannon\source\repos\IrishBusStopTracker\IrishBusStopTracker\obj\x64\Debug\Assets\AddTransport.g.cs
 C:\Users\Cian Gannon\source\repos\IrishBusStopTracker\IrishBusStopTracker\obj\x64\Debug\Assets\AddTransport.xaml
 C:\Users\Cian Gannon\source\repos\IrishBusStopTracker\IrishBusStopTracker\obj\x64\Debug\Assets\AddTransport.xbf
+C:\Users\Cian Gannon\source\repos\IrishBusStopTracker\IrishBusStopTracker\bin\x64\Debug\AddTransport.xbf
+C:\Users\Cian Gannon\source\repos\IrishBusStopTracker\IrishBusStopTracker\obj\x64\Debug\AddTransport.g.i.cs
+C:\Users\Cian Gannon\source\repos\IrishBusStopTracker\IrishBusStopTracker\obj\x64\Debug\AddTransport.g.cs
+C:\Users\Cian Gannon\source\repos\IrishBusStopTracker\IrishBusStopTracker\obj\x64\Debug\AddTransport.xaml
+C:\Users\Cian Gannon\source\repos\IrishBusStopTracker\IrishBusStopTracker\obj\x64\Debug\AddTransport.xbf
