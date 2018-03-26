@@ -22,12 +22,17 @@ namespace IrishBusStopTracker
 			
 		}
 
-		private void Button_Click(object sender, RoutedEventArgs e)
+		private void Add_Transport(object sender, RoutedEventArgs e)
+		{
+			//Add page
+		}
+
+		private void View_Busses(object sender, RoutedEventArgs e)
 		{
 			this.Frame.Navigate(typeof(ListTransport));
 		}
 
-		private void Button_Click1(object sender, RoutedEventArgs e)
+		private void View_Trains(object sender, RoutedEventArgs e)
 		{
 			Debug.WriteLine("Test Output");
 		}
