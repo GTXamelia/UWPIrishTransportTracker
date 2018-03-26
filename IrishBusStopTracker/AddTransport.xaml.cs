@@ -29,7 +29,7 @@ namespace IrishBusStopTracker
 		private async void Submit(object sender, RoutedEventArgs e)
 		{
 
-			Windows.Storage.StorageFolder storageFolder;
+			Windows.Storage.StorageFolder storageFolder = Windows.Storage.ApplicationData.Current.LocalFolder;
 			Windows.Storage.StorageFile fileToSave = null;
 
 			String fileName = "BusIDs.txt";
@@ -38,19 +38,18 @@ namespace IrishBusStopTracker
 
 			try
 			{
-				await FileIO.AppendTextAsync(fileToSave, "text content");
+				var file = await ApplicationData.Current.LocalFolder.GetFileAsync(fileName);
+
+				fileToSave = await storageFolder.GetFileAsync(fileName);
+
+				await Windows.Storage.FileIO.AppendTextAsync(fileToSave, textBoxAdd.Text + Environment.NewLine);
 			}
-			catch (NullReferenceException)
+			catch (FileNotFoundException)
 			{
-				storageFolder = Windows.Storage.ApplicationData.Current.LocalFolder;
-				fileToSave = await storageFolder.CreateFileAsync("sample.txt", Windows.Storage.CreationCollisionOption.ReplaceExisting);
+				fileToSave = await storageFolder.CreateFileAsync(fileName, Windows.Storage.CreationCollisionOption.ReplaceExisting);
 
-				await FileIO.AppendTextAsync(fileToSave, "text content");
+				await Windows.Storage.FileIO.AppendTextAsync(fileToSave, textBoxAdd.Text + Environment.NewLine);
 			}
-			
-			await FileIO.AppendTextAsync(fileToSave, "text content");
-
-			string text = await Windows.Storage.FileIO.ReadTextAsync(fileToSave);
 
 			Debug.WriteLine("Test: " + fileToSave.Path);
 		}
