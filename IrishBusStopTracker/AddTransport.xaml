@@ -8,10 +8,12 @@
     mc:Ignorable="d">
 
     <StackPanel HorizontalAlignment="center">
-        
+
         <Image Source="http://www.buseireann.ie/img/logo-transport-for-ireland-large.png" Margin="115,0,0,0" Width="250" Height="50"/>
 
-        <TextBox Width="500" Height="60" Header="Add:" PlaceholderText="Type id here"/>
+        <TextBox x:Name="textBoxAdd" Width="300" Height="60" Header="Add:" PlaceholderText="Type ID here" KeyDown="OnKeyPress"/>
+        
+        <Button Content="Submit" Click="Submit" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Width="300"/>
 
     </StackPanel>
 </Page>

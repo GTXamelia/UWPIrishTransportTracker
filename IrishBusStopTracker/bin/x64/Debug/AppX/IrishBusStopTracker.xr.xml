@@ -67,19 +67,12 @@
       <RootProperty Name="Content" />
       <RootProperty Name="Resources" />
     </RootType>
-    <RootType FullName="Microsoft.Xaml.DirectUI.ProxyTypes.ThemeResourceExtension" />
     <RootType FullName="Windows.UI.Xaml.Controls.TextBox">
       <RootProperty Name="Width" />
       <RootProperty Name="Height" />
       <RootProperty Name="Header" />
       <RootProperty Name="PlaceholderText" />
     </RootType>
-    <RootType FullName="IrishBusStopTracker.AddTransport" />
-    <RootType FullName="IrishBusStopTracker.Assets.AddTransport" />
-    <RootType FullName="Windows.UI.Xaml.Data.CollectionViewSource">
-      <RootProperty Name="IsSourceGrouped" />
-    </RootType>
-    <RootType FullName="IrishBusStopTracker.ListGroupStyleSelector" />
     <RootType FullName="Windows.UI.Xaml.Controls.Button">
       <RootProperty Name="Content" />
       <RootProperty Name="HorizontalAlignment" />
@@ -89,6 +82,13 @@
       <RootProperty Name="Foreground" />
       <RootEvent Name="Click" />
     </RootType>
+    <RootType FullName="IrishBusStopTracker.AddTransport" />
+    <RootType FullName="Microsoft.Xaml.DirectUI.ProxyTypes.ThemeResourceExtension" />
+    <RootType FullName="IrishBusStopTracker.Assets.AddTransport" />
+    <RootType FullName="Windows.UI.Xaml.Data.CollectionViewSource">
+      <RootProperty Name="IsSourceGrouped" />
+    </RootType>
+    <RootType FullName="IrishBusStopTracker.ListGroupStyleSelector" />
     <RootType FullName="Windows.UI.Xaml.Controls.ScrollViewer">
       <RootProperty Name="VerticalScrollMode" />
       <RootProperty Name="HorizontalScrollMode" />

@@ -7,20 +7,15 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <Page.Resources>
-        <CollectionViewSource x:ConnectionId='1' x:Name="cvsActivities" IsSourceGrouped="True"/>
-        <local:ListGroupStyleSelector x:Key="listGroupStyleSelector"/>
-    </Page.Resources>
-
     <StackPanel HorizontalAlignment="center">
         
         <Image Source="http://www.buseireann.ie/img/logo-transport-for-ireland-large.png" Margin="115,0,0,0" Width="250" Height="50"/>
 
-        <Button x:ConnectionId='2' Content="Add Transport"                        Margin="5" Width="300"  Foreground="Green"/>
+        <Button x:ConnectionId='1' Content="Add Transport"                        Margin="5" Width="300"  Foreground="Green"/>
 
-        <Button x:ConnectionId='3' Content="View Bus Stops"                      Margin="5" Width="300"  Foreground="Green"/>
+        <Button x:ConnectionId='2' Content="View Bus Stops"                      Margin="5" Width="300"  Foreground="Green"/>
 
-        <Button x:ConnectionId='4' Content="View Train Stations"                      Margin="5" Width="300"  Foreground="Green"/>
+        <Button x:ConnectionId='3' Content="View Train Stations"                      Margin="5" Width="300"  Foreground="Green"/>
         
     </StackPanel>
 

@@ -1,10 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.UI.Core;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -25,6 +27,11 @@ namespace IrishBusStopTracker
 		public AddTransport()
 		{
 			this.InitializeComponent();
+		}
+
+		private void Submit(object sender, RoutedEventArgs e)
+		{
+			Debug.WriteLine("Added: " + textBoxAdd.Text);
 		}
 	}
 }

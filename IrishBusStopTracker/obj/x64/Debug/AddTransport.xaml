@@ -7,12 +7,14 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <StackPanel HorizontalAlignment="center">
 
-        <TextBox Width="300" Height="10" Header="Add:" PlaceholderText="Type id here"/>
+        <Image Source="http://www.buseireann.ie/img/logo-transport-for-ireland-large.png" Margin="115,0,0,0" Width="250" Height="50"/>
+        
+        <TextBox x:ConnectionId='1' x:Name="textBoxAdd" Width="300" Height="60" Header="Add:" PlaceholderText="Type ID here"/>
+        
+        <Button x:ConnectionId='2' Content="Submit"                HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Width="300"/>
 
-
-
-    </Grid>
+    </StackPanel>
 </Page>
 
