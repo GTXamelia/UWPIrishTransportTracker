@@ -75,8 +75,9 @@
     <RootType FullName="IrishBusStopTracker.ListGroupStyleSelector" />
     <RootType FullName="Windows.UI.Xaml.Controls.Button">
       <RootProperty Name="Content" />
+      <RootProperty Name="HorizontalAlignment" />
+      <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="Width" />
-      <RootProperty Name="Height" />
       <RootProperty Name="Margin" />
       <RootProperty Name="Foreground" />
       <RootEvent Name="Click" />
