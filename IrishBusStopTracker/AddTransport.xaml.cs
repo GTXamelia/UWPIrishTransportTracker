@@ -1,8 +1,11 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
 using System.Linq;
+using System.Net.Http;
+using System.Net.Http.Headers;
 using System.Runtime.InteropServices.WindowsRuntime;
 using System.Threading.Tasks;
 using Windows.Foundation;
@@ -39,19 +42,40 @@ namespace IrishBusStopTracker
 
 			String fileName = "BusIDs.txt";
 
-			try
+			HttpClient client = new HttpClient();
+			client.BaseAddress = new Uri("https://data.dublinked.ie/cgi-bin/rtpi/realtimebusinformation?stopid=" + textBoxAdd.Text + "&format=json");
+			client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+			HttpResponseMessage response = client.GetAsync("https://data.dublinked.ie/cgi-bin/rtpi/realtimebusinformation?stopid=" + textBoxAdd.Text + "&format=json").Result;
+			var result = response.Content.ReadAsStringAsync().Result;
+
+			var obj = JsonConvert.DeserializeObject<RootObject>(result);
+
+			Debug.WriteLine(obj.Errorcode);
+
+			if (obj.Errorcode.Contains("0"))
 			{
-				var file = await ApplicationData.Current.LocalFolder.GetFileAsync(fileName);
+				try
+				{
+					var file = await ApplicationData.Current.LocalFolder.GetFileAsync(fileName);
 
-				fileToSave = await storageFolder.GetFileAsync(fileName);
+					fileToSave = await storageFolder.GetFileAsync(fileName);
 
-				await Windows.Storage.FileIO.AppendTextAsync(fileToSave, textBoxAdd.Text + Environment.NewLine);
+					await Windows.Storage.FileIO.AppendTextAsync(fileToSave, textBoxAdd.Text + Environment.NewLine);
+
+					Debug.WriteLine("Path: " + fileToSave.Path);
+				}
+				catch (FileNotFoundException)
+				{
+					fileToSave = await storageFolder.CreateFileAsync(fileName, Windows.Storage.CreationCollisionOption.ReplaceExisting);
+
+					await Windows.Storage.FileIO.AppendTextAsync(fileToSave, textBoxAdd.Text + Environment.NewLine);
+
+					Debug.WriteLine("Path: " + fileToSave.Path);
+				}
 			}
-			catch (FileNotFoundException)
+			else
 			{
-				fileToSave = await storageFolder.CreateFileAsync(fileName, Windows.Storage.CreationCollisionOption.ReplaceExisting);
-
-				await Windows.Storage.FileIO.AppendTextAsync(fileToSave, textBoxAdd.Text + Environment.NewLine);
+				Debug.WriteLine("Error Code: " + obj.Errorcode + "\nError Message: " + obj.Errormessage);
 			}
 		}
 	}

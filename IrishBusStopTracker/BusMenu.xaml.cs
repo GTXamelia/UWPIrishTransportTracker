@@ -31,7 +31,7 @@ namespace IrishBusStopTracker
 			// 524351 - Opposite Glenina Heights (Galway)
 			// GALWY  - Galway Train Station
 
-			string[] BusStopID = new string[] { "522691", "522961", "GLGRY", "524351" };
+			string[] BusStopID = new string[] { "522691", "522961", "GLGRY", "GALWY" };
 
 			for (i = 0; i < BusStopID.Length; i++)
 			{
