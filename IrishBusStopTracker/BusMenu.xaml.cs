@@ -137,20 +137,6 @@ namespace IrishBusStopTracker
 		}
 	}
 
-
-	public class ListGroupStyleSelector : GroupStyleSelector
-	{
-		protected override GroupStyle SelectGroupStyleCore(object group, uint level)
-		{
-			return (GroupStyle)App.Current.Resources["listViewGroupStyle"];
-		}
-	}
-
-	public class Errors
-	{
-		public string ErrorCode { get; set; }
-	}
-
 	public class Transport
 	{
 		public string StopID { get; set; }

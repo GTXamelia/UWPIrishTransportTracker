@@ -81,17 +81,9 @@ namespace IrishBusStopTracker
 
 						for (k = 0; k < obj.Numberofresults; k++)
 						{
-							if (ssize[0 + (k * ObjectRetrieval)].Contains("X"))
+							if (ssize[0 + (k * ObjectRetrieval)].Contains("ir"))
 							{
-								imageBusOp = "http://www.buseireann.ie/img/pictures/1405694022_content_main.jpg";
-							}
-							else if (ssize[4 + (k * ObjectRetrieval)].Contains("BE"))
-							{
-								imageBusOp = "https://c2.staticflickr.com/8/7354/13473687104_6f57f4749f_b.jpg";
-							}
-							else if (ssize[4 + (k * ObjectRetrieval)].Contains("bac"))
-							{
-								imageBusOp = "http://www.echo.ie/images/Dublin_Bus_27_stock.jpg";
+								imageBusOp = "https://www.railjournal.com/media/k2/items/cache/8625251b6ea82455a3caf137b4aea8ab_XL.jpg?t=943938000";
 							}
 							else
 							{
@@ -118,7 +110,7 @@ namespace IrishBusStopTracker
 						}
 
 					}
-					catch (Exception e)
+					catch (Exception)
 					{
 						BusStatus++;
 					}
@@ -140,11 +132,6 @@ namespace IrishBusStopTracker
 				this.Frame.Navigate(typeof(AddTransport), Error);
 			}
 		}
-	}
-
-	public class ErrorsTrain
-	{
-		public string ErrorCode { get; set; }
 	}
 
 	public class TransportTrain
