@@ -17,7 +17,7 @@
 
         <Button x:ConnectionId='3' Content="Submit"                HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Width="300"/>
 
-        <TextBlock x:ConnectionId='4' x:Name="errorLabel" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+        <TextBlock x:ConnectionId='4' x:Name="errorLabel" Foreground="Red" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Width="300"/>
 
     </StackPanel>
     

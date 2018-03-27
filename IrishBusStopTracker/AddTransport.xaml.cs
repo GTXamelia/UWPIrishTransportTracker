@@ -36,11 +36,15 @@ namespace IrishBusStopTracker
 
 		private async void Submit(object sender, RoutedEventArgs e)
 		{
+			// Clears error message on run
+			errorLabel.Text = String.Empty;
 
 			Windows.Storage.StorageFolder storageFolder = Windows.Storage.ApplicationData.Current.LocalFolder;
 			Windows.Storage.StorageFile fileToSave = null;
 
-			String fileName = "BusIDs.txt";
+			String busFile= "BusIDs.txt";
+			String trainFile = "TrainIDs.txt";
+			int ObjectRetrieval = 4;
 
 			HttpClient client = new HttpClient();
 			client.BaseAddress = new Uri("https://data.dublinked.ie/cgi-bin/rtpi/realtimebusinformation?stopid=" + textBoxAdd.Text + "&format=json");
@@ -50,40 +54,67 @@ namespace IrishBusStopTracker
 
 			var obj = JsonConvert.DeserializeObject<RootObject>(result);
 
-			//Debug.WriteLine(obj.Errorcode);
-
 			if (obj.Errorcode.Contains("0"))
 			{
 				try
 				{
-					var file = await ApplicationData.Current.LocalFolder.GetFileAsync(fileName);
-					fileToSave = await storageFolder.GetFileAsync(fileName);
 
-					string text = await Windows.Storage.FileIO.ReadTextAsync(fileToSave);
+					string[] ssize = (obj.ToString()).Split(new char[0]);
 
-					if (!text.Contains(textBoxAdd.Text))
+					if (ssize[ObjectRetrieval].Equals("X") || ssize[ObjectRetrieval].Equals("BE") || ssize[ObjectRetrieval].Equals("bac")) // Buses
 					{
-						await Windows.Storage.FileIO.AppendTextAsync(fileToSave, textBoxAdd.Text + Environment.NewLine);
+						var BusfileLocal = await ApplicationData.Current.LocalFolder.GetFileAsync(busFile);
+						fileToSave = await storageFolder.GetFileAsync(busFile);
+
+						string busFileContents = await Windows.Storage.FileIO.ReadTextAsync(fileToSave);
+
+						if (!busFileContents.Contains(textBoxAdd.Text))
+						{
+							await Windows.Storage.FileIO.AppendTextAsync(fileToSave, textBoxAdd.Text + Environment.NewLine);
+
+							this.Frame.Navigate(typeof(BusTransport));
+						}
+						else
+						{
+							errorLabel.Text = "ID \"" + textBoxAdd.Text + "\" has already been entered";
+						}
+					}
+					else if (ssize[ObjectRetrieval].Contains("ir")) // Trains
+					{
+						var TrainfileLocal = await ApplicationData.Current.LocalFolder.GetFileAsync(trainFile);
+						fileToSave = await storageFolder.GetFileAsync(trainFile);
+
+						string trainFileContents = await Windows.Storage.FileIO.ReadTextAsync(fileToSave);
+
+						if (!trainFileContents.Contains(textBoxAdd.Text))
+						{
+							await Windows.Storage.FileIO.AppendTextAsync(fileToSave, textBoxAdd.Text + Environment.NewLine);
+						}
+						else
+						{
+							errorLabel.Text = "ID \"" + textBoxAdd.Text + "\" has already been entered";
+						}
 					}
 					else
 					{
-						errorLabel.Text = "Code \"" + textBoxAdd.Text + "\"is already saved";
+
+						errorLabel.Text = "ID \"" + ssize[ObjectRetrieval] + "\" has encountered an error";
 					}
 				}
 				catch (FileNotFoundException)
 				{
-					fileToSave = await storageFolder.CreateFileAsync(fileName, Windows.Storage.CreationCollisionOption.ReplaceExisting);
+					fileToSave = await storageFolder.CreateFileAsync(busFile, Windows.Storage.CreationCollisionOption.ReplaceExisting);
+					fileToSave = await storageFolder.CreateFileAsync(trainFile, Windows.Storage.CreationCollisionOption.ReplaceExisting);
 
 					await Windows.Storage.FileIO.AppendTextAsync(fileToSave, textBoxAdd.Text + Environment.NewLine);
-
-					Debug.WriteLine("-====::Success::====- \nError Code: " + obj.Errorcode + "\nError Message: " + obj.Errormessage + "\nCode " + textBoxAdd.Text + " is valid");
-					Debug.WriteLine("Path: " + fileToSave.Path);
 				}
 			}
 			else
 			{
-				Debug.WriteLine("-====::FAILURE::====- \nError Code: " + obj.Errorcode + "\nError Message: " + obj.Errormessage + "\nCode " + textBoxAdd.Text + " is not valid");
+				errorLabel.Text = "ID \"" + textBoxAdd.Text + "\" is not a valid stopID";
 			}
+
+			Debug.WriteLine(fileToSave.Path);
 
 			// Clears textbox after button code runs
 			textBoxAdd.Text = String.Empty;
