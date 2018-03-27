@@ -19,4 +19,14 @@ namespace IrishBusStopTracker
 	{
 		public string ErrorCode { get; set; }
 	}
+
+	public class Transport
+	{
+		public string StopID { get; set; }
+		public string Route { get; set; }
+		public string ArrivalTime { get; set; }
+		public string Duetime { get; set; }
+		public string Destination { get; set; }
+		public string ImageOperator { get; set; }
+	}
 }
