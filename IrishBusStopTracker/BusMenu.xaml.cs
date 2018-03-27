@@ -28,8 +28,6 @@ namespace IrishBusStopTracker
 			// 522811 - GMIT Dublin Road (Galway)
 			// 524351 - Opposite Glenina Heights (Galway)
 			// GALWY  - Galway Train Station
-
-
 		}
 
 		private void Button_Click(object sender, RoutedEventArgs e)
@@ -92,10 +90,6 @@ namespace IrishBusStopTracker
 							{
 								imageBusOp = "http://www.echo.ie/images/Dublin_Bus_27_stock.jpg";
 							}
-							else if (ssize[4 + (k * ObjectRetrieval)].Contains("ir"))
-							{
-								imageBusOp = "https://www.railjournal.com/media/k2/items/cache/8625251b6ea82455a3caf137b4aea8ab_XL.jpg?t=943938000";
-							}
 							else
 							{
 								imageBusOp = "https://st2.depositphotos.com/3068703/6369/v/950/depositphotos_63698389-stock-ilglustration-no-bus-sign-icon-great.jpg";
@@ -132,13 +126,9 @@ namespace IrishBusStopTracker
 						listOfStop.Add(new Transport { Route = "No", Destination = "busses", Duetime = "operating", ImageOperator = imageBusOp });
 					}
 
-					Debug.WriteLine("Obj: " + BusStopID.Length + " Counter: " + BusStatus);
-
 					var resultCVS = from act in listOfStop group act by act.StopID into grp orderby grp.Key select grp;
 					cvsActivities.Source = resultCVS;
 				}
-
-
 			}
 			catch (FileNotFoundException)
 			{
@@ -146,9 +136,6 @@ namespace IrishBusStopTracker
 				Error.ErrorCode = "Please enter an ID before viewing stops";
 				this.Frame.Navigate(typeof(AddTransport), Error);
 			}
-
-
-
 		}
 	}
 

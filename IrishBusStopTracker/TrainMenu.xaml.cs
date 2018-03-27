@@ -25,6 +25,8 @@ namespace IrishBusStopTracker
         public TrainMenu()
         {
             this.InitializeComponent();
-        }
+
+			String url = "https://scontent-dub4-1.xx.fbcdn.net/v/t1.0-9/29025830_1727100117346019_1771119452012675072_n.jpg?oh=fd2dad187d5fdfe393123ae90fde4f21&oe=5B30FAAD";
+		}
     }
 }

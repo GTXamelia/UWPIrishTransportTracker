@@ -31,7 +31,7 @@ namespace IrishBusStopTracker
 
 		private void View_Trains(object sender, RoutedEventArgs e)
 		{
-			Debug.WriteLine("Test Output");
+			this.Frame.Navigate(typeof(TrainMenu)); 
 		}
 
 	}
