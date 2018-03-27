@@ -44,6 +44,7 @@ namespace IrishBusStopTracker
 
 			String busFile= "BusIDs.txt";
 			String trainFile = "TrainIDs.txt";
+			String luasFile = "LuasIDs.txt";
 			int ObjectRetrieval = 4;
 
 			HttpClient client = new HttpClient();
@@ -97,10 +98,28 @@ namespace IrishBusStopTracker
 							errorLabel.Text = "ID \"" + textBoxAdd.Text + "\" has already been entered";
 						}
 					}
+					else if (ssize[ObjectRetrieval].Contains("LUAS")) // Trains
+					{
+						var TrainfileLocal = await ApplicationData.Current.LocalFolder.GetFileAsync(luasFile);
+						fileToSave = await storageFolder.GetFileAsync(luasFile);
+
+						string luasFileContents = await Windows.Storage.FileIO.ReadTextAsync(fileToSave);
+
+						if (!luasFileContents.Contains(textBoxAdd.Text))
+						{
+							await Windows.Storage.FileIO.AppendTextAsync(fileToSave, textBoxAdd.Text + Environment.NewLine);
+
+							this.Frame.Navigate(typeof(TrainMenu));
+						}
+						else
+						{
+							errorLabel.Text = "ID \"" + textBoxAdd.Text + "\" has already been entered";
+						}
+					}
 					else
 					{
 
-						errorLabel.Text = "ID \"" + ssize[ObjectRetrieval] + "\" has encountered an error";
+						errorLabel.Text = "ID \"" + textBoxAdd.Text + "\" has encountered an error";
 					}
 				}
 				catch (FileNotFoundException)
@@ -118,6 +137,14 @@ namespace IrishBusStopTracker
 					else if (ssize[ObjectRetrieval].Contains("ir")) // Trains
 					{
 						fileToSave = await storageFolder.CreateFileAsync(trainFile, Windows.Storage.CreationCollisionOption.ReplaceExisting);
+
+						await Windows.Storage.FileIO.AppendTextAsync(fileToSave, textBoxAdd.Text + Environment.NewLine);
+
+						this.Frame.Navigate(typeof(TrainMenu));
+					}
+					else if (ssize[ObjectRetrieval].Contains("LUAS")) // Trains
+					{
+						fileToSave = await storageFolder.CreateFileAsync(luasFile, Windows.Storage.CreationCollisionOption.ReplaceExisting);
 
 						await Windows.Storage.FileIO.AppendTextAsync(fileToSave, textBoxAdd.Text + Environment.NewLine);
 
