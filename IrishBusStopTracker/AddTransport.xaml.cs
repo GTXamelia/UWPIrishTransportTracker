@@ -42,7 +42,7 @@ namespace IrishBusStopTracker
 			Windows.Storage.StorageFolder storageFolder = Windows.Storage.ApplicationData.Current.LocalFolder;
 			Windows.Storage.StorageFile fileToSave = null;
 
-			String busFile= "BusIDs.txt";
+			String busFile = "BusIDs.txt";
 			String trainFile = "TrainIDs.txt";
 			String luasFile = "LuasIDs.txt";
 			int ObjectRetrieval = 4;
@@ -171,7 +171,7 @@ namespace IrishBusStopTracker
 			{
 				errorLabel.Text = error.ErrorCode;
 			}
-			catch(NullReferenceException)
+			catch (NullReferenceException)
 			{
 
 			}
