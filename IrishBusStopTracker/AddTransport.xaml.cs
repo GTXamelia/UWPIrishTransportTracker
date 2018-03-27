@@ -89,6 +89,8 @@ namespace IrishBusStopTracker
 						if (!trainFileContents.Contains(textBoxAdd.Text))
 						{
 							await Windows.Storage.FileIO.AppendTextAsync(fileToSave, textBoxAdd.Text + Environment.NewLine);
+
+							this.Frame.Navigate(typeof(TrainMenu));
 						}
 						else
 						{
@@ -119,7 +121,7 @@ namespace IrishBusStopTracker
 
 						await Windows.Storage.FileIO.AppendTextAsync(fileToSave, textBoxAdd.Text + Environment.NewLine);
 
-						this.Frame.Navigate(typeof(BusTransport));
+						this.Frame.Navigate(typeof(TrainMenu));
 					}
 				}
 			}
@@ -148,7 +150,6 @@ namespace IrishBusStopTracker
 			{
 
 			}
-			
 		}
 	}
 }

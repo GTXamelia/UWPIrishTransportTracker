@@ -43,10 +43,8 @@ namespace IrishBusStopTracker
 
 		private async Task Display()
 		{
-
 			try
 			{
-
 				Windows.Storage.StorageFolder storageFolder = Windows.Storage.ApplicationData.Current.LocalFolder;
 				Windows.Storage.StorageFile busStopIDsFile = await storageFolder.GetFileAsync("BusIDs.txt");
 
@@ -152,7 +150,6 @@ namespace IrishBusStopTracker
 	{
 		public string ErrorCode { get; set; }
 	}
-
 
 	public class Transport
 	{

@@ -31,13 +31,13 @@
     <AppXManifest Include="C:\Users\Cian Gannon\source\repos\IrishBusStopTracker\IrishBusStopTracker\bin\x64\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-03-27T17:55:05.555</Modified>
+      <Modified>2018-03-27T18:07:27.597</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\Cian Gannon\source\repos\IrishBusStopTracker\IrishBusStopTracker\bin\x64\Debug\IrishBusStopTracker.exe">
       <PackagePath>entrypoint\IrishBusStopTracker.exe</PackagePath>
-      <Modified>2018-03-27T17:55:04.725</Modified>
+      <Modified>2018-03-27T18:07:27.197</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Cian Gannon\.nuget\packages\microsoft.csharp\4.3.0\lib\netcore50\Microsoft.CSharp.dll">
       <PackagePath>Microsoft.CSharp.dll</PackagePath>
@@ -767,11 +767,11 @@
     <AppxPackagedFile Include="C:\Users\Cian Gannon\source\repos\IrishBusStopTracker\IrishBusStopTracker\bin\x64\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-03-27T17:55:05.330</Modified>
+      <Modified>2018-03-27T18:03:53.067</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Cian Gannon\source\repos\IrishBusStopTracker\IrishBusStopTracker\bin\x64\Debug\Core\IrishBusStopTracker.exe">
       <PackagePath>IrishBusStopTracker.exe</PackagePath>
-      <Modified>2018-03-27T17:55:05.549</Modified>
+      <Modified>2018-03-27T18:07:27.589</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>
