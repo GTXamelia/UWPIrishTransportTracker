@@ -104,6 +104,7 @@
       <RootProperty Name="Height" />
     </RootType>
     <RootType FullName="IrishBusStopTracker.BusTransport" />
+    <RootType FullName="IrishBusStopTracker.LuasMenu" />
     <RootType FullName="IrishBusStopTracker.MainMenu" />
     <RootType FullName="IrishBusStopTracker.TrainMenu" />
   </Roots.RootTypes>

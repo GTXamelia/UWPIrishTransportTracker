@@ -46,7 +46,7 @@ namespace IrishBusStopTracker
 			try
 			{
 				Windows.Storage.StorageFolder storageFolder = Windows.Storage.ApplicationData.Current.LocalFolder;
-				Windows.Storage.StorageFile busStopIDsFile = await storageFolder.GetFileAsync("TrainIDs.txt");
+				Windows.Storage.StorageFile luasStationsIDsFile = await storageFolder.GetFileAsync("LuasIDs.txt");
 
 				// Loop values
 				int i, k;
@@ -54,7 +54,7 @@ namespace IrishBusStopTracker
 				int StatusCounter = 0;
 				int ObjectRetrieval = 5;
 
-				string text = await Windows.Storage.FileIO.ReadTextAsync(busStopIDsFile);
+				string text = await Windows.Storage.FileIO.ReadTextAsync(luasStationsIDsFile);
 
 				string[] StationID = text.Split(new char[0]);
 
@@ -73,12 +73,11 @@ namespace IrishBusStopTracker
 
 					try
 					{
-
 						for (k = 0; k < obj.Numberofresults; k++)
 						{
-							if (ssize[4 + (k * ObjectRetrieval)].Contains("ir"))
+							if (ssize[4 + (k * ObjectRetrieval)].Contains("LUAS"))
 							{
-								imageOperator = "https://www.railjournal.com/media/k2/items/cache/8625251b6ea82455a3caf137b4aea8ab_XL.jpg?t=943938000";
+								imageOperator = "https://cloud.lovindublin.com/images/_relatedEntryImage2x/luas.jpg?mtime=20180117113522";
 							}
 							else
 							{
@@ -113,7 +112,7 @@ namespace IrishBusStopTracker
 					if (StationID.Length <= StatusCounter)
 					{
 						imageOperator = "https://scontent-dub4-1.xx.fbcdn.net/v/t1.0-9/29025830_1727100117346019_1771119452012675072_n.jpg?oh=fd2dad187d5fdfe393123ae90fde4f21&oe=5B30FAAD";
-						listOfStop.Add(new Transport { Route = "No", Destination = "busses", Duetime = "operating", ImageOperator = imageOperator });
+						listOfStop.Add(new Transport { Route = "No", Destination = "luas line", Duetime = "operating", ImageOperator = imageOperator });
 					}
 
 					var resultCVS = from act in listOfStop group act by act.StopID into grp orderby grp.Key select grp;

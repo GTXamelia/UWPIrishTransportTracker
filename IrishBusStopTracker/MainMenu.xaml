@@ -17,6 +17,8 @@
 
         <Button Content="View Train Stations" Click="View_Trains" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"  Margin="5" Width="300"  Foreground="Green"/>
 
+        <Button Content="View Luas Stations" Click="View_Luas" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"  Margin="5" Width="300"  Foreground="Green"/>
+
     </StackPanel>
 
 </Page>

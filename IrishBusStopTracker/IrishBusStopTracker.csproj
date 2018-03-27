@@ -102,6 +102,9 @@
       <DependentUpon>BusMenu.xaml</DependentUpon>
     </Compile>
     <Compile Include="BusStatusObject.cs" />
+    <Compile Include="LuasMenu.xaml.cs">
+      <DependentUpon>LuasMenu.xaml</DependentUpon>
+    </Compile>
     <Compile Include="MainFunction.cs" />
     <Compile Include="MainMenu.xaml.cs">
       <DependentUpon>MainMenu.xaml</DependentUpon>
@@ -177,6 +180,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="BusMenu.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="LuasMenu.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

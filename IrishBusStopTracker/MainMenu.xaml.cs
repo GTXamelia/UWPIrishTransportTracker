@@ -13,7 +13,6 @@ namespace IrishBusStopTracker
 {
 	public sealed partial class MainMenu : Page
 	{
-
 		public MainMenu()
 		{
 			this.InitializeComponent();
@@ -34,5 +33,9 @@ namespace IrishBusStopTracker
 			this.Frame.Navigate(typeof(TrainMenu)); 
 		}
 
+		private void View_Luas(object sender, RoutedEventArgs e)
+		{
+			this.Frame.Navigate(typeof(LuasMenu));
+		}
 	}
 }

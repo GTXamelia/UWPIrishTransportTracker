@@ -17,6 +17,8 @@
 
         <Button x:ConnectionId='3' Content="View Train Stations"                     HorizontalAlignment="Stretch" VerticalAlignment="Stretch"  Margin="5" Width="300"  Foreground="Green"/>
 
+        <Button x:ConnectionId='4' Content="View Luas Stations"                   HorizontalAlignment="Stretch" VerticalAlignment="Stretch"  Margin="5" Width="300"  Foreground="Green"/>
+
     </StackPanel>
 
 </Page>

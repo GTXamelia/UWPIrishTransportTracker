@@ -237,3 +237,8 @@ C:\Users\Cian Gannon\source\repos\IrishBusStopTracker\IrishBusStopTracker\obj\x6
 C:\Users\Cian Gannon\source\repos\IrishBusStopTracker\IrishBusStopTracker\obj\x64\Debug\TrainMenu.xaml
 C:\Users\Cian Gannon\source\repos\IrishBusStopTracker\IrishBusStopTracker\obj\x64\Debug\MainMenu.xbf
 C:\Users\Cian Gannon\source\repos\IrishBusStopTracker\IrishBusStopTracker\obj\x64\Debug\TrainMenu.xbf
+C:\Users\Cian Gannon\source\repos\IrishBusStopTracker\IrishBusStopTracker\bin\x64\Debug\LuasMenu.xbf
+C:\Users\Cian Gannon\source\repos\IrishBusStopTracker\IrishBusStopTracker\obj\x64\Debug\LuasMenu.g.i.cs
+C:\Users\Cian Gannon\source\repos\IrishBusStopTracker\IrishBusStopTracker\obj\x64\Debug\LuasMenu.g.cs
+C:\Users\Cian Gannon\source\repos\IrishBusStopTracker\IrishBusStopTracker\obj\x64\Debug\LuasMenu.xaml
+C:\Users\Cian Gannon\source\repos\IrishBusStopTracker\IrishBusStopTracker\obj\x64\Debug\LuasMenu.xbf

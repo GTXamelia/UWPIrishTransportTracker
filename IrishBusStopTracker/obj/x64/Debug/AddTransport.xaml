@@ -1,0 +1,25 @@
+﻿<Page
+    x:Class="IrishBusStopTracker.AddTransport"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:IrishBusStopTracker"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <StackPanel HorizontalAlignment="center">
+
+        <Button x:ConnectionId='1' Content="Main Menu"                   HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Width="300"/>
+
+        <Image Source="http://www.buseireann.ie/img/logo-transport-for-ireland-large.png" Margin="115,0,0,0" Width="250" Height="50"/>
+
+        <TextBox x:ConnectionId='2' x:Name="textBoxAdd" Width="300" Height="60" Header="Add:" PlaceholderText="Type ID here"/>
+
+        <Button x:ConnectionId='3' Content="Submit"                HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Width="300"/>
+
+        <TextBlock x:ConnectionId='4' x:Name="errorLabel" Foreground="Red" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Width="300"/>
+
+    </StackPanel>
+    
+</Page>
+
