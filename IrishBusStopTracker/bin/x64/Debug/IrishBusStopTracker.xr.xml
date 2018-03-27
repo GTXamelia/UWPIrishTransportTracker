@@ -49,6 +49,8 @@
       <RootProperty Name="FontWeight" />
       <RootProperty Name="Foreground" />
       <RootProperty Name="Margin" />
+      <RootProperty Name="HorizontalAlignment" />
+      <RootProperty Name="VerticalAlignment" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Data.Binding">
       <RootProperty Name="Source" />

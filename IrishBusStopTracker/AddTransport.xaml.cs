@@ -67,8 +67,7 @@ namespace IrishBusStopTracker
 					}
 					else
 					{
-						//Inform user code already in file
-						Debug.WriteLine("Already present: " + textBoxAdd.Text);
+						errorLabel.Text = "Code \"" + textBoxAdd.Text + "\"is already saved";
 					}
 				}
 				catch (FileNotFoundException)
