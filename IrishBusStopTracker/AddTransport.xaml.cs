@@ -103,10 +103,22 @@ namespace IrishBusStopTracker
 				}
 				catch (FileNotFoundException)
 				{
-					fileToSave = await storageFolder.CreateFileAsync(busFile, Windows.Storage.CreationCollisionOption.ReplaceExisting);
-					fileToSave = await storageFolder.CreateFileAsync(trainFile, Windows.Storage.CreationCollisionOption.ReplaceExisting);
+					string[] ssize = (obj.ToString()).Split(new char[0]);
 
-					await Windows.Storage.FileIO.AppendTextAsync(fileToSave, textBoxAdd.Text + Environment.NewLine);
+					if (ssize[ObjectRetrieval].Equals("X") || ssize[ObjectRetrieval].Equals("BE") || ssize[ObjectRetrieval].Equals("bac")) // Buses
+					{
+						fileToSave = await storageFolder.CreateFileAsync(busFile, Windows.Storage.CreationCollisionOption.ReplaceExisting);
+
+						await Windows.Storage.FileIO.AppendTextAsync(fileToSave, textBoxAdd.Text + Environment.NewLine);
+
+						this.Frame.Navigate(typeof(BusTransport));
+					}
+					else if (ssize[ObjectRetrieval].Contains("ir")) // Trains
+					{
+						fileToSave = await storageFolder.CreateFileAsync(trainFile, Windows.Storage.CreationCollisionOption.ReplaceExisting);
+
+						await Windows.Storage.FileIO.AppendTextAsync(fileToSave, textBoxAdd.Text + Environment.NewLine);
+					}
 				}
 			}
 			else
