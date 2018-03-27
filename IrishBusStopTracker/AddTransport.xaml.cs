@@ -109,7 +109,7 @@ namespace IrishBusStopTracker
 						{
 							await Windows.Storage.FileIO.AppendTextAsync(fileToSave, textBoxAdd.Text + Environment.NewLine);
 
-							this.Frame.Navigate(typeof(TrainMenu));
+							this.Frame.Navigate(typeof(LuasMenu));
 						}
 						else
 						{
@@ -151,6 +151,14 @@ namespace IrishBusStopTracker
 						this.Frame.Navigate(typeof(TrainMenu));
 					}
 				}
+			}
+			else if (string.IsNullOrEmpty(textBoxAdd.Text))
+			{
+				errorLabel.Text = "You must enter an ID to continue";
+			}
+			else if (textBoxAdd.Text.Contains(" "))
+			{
+				errorLabel.Text = "ID cannot contain any spaces";
 			}
 			else
 			{

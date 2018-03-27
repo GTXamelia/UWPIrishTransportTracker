@@ -6,7 +6,7 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
-    
+
     <Page.Resources>
         <CollectionViewSource x:ConnectionId='1' x:Name="cvsActivities" IsSourceGrouped="True"/>
         <local:ListGroupStyleSelector x:Key="listGroupStyleSelector"/>
@@ -25,6 +25,6 @@
             </ScrollViewer>
         </StackPanel>
     </Grid>
-    
+
 </Page>
 

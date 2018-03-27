@@ -15,7 +15,7 @@
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
         <StackPanel>
-            
+
             <Button x:ConnectionId='2' Content="Main Menu"                      HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Width="350"/>
             <ScrollViewer VerticalScrollMode="Auto" HorizontalScrollMode="Disabled">
 
