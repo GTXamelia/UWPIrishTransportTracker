@@ -76,7 +76,7 @@ namespace IrishBusStopTracker
 						}
 						else
 						{
-							errorLabel.Text = "ID \"" + textBoxAdd.Text + "\" has already been entered";
+							errorLabel.Text = "ID \"" + textBoxAdd.Text + "\" has already been added";
 						}
 					}
 					else if (ssize[ObjectRetrieval].Contains("ir")) // Trains
@@ -92,7 +92,7 @@ namespace IrishBusStopTracker
 						}
 						else
 						{
-							errorLabel.Text = "ID \"" + textBoxAdd.Text + "\" has already been entered";
+							errorLabel.Text = "ID \"" + textBoxAdd.Text + "\" has already been added";
 						}
 					}
 					else
@@ -119,7 +119,7 @@ namespace IrishBusStopTracker
 
 						await Windows.Storage.FileIO.AppendTextAsync(fileToSave, textBoxAdd.Text + Environment.NewLine);
 
-						this.Frame.Navigate(typeof(BusMenu));
+						this.Frame.Navigate(typeof(TrainMenu));
 					}
 				}
 			}
@@ -127,8 +127,6 @@ namespace IrishBusStopTracker
 			{
 				errorLabel.Text = "ID \"" + textBoxAdd.Text + "\" is not a valid stopID";
 			}
-
-			Debug.WriteLine(fileToSave.Path);
 
 			// Clears textbox after button code runs
 			textBoxAdd.Text = String.Empty;

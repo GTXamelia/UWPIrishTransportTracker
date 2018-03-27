@@ -138,7 +138,7 @@ namespace IrishBusStopTracker.IrishBusStopTracker_XamlTypeInfo
             _typeNameTable[2] = "Windows.UI.Xaml.Controls.UserControl";
             _typeNameTable[3] = "IrishBusStopTracker.ListGroupStyleSelector";
             _typeNameTable[4] = "Windows.UI.Xaml.Controls.GroupStyleSelector";
-            _typeNameTable[5] = "IrishBusStopTracker.BusTransport";
+            _typeNameTable[5] = "IrishBusStopTracker.BusMenu";
             _typeNameTable[6] = "IrishBusStopTracker.MainMenu";
             _typeNameTable[7] = "IrishBusStopTracker.TrainMenu";
 
@@ -187,7 +187,7 @@ namespace IrishBusStopTracker.IrishBusStopTracker_XamlTypeInfo
 
         private object Activate_0_AddTransport() { return new global::IrishBusStopTracker.AddTransport(); }
         private object Activate_3_ListGroupStyleSelector() { return new global::IrishBusStopTracker.ListGroupStyleSelector(); }
-        private object Activate_5_BusTransport() { return new global::IrishBusStopTracker.BusMenu(); }
+        private object Activate_5_BusMenu() { return new global::IrishBusStopTracker.BusMenu(); }
         private object Activate_6_MainMenu() { return new global::IrishBusStopTracker.MainMenu(); }
         private object Activate_7_TrainMenu() { return new global::IrishBusStopTracker.TrainMenu(); }
 
@@ -227,9 +227,9 @@ namespace IrishBusStopTracker.IrishBusStopTracker_XamlTypeInfo
                 xamlType = new global::IrishBusStopTracker.IrishBusStopTracker_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 5:   //  IrishBusStopTracker.BusTransport
+            case 5:   //  IrishBusStopTracker.BusMenu
                 userType = new global::IrishBusStopTracker.IrishBusStopTracker_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_5_BusTransport;
+                userType.Activator = Activate_5_BusMenu;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
