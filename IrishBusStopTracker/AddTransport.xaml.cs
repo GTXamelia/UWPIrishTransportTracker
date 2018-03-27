@@ -50,19 +50,26 @@ namespace IrishBusStopTracker
 
 			var obj = JsonConvert.DeserializeObject<RootObject>(result);
 
-			Debug.WriteLine(obj.Errorcode);
+			//Debug.WriteLine(obj.Errorcode);
 
 			if (obj.Errorcode.Contains("0"))
 			{
 				try
 				{
 					var file = await ApplicationData.Current.LocalFolder.GetFileAsync(fileName);
-
 					fileToSave = await storageFolder.GetFileAsync(fileName);
 
-					await Windows.Storage.FileIO.AppendTextAsync(fileToSave, textBoxAdd.Text + Environment.NewLine);
+					string text = await Windows.Storage.FileIO.ReadTextAsync(fileToSave);
 
-					Debug.WriteLine("Path: " + fileToSave.Path);
+					if (!text.Contains(textBoxAdd.Text))
+					{
+						await Windows.Storage.FileIO.AppendTextAsync(fileToSave, textBoxAdd.Text + Environment.NewLine);
+					}
+					else
+					{
+						//Inform user code already in file
+						Debug.WriteLine("Already present: " + textBoxAdd.Text);
+					}
 				}
 				catch (FileNotFoundException)
 				{
@@ -70,13 +77,17 @@ namespace IrishBusStopTracker
 
 					await Windows.Storage.FileIO.AppendTextAsync(fileToSave, textBoxAdd.Text + Environment.NewLine);
 
+					Debug.WriteLine("-====::Success::====- \nError Code: " + obj.Errorcode + "\nError Message: " + obj.Errormessage + "\nCode " + textBoxAdd.Text + " is valid");
 					Debug.WriteLine("Path: " + fileToSave.Path);
 				}
 			}
 			else
 			{
-				Debug.WriteLine("Error Code: " + obj.Errorcode + "\nError Message: " + obj.Errormessage);
+				Debug.WriteLine("-====::FAILURE::====- \nError Code: " + obj.Errorcode + "\nError Message: " + obj.Errormessage + "\nCode " + textBoxAdd.Text + " is not valid");
 			}
+
+			// Clears textbox after button code runs
+			textBoxAdd.Text = String.Empty;
 		}
 	}
 }
