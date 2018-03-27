@@ -67,12 +67,6 @@
       <RootProperty Name="Content" />
       <RootProperty Name="Resources" />
     </RootType>
-    <RootType FullName="Windows.UI.Xaml.Controls.TextBox">
-      <RootProperty Name="Width" />
-      <RootProperty Name="Height" />
-      <RootProperty Name="Header" />
-      <RootProperty Name="PlaceholderText" />
-    </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Button">
       <RootProperty Name="Content" />
       <RootProperty Name="HorizontalAlignment" />
@@ -81,6 +75,12 @@
       <RootProperty Name="Margin" />
       <RootProperty Name="Foreground" />
       <RootEvent Name="Click" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.TextBox">
+      <RootProperty Name="Width" />
+      <RootProperty Name="Height" />
+      <RootProperty Name="Header" />
+      <RootProperty Name="PlaceholderText" />
     </RootType>
     <RootType FullName="IrishBusStopTracker.AddTransport" />
     <RootType FullName="Windows.UI.Xaml.Data.CollectionViewSource">
@@ -101,6 +101,6 @@
       <RootProperty Name="Height" />
     </RootType>
     <RootType FullName="IrishBusStopTracker.BusTransport" />
-    <RootType FullName="IrishBusStopTracker.ListBus" />
+    <RootType FullName="IrishBusStopTracker.MainMenu" />
   </Roots.RootTypes>
 </Roots>

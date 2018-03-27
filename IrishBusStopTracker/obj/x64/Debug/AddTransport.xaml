@@ -9,11 +9,13 @@
 
     <StackPanel HorizontalAlignment="center">
 
+        <Button x:ConnectionId='1' Content="Main Menu"                   HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Width="300"/>
+
         <Image Source="http://www.buseireann.ie/img/logo-transport-for-ireland-large.png" Margin="115,0,0,0" Width="250" Height="50"/>
 
-        <TextBox x:ConnectionId='1' x:Name="textBoxAdd" Width="300" Height="60" Header="Add:" PlaceholderText="Type ID here"/>
+        <TextBox x:ConnectionId='2' x:Name="textBoxAdd" Width="300" Height="60" Header="Add:" PlaceholderText="Type ID here"/>
 
-        <Button x:ConnectionId='2' Content="Submit"                HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Width="300"/>
+        <Button x:ConnectionId='3' Content="Submit"                HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Width="300"/>
 
     </StackPanel>
     

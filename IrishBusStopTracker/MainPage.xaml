@@ -8,16 +8,15 @@
     mc:Ignorable="d">
 
     <StackPanel HorizontalAlignment="center">
-        
+
         <Image Source="http://www.buseireann.ie/img/logo-transport-for-ireland-large.png" Margin="115,0,0,0" Width="250" Height="50"/>
 
-        <Button Content="Add Transport" Click="Add_Transport"  Margin="5" Width="300"  Foreground="Green"/>
+        <Button Content="Add Transport" Click="Add_Transport" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"  Margin="5" Width="300"  Foreground="Green"/>
 
-        <Button Content="View Bus Stops" Click="View_Busses"  Margin="5" Width="300"  Foreground="Green"/>
+        <Button Content="View Bus Stops" Click="View_Busses" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"  Margin="5" Width="300"  Foreground="Green"/>
 
-        <Button Content="View Train Stations" Click="View_Trains"  Margin="5" Width="300"  Foreground="Green"/>
-        
+        <Button Content="View Train Stations" Click="View_Trains" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"  Margin="5" Width="300"  Foreground="Green"/>
+
     </StackPanel>
-
 
 </Page>
