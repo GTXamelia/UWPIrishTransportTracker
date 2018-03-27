@@ -76,7 +76,7 @@ namespace IrishBusStopTracker
 
 						for (k = 0; k < obj.Numberofresults; k++)
 						{
-							if (ssize[0 + (k * ObjectRetrieval)].Contains("X"))
+							if (ssize[4 + (k * ObjectRetrieval)].Contains("X"))
 							{
 								imageBusOp = "http://www.buseireann.ie/img/pictures/1405694022_content_main.jpg";
 							}

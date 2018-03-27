@@ -130,8 +130,6 @@ namespace IrishBusStopTracker
 				errorLabel.Text = "ID \"" + textBoxAdd.Text + "\" is not a valid stopID";
 			}
 
-			Debug.WriteLine(fileToSave.Path);
-
 			// Clears textbox after button code runs
 			textBoxAdd.Text = String.Empty;
 		}
