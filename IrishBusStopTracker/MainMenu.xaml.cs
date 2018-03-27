@@ -26,7 +26,7 @@ namespace IrishBusStopTracker
 
 		private void View_Busses(object sender, RoutedEventArgs e)
 		{
-			this.Frame.Navigate(typeof(BusMenu));
+			this.Frame.Navigate(typeof(BusTransport));
 		}
 
 		private void View_Trains(object sender, RoutedEventArgs e)

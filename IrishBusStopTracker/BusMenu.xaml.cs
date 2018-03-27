@@ -2,28 +2,29 @@
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.IO;
 using System.Linq;
 using System.Net.Http;
 using System.Net.Http.Headers;
+using System.Threading.Tasks;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 
 
 namespace IrishBusStopTracker
 {
-	public sealed partial class BusMenu : Page
+	public sealed partial class BusTransport : Page
 	{
 		private List<Transport> listOfStop = new List<Transport>();
 
-		public BusMenu()
+		public BusTransport()
 		{
 			this.InitializeComponent();
 
-			// Loop values
-			int i, k;
-			string imageBusOp = "";
-			int BusStatus = 0;
-			int ObjectRetrieval = 5;
+			Display();
+
+
+			
 
 			// 522691 - gHotel Dublin Road (Galway)
 			// 522961 - Opposite Londis Dublin Road (Galway)
@@ -31,7 +32,30 @@ namespace IrishBusStopTracker
 			// 524351 - Opposite Glenina Heights (Galway)
 			// GALWY  - Galway Train Station
 
-			string[] BusStopID = new string[] {"522691"};
+			
+		}
+
+		private void Button_Click(object sender, RoutedEventArgs e)
+		{
+			this.Frame.Navigate(typeof(MainMenu));
+		}
+
+
+		private async void Display()
+		{
+
+			Windows.Storage.StorageFolder storageFolder = Windows.Storage.ApplicationData.Current.LocalFolder;
+			Windows.Storage.StorageFile busStopIDsFile = await storageFolder.GetFileAsync("BusIDs.txt");
+
+			// Loop values
+			int i, k;
+			string imageBusOp = "";
+			int BusStatus = 0;
+			int ObjectRetrieval = 5;
+
+			string text = await Windows.Storage.FileIO.ReadTextAsync(busStopIDsFile);
+
+			string[] BusStopID = text.Split(new char[0]);
 
 			for (i = 0; i < BusStopID.Length; i++)
 			{
@@ -86,7 +110,7 @@ namespace IrishBusStopTracker
 						}
 					}
 
-					if(obj.Numberofresults == 0)
+					if (obj.Numberofresults == 0)
 					{
 						BusStatus++;
 					}
@@ -109,12 +133,6 @@ namespace IrishBusStopTracker
 				cvsActivities.Source = resultCVS;
 			}
 		}
-
-		private void Button_Click(object sender, RoutedEventArgs e)
-		{
-			this.Frame.Navigate(typeof(MainMenu));
-		}
-
 	}
 
 
