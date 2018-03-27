@@ -11,10 +11,10 @@ using Windows.UI.Xaml.Controls;
 
 namespace IrishBusStopTracker
 {
-	public sealed partial class ListBus : Page
+	public sealed partial class MainMenu : Page
 	{
 
-		public ListBus()
+		public MainMenu()
 		{
 			this.InitializeComponent();
 		}

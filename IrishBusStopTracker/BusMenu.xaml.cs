@@ -112,7 +112,7 @@ namespace IrishBusStopTracker
 
 		private void Button_Click(object sender, RoutedEventArgs e)
 		{
-			this.Frame.Navigate(typeof(ListBus));
+			this.Frame.Navigate(typeof(MainMenu));
 		}
 
 	}

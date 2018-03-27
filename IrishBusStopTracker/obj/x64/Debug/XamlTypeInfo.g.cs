@@ -148,7 +148,7 @@ namespace IrishBusStopTracker.IrishBusStopTracker_XamlTypeInfo
             _typeTable[3] = typeof(global::IrishBusStopTracker.ListGroupStyleSelector);
             _typeTable[4] = typeof(global::Windows.UI.Xaml.Controls.GroupStyleSelector);
             _typeTable[5] = typeof(global::IrishBusStopTracker.BusTransport);
-            _typeTable[6] = typeof(global::IrishBusStopTracker.ListBus);
+            _typeTable[6] = typeof(global::IrishBusStopTracker.MainMenu);
         }
 
         private int LookupTypeIndexByName(string typeName)
@@ -186,7 +186,7 @@ namespace IrishBusStopTracker.IrishBusStopTracker_XamlTypeInfo
         private object Activate_0_AddTransport() { return new global::IrishBusStopTracker.AddTransport(); }
         private object Activate_3_ListGroupStyleSelector() { return new global::IrishBusStopTracker.ListGroupStyleSelector(); }
         private object Activate_5_BusTransport() { return new global::IrishBusStopTracker.BusTransport(); }
-        private object Activate_6_ListBus() { return new global::IrishBusStopTracker.ListBus(); }
+        private object Activate_6_ListBus() { return new global::IrishBusStopTracker.MainMenu(); }
 
         private global::Windows.UI.Xaml.Markup.IXamlType CreateXamlType(int typeIndex)
         {

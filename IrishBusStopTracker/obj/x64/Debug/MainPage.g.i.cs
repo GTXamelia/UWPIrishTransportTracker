@@ -10,7 +10,7 @@
 
 namespace IrishBusStopTracker
 {
-    partial class ListBus : global::Windows.UI.Xaml.Controls.Page
+    partial class MainMenu : global::Windows.UI.Xaml.Controls.Page
     {
 
 

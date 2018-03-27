@@ -26,6 +26,11 @@ namespace IrishBusStopTracker
 			this.InitializeComponent();
 		}
 
+		private void Main_Menu(object sender, RoutedEventArgs e)
+		{
+			this.Frame.Navigate(typeof(MainMenu));
+		}
+
 		private async void Submit(object sender, RoutedEventArgs e)
 		{
 
@@ -33,8 +38,6 @@ namespace IrishBusStopTracker
 			Windows.Storage.StorageFile fileToSave = null;
 
 			String fileName = "BusIDs.txt";
-
-			Debug.WriteLine("Test: " + fileName);
 
 			try
 			{
@@ -50,8 +53,6 @@ namespace IrishBusStopTracker
 
 				await Windows.Storage.FileIO.AppendTextAsync(fileToSave, textBoxAdd.Text + Environment.NewLine);
 			}
-
-			Debug.WriteLine("Test: " + fileToSave.Path);
 		}
 	}
 }
