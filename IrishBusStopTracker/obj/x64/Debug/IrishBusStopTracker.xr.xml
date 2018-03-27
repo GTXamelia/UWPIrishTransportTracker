@@ -105,5 +105,6 @@
     </RootType>
     <RootType FullName="IrishBusStopTracker.BusTransport" />
     <RootType FullName="IrishBusStopTracker.MainMenu" />
+    <RootType FullName="IrishBusStopTracker.TrainMenu" />
   </Roots.RootTypes>
 </Roots>

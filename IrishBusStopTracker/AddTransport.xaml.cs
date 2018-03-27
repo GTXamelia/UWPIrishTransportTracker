@@ -72,7 +72,7 @@ namespace IrishBusStopTracker
 						{
 							await Windows.Storage.FileIO.AppendTextAsync(fileToSave, textBoxAdd.Text + Environment.NewLine);
 
-							this.Frame.Navigate(typeof(BusTransport));
+							this.Frame.Navigate(typeof(BusMenu));
 						}
 						else
 						{
@@ -111,13 +111,15 @@ namespace IrishBusStopTracker
 
 						await Windows.Storage.FileIO.AppendTextAsync(fileToSave, textBoxAdd.Text + Environment.NewLine);
 
-						this.Frame.Navigate(typeof(BusTransport));
+						this.Frame.Navigate(typeof(BusMenu));
 					}
 					else if (ssize[ObjectRetrieval].Contains("ir")) // Trains
 					{
 						fileToSave = await storageFolder.CreateFileAsync(trainFile, Windows.Storage.CreationCollisionOption.ReplaceExisting);
 
 						await Windows.Storage.FileIO.AppendTextAsync(fileToSave, textBoxAdd.Text + Environment.NewLine);
+
+						this.Frame.Navigate(typeof(BusMenu));
 					}
 				}
 			}
