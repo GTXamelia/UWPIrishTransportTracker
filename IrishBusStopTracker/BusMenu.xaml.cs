@@ -142,7 +142,9 @@ namespace IrishBusStopTracker
 			}
 			catch (FileNotFoundException)
 			{
-				this.Frame.Navigate(typeof(AddTransport));
+				var Error = new Errors();
+				Error.ErrorCode = "Please enter an ID before viewing stops";
+				this.Frame.Navigate(typeof(AddTransport), Error);
 			}
 
 
@@ -159,7 +161,10 @@ namespace IrishBusStopTracker
 		}
 	}
 
-
+	public class Errors
+	{
+		public string ErrorCode { get; set; }
+	}
 
 
 	public class Transport

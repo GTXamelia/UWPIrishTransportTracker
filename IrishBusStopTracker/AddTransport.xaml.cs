@@ -133,5 +133,22 @@ namespace IrishBusStopTracker
 			// Clears textbox after button code runs
 			textBoxAdd.Text = String.Empty;
 		}
+
+		protected override void OnNavigatedTo(NavigationEventArgs e)
+		{
+			base.OnNavigatedTo(e);
+
+			var error = (Errors)e.Parameter;
+
+			try
+			{
+				errorLabel.Text = error.ErrorCode;
+			}
+			catch(NullReferenceException)
+			{
+
+			}
+			
+		}
 	}
 }
