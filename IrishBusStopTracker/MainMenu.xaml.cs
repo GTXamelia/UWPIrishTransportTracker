@@ -30,7 +30,7 @@ namespace IrishBusStopTracker
 
 		private void View_Trains(object sender, RoutedEventArgs e)
 		{
-			this.Frame.Navigate(typeof(TrainMenu)); 
+			this.Frame.Navigate(typeof(TrainMenu));
 		}
 
 		private void View_Luas(object sender, RoutedEventArgs e)

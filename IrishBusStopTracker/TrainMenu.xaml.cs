@@ -19,12 +19,12 @@ using Windows.UI.Xaml.Navigation;
 
 namespace IrishBusStopTracker
 {
-    public sealed partial class TrainMenu : Page
-    {
+	public sealed partial class TrainMenu : Page
+	{
 		private List<Transport> listOfStop = new List<Transport>();
 
 		public TrainMenu()
-        {
+		{
 			this.InitializeComponent();
 
 			this.SizeChanged += MainPage_SizeChanged;

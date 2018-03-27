@@ -20,5 +20,5 @@
         <TextBlock x:Name="errorLabel" Foreground="Red" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Width="300"/>
 
     </StackPanel>
-    
+
 </Page>
