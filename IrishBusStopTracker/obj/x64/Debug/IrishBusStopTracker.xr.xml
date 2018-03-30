@@ -110,6 +110,7 @@
     <RootType FullName="IrishBusStopTracker.ListGroupStyleSelector" />
     <RootType FullName="Microsoft.Xaml.DirectUI.ProxyTypes.ThemeResourceExtension" />
     <RootType FullName="Windows.UI.Xaml.Controls.ScrollViewer">
+      <RootProperty Name="Margin" />
       <RootProperty Name="VerticalScrollMode" />
       <RootProperty Name="HorizontalScrollMode" />
       <RootProperty Name="Content" />

@@ -32,8 +32,8 @@
                     <Run Text="Tracker" Foreground="#FD7100"/>
                 </TextBlock>
             </Grid>
-            
-            <ScrollViewer VerticalScrollMode="Auto" HorizontalScrollMode="Disabled">
+
+            <ScrollViewer  Margin="0,25,0,0" VerticalScrollMode="Auto" HorizontalScrollMode="Disabled">
 
                 <ListView ItemsSource="{Binding Source={StaticResource cvsActivities}}"
                 ItemTemplate="{StaticResource listViewItemTemplate}"

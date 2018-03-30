@@ -22,7 +22,7 @@
         <Image Stretch="UniformToFill" Source="https://www.irishtimes.com/polopoly_fs/1.2895736.1481091333!/image/image.jpg"/>
 
 
-        <StackPanel Grid.Row="0" Background="#FFFFFF" HorizontalAlignment="center">
+        <StackPanel Grid.Row="0" Background="#B2B2B2" HorizontalAlignment="center">
 
             <Grid Width="300">
                 <Image HorizontalAlignment="Left"  Source="https://imgur.com/lUXJFIA.png" Margin="0,0,0,0" Width="100" Height="50"/>
@@ -32,8 +32,8 @@
                     <Run Text="Tracker" Foreground="#FD7100"/>
                 </TextBlock>
             </Grid>
-            
-            <ScrollViewer VerticalScrollMode="Auto" HorizontalScrollMode="Disabled">
+
+            <ScrollViewer  Margin="0,25,0,0" VerticalScrollMode="Auto" HorizontalScrollMode="Disabled">
 
                 <ListView ItemsSource="{Binding Source={StaticResource cvsActivities}}"
                 ItemTemplate="{StaticResource listViewItemTemplate}"
