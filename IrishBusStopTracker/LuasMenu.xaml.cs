@@ -46,6 +46,13 @@ namespace IrishBusStopTracker
 				Windows.Storage.StorageFolder storageFolder = Windows.Storage.ApplicationData.Current.LocalFolder;
 				Windows.Storage.StorageFile luasStationsIDsFile = await storageFolder.GetFileAsync("LuasIDs.txt");
 
+				var element = new MediaElement();
+				var folder = await Windows.ApplicationModel.Package.Current.InstalledLocation.GetFolderAsync("MyFolder");
+				var file = await folder.GetFileAsync("MySound.wav");
+				var stream = await file.OpenAsync(Windows.Storage.FileAccessMode.Read);
+				element.SetSource(stream, "");
+				element.Play();
+
 				// Variables used
 				int i, k;
 				string imageOperator = "";

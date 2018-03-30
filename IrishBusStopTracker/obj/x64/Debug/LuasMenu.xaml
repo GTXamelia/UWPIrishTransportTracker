@@ -14,18 +14,34 @@
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-        <StackPanel>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
 
-            <Button x:ConnectionId='2' Content="Main Menu"                   HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Width="350"/>
-            <ScrollViewer VerticalScrollMode="Auto" HorizontalScrollMode="Disabled">
+        <Image Stretch="UniformToFill" Source="https://www.irishtimes.com/polopoly_fs/1.2895736.1481091333!/image/image.jpg"/>
 
+
+        <StackPanel Grid.Row="0" Background="#B2B2B2" HorizontalAlignment="center">
+
+            <Grid Width="300">
+                <Image HorizontalAlignment="Left"  Source="https://imgur.com/lUXJFIA.png" Margin="0,0,0,0" Width="100" Height="50"/>
+                <TextBlock HorizontalAlignment="Right" Margin="0,20,50,0" FontStyle="Italic">
+                    <Run Text="Irish" Foreground="#009543"/>
+                    <Run Text="Transport" Foreground="#FFFFFF"/>
+                    <Run Text="Tracker" Foreground="#FD7100"/>
+                </TextBlock>
+            </Grid>
+
+            <ScrollViewer  Margin="0,25,0,0" VerticalScrollMode="Auto" HorizontalScrollMode="Disabled">
                 <ListView ItemsSource="{Binding Source={StaticResource cvsActivities}}"
                 ItemTemplate="{StaticResource listViewItemTemplate}"
                 GroupStyleSelector="{StaticResource listGroupStyleSelector}" Width="350" Height="866" />
-
             </ScrollViewer>
 
         </StackPanel>
+
+        <Button x:ConnectionId='2' Grid.Row="1" Content="Main Menu"                   HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Foreground="Green" Background="#FFFFFF" Opacity="0.9"/>
 
     </Grid>
 
