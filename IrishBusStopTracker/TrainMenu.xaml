@@ -15,7 +15,7 @@
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <StackPanel>
 
-            <Button Content="Main Menu" Click="Button_Click" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Width="350"/>
+            <Button Content="Main Menu" Click="Main_Menu" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Width="350"/>
             <ScrollViewer VerticalScrollMode="Auto" HorizontalScrollMode="Disabled">
 
                 <ListView ItemsSource="{Binding Source={StaticResource cvsActivities}}"

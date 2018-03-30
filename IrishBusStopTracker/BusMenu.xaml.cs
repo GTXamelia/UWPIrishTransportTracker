@@ -105,7 +105,7 @@ namespace IrishBusStopTracker
 							// Will display 'Due' or '1 Minute' or '2 Minutes, 3 Minutes, 4 Minutes......'
 							if (ssize[2 + (k * ObjectRetrieval)].Contains("Due"))
 							{
-								// Adds contents to an instance of the Tranport object
+								// Adds contents to an instance of the Tranport object with due time equaling 'Due' Also adds the image from if statement block above
 								listOfStop.Add(new Transport { StopID = obj.Stopid, Route = ssize[0 + (k * ObjectRetrieval)], ArrivalTime = ssize[1 + (k * ObjectRetrieval)], Duetime = ssize[2 + (k * ObjectRetrieval)], Destination = ssize[3 + (k * ObjectRetrieval)], ImageOperator = imageBusOp });
 							}
 							else if (Int32.Parse(ssize[2 + (k * ObjectRetrieval)]) == 1) // If due time equals '1'
@@ -128,7 +128,7 @@ namespace IrishBusStopTracker
 						}
 
 					}
-					catch (Exception e) // if any error is encountered
+					catch (Exception) // if any error is encountered
 					{
 						// Increment counter
 						BusStatus++;
@@ -150,7 +150,7 @@ namespace IrishBusStopTracker
 					cvsActivities.Source = resultCVS;
 				}
 			}
-			catch (FileNotFoundException) // If no file was found means the user has yet to enter a valid bus code
+			catch (FileNotFoundException) // If no file was not found means the user has yet to enter a valid bus code
 			{
 				// Set up error var
 				var Error = new Errors();
