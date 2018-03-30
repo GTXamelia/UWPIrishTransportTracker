@@ -212,8 +212,14 @@ namespace IrishBusStopTracker
 			var error = (Errors)e.Parameter;
 
 			// Sets error message by using error from other page
-			errorLabel.Text = error.ErrorCode;
-
+			try
+			{
+				errorLabel.Text = error.ErrorCode;
+			}
+			catch (NullReferenceException)
+			{
+				errorLabel.Text = "";
+			}
 		}
 	}
 }

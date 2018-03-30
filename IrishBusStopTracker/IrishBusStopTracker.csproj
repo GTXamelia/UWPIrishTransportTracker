@@ -101,7 +101,7 @@
     <Compile Include="BusMenu.xaml.cs">
       <DependentUpon>BusMenu.xaml</DependentUpon>
     </Compile>
-    <Compile Include="BusStatusObject.cs" />
+    <Compile Include="TransportJsonParsed.cs" />
     <Compile Include="LuasMenu.xaml.cs">
       <DependentUpon>LuasMenu.xaml</DependentUpon>
     </Compile>

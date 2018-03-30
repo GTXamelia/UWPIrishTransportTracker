@@ -9,6 +9,7 @@
 
     <StackPanel HorizontalAlignment="center">
 
+        <!-- Cool comment -->
         <Button x:ConnectionId='1' Content="Main Menu"                   HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Width="300"/>
 
         <Image Source="http://www.buseireann.ie/img/logo-transport-for-ireland-large.png" Margin="115,0,0,0" Width="250" Height="50"/>
