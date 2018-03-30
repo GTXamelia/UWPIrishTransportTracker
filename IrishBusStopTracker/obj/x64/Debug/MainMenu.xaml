@@ -7,9 +7,15 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <Grid Background="#FFFFFF">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
+
         <Image Stretch="UniformToFill" Source="https://www.irishtimes.com/polopoly_fs/1.2895736.1481091333!/image/image.jpg"/>
-        <StackPanel HorizontalAlignment="center">
+
+        <StackPanel Grid.Row="0" HorizontalAlignment="center">
             <Grid Width="300">
                 <Image HorizontalAlignment="Left"  Source="https://imgur.com/lUXJFIA.png" Margin="0,0,0,0" Width="100" Height="50"/>
                 <TextBlock HorizontalAlignment="Right" Margin="0,20,50,0" FontStyle="Italic">
@@ -19,15 +25,19 @@
                 </TextBlock>
             </Grid>
 
-            <Button x:ConnectionId='1' Content="Add Transport"                       HorizontalAlignment="Stretch" VerticalAlignment="Stretch"  Margin="5" Width="300"  Foreground="Green"/>
+            <Button x:ConnectionId='1' Margin="0,25,0,5" Content="Add Transport"                       HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Width="300"  Foreground="Green" Background="#FFFFFF" Opacity="0.9"/>
 
-            <Button x:ConnectionId='2' Content="View Bus Stops"                     HorizontalAlignment="Stretch" VerticalAlignment="Stretch"  Margin="5" Width="300"  Foreground="Green"/>
+            <Button x:ConnectionId='2' Content="View Bus Stops"                     HorizontalAlignment="Stretch" VerticalAlignment="Stretch"  Margin="5" Width="300"  Foreground="Green" Background="#FFFFFF" Opacity="0.9"/>
 
-            <Button x:ConnectionId='3' Content="View Train Stations"                     HorizontalAlignment="Stretch" VerticalAlignment="Stretch"  Margin="5" Width="300"  Foreground="Green"/>
+            <Button x:ConnectionId='3' Content="View Train Stations"                     HorizontalAlignment="Stretch" VerticalAlignment="Stretch"  Margin="5" Width="300"  Foreground="Green" Background="#FFFFFF" Opacity="0.9"/>
 
-            <Button x:ConnectionId='4' Content="View Luas Stations"                   HorizontalAlignment="Stretch" VerticalAlignment="Stretch"  Margin="5" Width="300"  Foreground="Green"/>
+            <Button x:ConnectionId='4' Content="View Luas Stations"                   HorizontalAlignment="Stretch" VerticalAlignment="Stretch"  Margin="5" Width="300"  Foreground="Green" Background="#FFFFFF" Opacity="0.9"/>
 
         </StackPanel>
+
+        <TextBlock Grid.Row="1" HorizontalAlignment="Right" Margin="0,12,5,0" FontStyle="Italic">
+            <Run Text="Irish Transport Tracker Created by Cian Gannon 2018"/>
+        </TextBlock>
     </Grid>
 
 </Page>

@@ -7,11 +7,15 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <Grid Background="#FFFFFF">
-        <StackPanel Background="#9D9D9D" HorizontalAlignment="center">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
 
-            <!-- Button to move user to Main Menu page -->
-            <Button Content="Main Menu" Click="Main_Menu" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Width="300"/>
+        <Image Stretch="UniformToFill" Source="https://www.irishtimes.com/polopoly_fs/1.2895736.1481091333!/image/image.jpg"/>
+
+        <StackPanel Grid.Row="0" HorizontalAlignment="center">
 
             <Grid Width="300">
                 <Image HorizontalAlignment="Left"  Source="https://imgur.com/lUXJFIA.png" Margin="0,0,0,0" Width="100" Height="50"/>
@@ -22,13 +26,16 @@
                 </TextBlock>
             </Grid>
 
-            <TextBox x:Name="textBoxAdd" Width="300" Height="60" Header="Add:" PlaceholderText="Type ID here"/>
+            <TextBox Margin="0,25,0,0" x:Name="textBoxAdd" Width="300" Height="60" Header="Add Transport:" PlaceholderText="Type ID here"/>
 
-            <Button Content="Submit" Click="Submit" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Width="300"/>
+            <Button Content="Submit" Click="Submit" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Width="300" Foreground="Green" Background="#FFFFFF" Opacity="0.9"/>
 
             <TextBlock x:Name="errorLabel" Foreground="Red" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Width="300"/>
 
         </StackPanel>
+        
+        <Button Grid.Row="1" Content="Main Menu" Click="Main_Menu" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Foreground="Green" Background="#FFFFFF" Opacity="0.9"/>
+
     </Grid>
 
 </Page>
