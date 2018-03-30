@@ -3,6 +3,7 @@ using System;
 using System.IO;
 using System.Net.Http;
 using System.Net.Http.Headers;
+using System.Threading.Tasks;
 using Windows.Storage;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
@@ -79,6 +80,7 @@ namespace IrishBusStopTracker
 							// Writes code to file
 							await Windows.Storage.FileIO.AppendTextAsync(fileToSave, textBoxAdd.Text + Environment.NewLine);
 
+
 							// Moves user to BusTransport page
 							this.Frame.Navigate(typeof(BusTransport));
 						}
@@ -114,7 +116,7 @@ namespace IrishBusStopTracker
 					else if (ssize[ObjectRetrieval].Contains("LUAS")) // Else if 5th value of the array equals 'LUAS' then the transport type is a Luas line
 					{
 						// Sets file path
-						var TrainfileLocal = await ApplicationData.Current.LocalFolder.GetFileAsync(luasFile);
+						var LuasfileLocal = await ApplicationData.Current.LocalFolder.GetFileAsync(luasFile);
 						fileToSave = await storageFolder.GetFileAsync(luasFile);
 
 						// Get file contents
@@ -177,7 +179,7 @@ namespace IrishBusStopTracker
 						await Windows.Storage.FileIO.AppendTextAsync(fileToSave, textBoxAdd.Text + Environment.NewLine);
 
 						// Moves user to TrainMenu page
-						this.Frame.Navigate(typeof(TrainMenu));
+						this.Frame.Navigate(typeof(LuasMenu));
 					}
 				}
 			}
