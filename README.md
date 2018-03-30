@@ -35,16 +35,18 @@ Git pull origin master
 
 ## Running the tests
 
-Explain how to run the automated tests for this system
-
-<a href="https://imgur.com/Uy8LRjL"><img src="https://imgur.com/Uy8LRjL.gif" title="Bus Adding Test"/></a>
-
 ### Adding Transport
 
 Adding a transport is the first phase of the program
 
 1. Launch application
-2. Click 
+2. Click 'Add Transport'
+3. Type in a valid stopID
+	- Bus example: 	 522691
+	- Train example: galwy
+	- Luas example:  luas10
+
+<a href="https://imgur.com/Uy8LRjL"><img src="https://imgur.com/Uy8LRjL.gif" title="Bus Adding Test"/></a>
 
 ### And coding style tests
 
