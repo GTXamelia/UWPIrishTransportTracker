@@ -46,7 +46,7 @@ Adding a transport is the first phase of the program
 	- Train example: galwy
 	- Luas example:  luas10
 
-<a href="https://imgur.com/Uy8LRjL"><img src="https://imgur.com/Uy8LRjL.gif" title="Bus Adding Test"/></a>
+<a href="https://imgur.com/a/cpQva"><img src="https://imgur.com/a/cpQva.gif" title="Bus Adding Test"/></a>
 
 ### Adding Transport
 
