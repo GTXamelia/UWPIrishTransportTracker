@@ -29,5 +29,9 @@
     <Source>C:\Users\Cian Gannon\source\repos\IrishBusStopTracker\IrishBusStopTracker\Assets\Store\StoreLogo.scale-400.png</Source>
     <PackageLogoSource>C:\Users\Cian Gannon\Pictures\UWP\Square310x310Logo.scale-400.png</PackageLogoSource>
     <ProjectView>ShowAllFiles</ProjectView>
+    <AppxPackageIsForStore>True</AppxPackageIsForStore>
+    <AppxShowAllApps>False</AppxShowAllApps>
+    <AppxBuildConfigurationSelection>x86|x64|arm</AppxBuildConfigurationSelection>
+    <PackageOptionalProjectsInIdeBuilds>True</PackageOptionalProjectsInIdeBuilds>
   </PropertyGroup>
 </Project>
