@@ -11,8 +11,9 @@ namespace IrishBusStopTracker
 		{
 			this.InitializeComponent();
 
+			// Sets up sound player
 			ElementSoundPlayer.State = ElementSoundPlayerState.On;
-
+			ElementSoundPlayer.Volume = 0.5;
 		}
 
 		// Button fuction for when user presses 'Add_Transport' button in xaml
