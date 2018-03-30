@@ -118,6 +118,7 @@
     <AppxManifest Include="Package.appxmanifest">
       <SubType>Designer</SubType>
     </AppxManifest>
+    <None Include="ClassDiagram1.cd" />
     <None Include="IrishBusStopTracker_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
