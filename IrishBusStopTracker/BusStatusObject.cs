@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace IrishBusStopTracker
 {
+	// Result class object holds the linked data from rootobject from the JSON data page
 	public class Result
 	{
 		public string Arrivaldatetime { get; set; }
@@ -26,11 +27,13 @@ namespace IrishBusStopTracker
 		public string Sourcetimestamp { get; set; }
 		public string Monitored { get; set; }
 
+		// ToString method return select data from the result class
 		public override string ToString()
 		{
 			Arrivaldatetime = Arrivaldatetime.Replace(" ", "-");// Removes spaces from date/time (Arrivaldatetime)
 			Destination = Destination.Replace(" ", "-"); // Removes potential space from destination (Destination)
 
+			// Return the select data to the RootObject
 			return string.Format("{0} {1} {2} {3} {4} ", Route, Arrivaldatetime, Duetime, Destination, Operator);
 		}
 	}
