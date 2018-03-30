@@ -8,7 +8,7 @@ A UWP application that allows the user to add any transport type from the TFI AP
 - Right click on project folder
 - Git init
 - Git remote add origin https://github.com/cian2009/UWPIrishTransportTracker.git
-- git pull origin master
+- Git pull origin master
 
 ### Prerequisites
 
@@ -19,39 +19,37 @@ Json parser for c#:
 
 A step by step series of examples that tell you have to get a development env running
 
-Create
+Create Visual Studio 2017 Project
 
 ```
-Give the example
+File > New > Project > Visual c# > Blank App (Universal Windows)
 ```
 
-And repeat
+Set-up Git Repository
 
 ```
-until finished
+Git init
+Git remote add origin https://github.com/cian2009/UWPIrishTransportTracker.git
+Git pull origin master
 ```
-
-End with an example of getting some data out of the system or using it for a little demo
 
 ## Running the tests
 
 Explain how to run the automated tests for this system
 
-### Break down into end to end tests
+<a href="https://imgur.com/Uy8LRjL"><img src="https://imgur.com/Uy8LRjL.gif" title="Bus Adding Test"/></a>
 
-Explain what these tests test and why
+### Adding Transport
 
-```
-Give an example
-```
+Adding a transport is the first phase of the program
+
+1. Launch application
+2. Click 
 
 ### And coding style tests
 
 Explain what these tests test and why
 
-```
-Give an example
-```
 
 ## Deployment
 
