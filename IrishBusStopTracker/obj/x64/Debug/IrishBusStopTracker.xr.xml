@@ -124,6 +124,13 @@
     </RootType>
     <RootType FullName="IrishBusStopTracker.BusTransport" />
     <RootType FullName="IrishBusStopTracker.LuasMenu" />
+    <RootType FullName="Windows.UI.Xaml.Controls.Border">
+      <RootProperty Name="BorderBrush" />
+      <RootProperty Name="BorderThickness" />
+      <RootProperty Name="CornerRadius" />
+      <RootProperty Name="VerticalAlignment" />
+      <RootProperty Name="Child" />
+    </RootType>
     <RootType FullName="IrishBusStopTracker.MainMenu" />
     <RootType FullName="IrishBusStopTracker.TrainMenu" />
   </Roots.RootTypes>
