@@ -25,14 +25,14 @@
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
   <Class Name="IrishBusStopTracker.Result">
-    <Position X="7" Y="2.75" Width="1.5" />
+    <Position X="8.75" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAIAAAAgBAAKAEAmAAIAAAAAAAEAQEAAAAAAhEIAA=</HashCode>
       <FileName>BusStatusObject.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="IrishBusStopTracker.RootObject" Collapsed="true">
-    <Position X="1.75" Y="3.75" Width="1.5" />
+  <Class Name="IrishBusStopTracker.RootObject">
+    <Position X="10.5" Y="3" Width="1.5" />
     <TypeIdentifier>
       <HashCode>ASAAAAAAAAAAAAAEAAACAAAACAgAAABAAAAAAAAAAAA=</HashCode>
       <FileName>BusStatusObject.cs</FileName>
@@ -60,23 +60,23 @@
       <FileName>MainFunction.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="IrishBusStopTracker.Transport" Collapsed="true">
-    <Position X="5.25" Y="3.75" Width="1.5" />
+  <Class Name="IrishBusStopTracker.Transport">
+    <Position X="5.25" Y="3" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAGAQEAAAAAAEAAAEAAAAAAAAAAA=</HashCode>
       <FileName>MainFunction.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="IrishBusStopTracker.MainMenu" BaseTypeListCollapsed="true">
-    <Position X="5.25" Y="2.75" Width="1.5" />
+    <Position X="10.5" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>CCAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAA=</HashCode>
       <FileName>MainMenu.xaml.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
-  <Class Name="IrishBusStopTracker.TrainMenu" Collapsed="true" BaseTypeListCollapsed="true">
-    <Position X="3.5" Y="3.75" Width="1.5" />
+  <Class Name="IrishBusStopTracker.TrainMenu" BaseTypeListCollapsed="true">
+    <Position X="7" Y="3" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAECAQEAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>TrainMenu.xaml.cs</FileName>
