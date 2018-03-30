@@ -80,7 +80,6 @@ namespace IrishBusStopTracker
 							// Writes code to file
 							await Windows.Storage.FileIO.AppendTextAsync(fileToSave, textBoxAdd.Text + Environment.NewLine);
 
-
 							// Moves user to BusTransport page
 							this.Frame.Navigate(typeof(BusTransport));
 						}

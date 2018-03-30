@@ -7,18 +7,27 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <StackPanel HorizontalAlignment="center">
+    <Grid>
+        <Image Stretch="UniformToFill" Source="https://www.irishtimes.com/polopoly_fs/1.2895736.1481091333!/image/image.jpg"/>
+        <StackPanel HorizontalAlignment="center">
+            <Grid Width="300">
+                <Image HorizontalAlignment="Left"  Source="https://imgur.com/lUXJFIA.png" Margin="0,0,0,0" Width="100" Height="50"/>
+                <TextBlock HorizontalAlignment="Right" Margin="0,20,50,0" FontStyle="Italic">
+                    <Run Text="Irish" Foreground="#009543"/>
+                    <Run Text="Transport" Foreground="#FFFFFF"/>
+                    <Run Text="Tracker" Foreground="#FD7100"/>
+                </TextBlock>
+            </Grid>
 
-        <Image Source="http://www.buseireann.ie/img/logo-transport-for-ireland-large.png" Margin="115,0,0,0" Width="250" Height="50"/>
+            <Button Content="Add Transport" Click="Add_Transport" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"  Margin="5" Width="300"  Foreground="Green" Background="#FFFFFF" Opacity="0.7"/>
 
-        <Button Content="Add Transport" Click="Add_Transport" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"  Margin="5" Width="300"  Foreground="Green"/>
+            <Button Content="View Bus Stops" Click="View_Busses" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"  Margin="5" Width="300"  Foreground="Green" Background="#FFFFFF" Opacity="0.7"/>
 
-        <Button Content="View Bus Stops" Click="View_Busses" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"  Margin="5" Width="300"  Foreground="Green"/>
+            <Button Content="View Train Stations" Click="View_Trains" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"  Margin="5" Width="300"  Foreground="Green" Background="#FFFFFF" Opacity="0.7"/>
 
-        <Button Content="View Train Stations" Click="View_Trains" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"  Margin="5" Width="300"  Foreground="Green"/>
+            <Button Content="View Luas Stations" Click="View_Luas" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"  Margin="5" Width="300"  Foreground="Green" Background="#FFFFFF" Opacity="0.7"/>
 
-        <Button Content="View Luas Stations" Click="View_Luas" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"  Margin="5" Width="300"  Foreground="Green"/>
-
-    </StackPanel>
+        </StackPanel>
+    </Grid>
 
 </Page>

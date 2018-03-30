@@ -7,19 +7,28 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <StackPanel HorizontalAlignment="center">
+    <Grid Background="#FFFFFF">
+        <StackPanel Background="#9D9D9D" HorizontalAlignment="center">
 
-        <!--  -->
-        <Button Content="Main Menu" Click="Main_Menu" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Width="300"/>
+            <!-- Button to move user to Main Menu page -->
+            <Button Content="Main Menu" Click="Main_Menu" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Width="300"/>
 
-        <Image Source="http://www.buseireann.ie/img/logo-transport-for-ireland-large.png" Margin="115,0,0,0" Width="250" Height="50"/>
+            <Grid Width="300">
+                <Image HorizontalAlignment="Left"  Source="https://imgur.com/lUXJFIA.png" Margin="0,0,0,0" Width="100" Height="50"/>
+                <TextBlock HorizontalAlignment="Right" Margin="0,20,50,0" FontStyle="Italic">
+                    <Run Text="Irish" Foreground="#009543"/>
+                    <Run Text="Transport" Foreground="#FFFFFF"/>
+                    <Run Text="Tracker" Foreground="#FD7100"/>
+                </TextBlock>
+            </Grid>
 
-        <TextBox x:Name="textBoxAdd" Width="300" Height="60" Header="Add:" PlaceholderText="Type ID here"/>
+            <TextBox x:Name="textBoxAdd" Width="300" Height="60" Header="Add:" PlaceholderText="Type ID here"/>
 
-        <Button Content="Submit" Click="Submit" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Width="300"/>
+            <Button Content="Submit" Click="Submit" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Width="300"/>
 
-        <TextBlock x:Name="errorLabel" Foreground="Red" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Width="300"/>
+            <TextBlock x:Name="errorLabel" Foreground="Red" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Width="300"/>
 
-    </StackPanel>
+        </StackPanel>
+    </Grid>
 
 </Page>

@@ -23,6 +23,7 @@
       <RootProperty Name="Margin" />
       <RootProperty Name="Orientation" />
       <RootProperty Name="Children" />
+      <RootProperty Name="Background" />
       <RootProperty Name="HorizontalAlignment" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.GridView">
@@ -52,6 +53,8 @@
       <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="Width" />
+      <RootProperty Name="FontStyle" />
+      <RootProperty Name="Inlines" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Data.Binding">
       <RootProperty Name="Source" />
@@ -65,6 +68,8 @@
       <RootProperty Name="Margin" />
       <RootProperty Name="Width" />
       <RootProperty Name="Height" />
+      <RootProperty Name="HorizontalAlignment" />
+      <RootProperty Name="Stretch" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Page">
       <RootProperty Name="Content" />
@@ -84,6 +89,10 @@
       <RootProperty Name="Height" />
       <RootProperty Name="Header" />
       <RootProperty Name="PlaceholderText" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Documents.Run">
+      <RootProperty Name="Text" />
+      <RootProperty Name="Foreground" />
     </RootType>
     <RootType FullName="IrishBusStopTracker.AddTransport" />
     <RootType FullName="Windows.UI.Xaml.Data.CollectionViewSource">
