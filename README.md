@@ -48,6 +48,15 @@ Adding a transport is the first phase of the program
 
 <a href="https://imgur.com/Uy8LRjL"><img src="https://imgur.com/Uy8LRjL.gif" title="Bus Adding Test"/></a>
 
+### Adding Transport
+
+Trying to view trasnport that hasn't been added
+
+1. Launch application
+2. Click 'View Luas'
+
+<a href="https://imgur.com/a/cpQva"><img src="https://imgur.com/a/cpQva.gif" title="Luas Fail Test"/></a>
+
 ### And coding style tests
 
 Explain what these tests test and why
