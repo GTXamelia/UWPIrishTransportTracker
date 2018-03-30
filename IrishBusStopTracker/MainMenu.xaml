@@ -18,13 +18,11 @@
         <StackPanel Grid.Row="0" HorizontalAlignment="center">
             <Grid Width="300">
                 <Image HorizontalAlignment="Left"  Source="https://imgur.com/lUXJFIA.png" Margin="0,0,0,0" Width="100" Height="50"/>
-                <Border BorderBrush="Black" BorderThickness="8" CornerRadius="3.2" VerticalAlignment="Top">
-                    <TextBlock HorizontalAlignment="Right" Margin="0,20,50,0" FontStyle="Italic">
-                        <Run Text="Irish" Foreground="#009543"/>
-                        <Run Text="Transport" Foreground="#FFFFFF"/>
-                        <Run Text="Tracker" Foreground="#FD7100"/>
-                    </TextBlock>
-                </Border>
+                <TextBlock HorizontalAlignment="Right" Margin="0,20,50,0" FontStyle="Italic">
+                    <Run Text="Irish" Foreground="#009543"/>
+                    <Run Text="Transport" Foreground="#FFFFFF"/>
+                    <Run Text="Tracker" Foreground="#FD7100"/>
+                </TextBlock>
             </Grid>
 
             <Button Margin="0,25,0,5" Content="Add Transport" Click="Add_Transport" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Width="300"  Foreground="Green" Background="#FFFFFF" Opacity="0.9"/>
