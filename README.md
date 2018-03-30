@@ -12,8 +12,7 @@ A UWP application that allows the user to add any transport type from the TFI AP
 
 ### Prerequisites
 
-Json parser for c#
-
+Json parser for c#:
 [Newtonsoft Json.NET](https://www.newtonsoft.com/json)
 
 ### Installing
