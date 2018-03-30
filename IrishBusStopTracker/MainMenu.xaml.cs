@@ -11,17 +11,16 @@ namespace IrishBusStopTracker
 		{
 			this.InitializeComponent();
 
+			ElementSoundPlayer.State = ElementSoundPlayerState.On;
+
 		}
 
 		// Button fuction for when user presses 'Add_Transport' button in xaml
 		private void Add_Transport(object sender, RoutedEventArgs e)
 		{
+
 			// Moves user to AddTransport.xaml page
 			this.Frame.Navigate(typeof(AddTransport));
-
-			ElementSoundPlayer.State = ElementSoundPlayerState.On;
-			ElementSoundPlayer.Volume = 0.5;
-			ElementSoundPlayer.Play(ElementSoundKind.Invoke);
 		}
 
 		// Button fuction for when user presses 'View_Busses' button in xaml
@@ -29,10 +28,6 @@ namespace IrishBusStopTracker
 		{
 			// Moves user to BusTransport.xaml page
 			this.Frame.Navigate(typeof(BusTransport));
-
-			ElementSoundPlayer.State = ElementSoundPlayerState.On;
-			ElementSoundPlayer.Volume = 0.5;
-			ElementSoundPlayer.Play(ElementSoundKind.Invoke);
 		}
 
 		// Button fuction for when user presses 'View_Trains' button in xaml
@@ -40,10 +35,6 @@ namespace IrishBusStopTracker
 		{
 			// Moves user to TrainMenu.xaml page
 			this.Frame.Navigate(typeof(TrainMenu));
-
-			ElementSoundPlayer.State = ElementSoundPlayerState.On;
-			ElementSoundPlayer.Volume = 0.5;
-			ElementSoundPlayer.Play(ElementSoundKind.Invoke);
 		}
 
 		// Button fuction for when user presses 'View_Luas' button in xaml
@@ -51,10 +42,6 @@ namespace IrishBusStopTracker
 		{
 			// Moves user to LuasMenu.xaml page
 			this.Frame.Navigate(typeof(LuasMenu));
-
-			ElementSoundPlayer.State = ElementSoundPlayerState.On;
-			ElementSoundPlayer.Volume = 0.5;
-			ElementSoundPlayer.Play(ElementSoundKind.Invoke);
 		}
 	}
 }
