@@ -46,7 +46,7 @@ Adding a transport is the first phase of the program
 	- Train example: galwy
 	- Luas example:  luas10
 
-<a href="https://imgur.com/a/cpQva"><img src="https://imgur.com/a/cpQva.gif" title="Bus Adding Test"/></a>
+<a href="https://imgur.com/Uy8LRjL"><img src="https://imgur.com/Uy8LRjL.gif" title="Bus Adding Test"/></a>
 
 ### Adding Transport
 
@@ -55,7 +55,7 @@ Trying to view trasnport that hasn't been added
 1. Launch application
 2. Click 'View Luas'
 
-<a href="https://imgur.com/a/cpQva"><img src="https://imgur.com/a/cpQva.gif" title="Luas Fail Test"/></a>
+<a href="https://imgur.com/LSu8tZ0"><img src="https://imgur.com/LSu8tZ0.gif" title="Luas Fail Test"/></a>
 
 ### And coding style tests
 
