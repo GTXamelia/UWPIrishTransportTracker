@@ -1,12 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Windows.UI.Xaml.Controls;
+﻿using Windows.UI.Xaml.Controls;
 
 namespace IrishBusStopTracker
 {
+	// Reference used by the 3 main pages 'BusMenu.xaml', 'TrainMenu.xaml' and 'LuasMenu.xaml'
 	public class ListGroupStyleSelector : GroupStyleSelector
 	{
 		protected override GroupStyle SelectGroupStyleCore(object group, uint level)
@@ -15,11 +11,13 @@ namespace IrishBusStopTracker
 		}
 	}
 
+	// Error object used to transfer error details between pages
 	public class Errors
 	{
 		public string ErrorCode { get; set; }
 	}
 
+	// Transport object used to store details needed to bind data to xaml from RootObject
 	public class Transport
 	{
 		public string StopID { get; set; }
