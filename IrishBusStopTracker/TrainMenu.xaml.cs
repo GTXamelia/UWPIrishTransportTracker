@@ -44,7 +44,7 @@ namespace IrishBusStopTracker
 			{
 				// File settings
 				Windows.Storage.StorageFolder storageFolder = Windows.Storage.ApplicationData.Current.LocalFolder;
-				Windows.Storage.StorageFile busStopIDsFile = await storageFolder.GetFileAsync("TrainIDs.txt");
+				Windows.Storage.StorageFile trainStopIDsFile = await storageFolder.GetFileAsync("TrainIDs.txt");
 
 				// Variables used
 				int i, k;
@@ -53,17 +53,17 @@ namespace IrishBusStopTracker
 				int ObjectRetrieval = 5;
 
 				// Read file and store data in string format
-				string text = await Windows.Storage.FileIO.ReadTextAsync(busStopIDsFile);
+				string text = await Windows.Storage.FileIO.ReadTextAsync(trainStopIDsFile);
 
 				// split data into an array of codes
 				string[] StationID = text.Split(new char[0]);
 
-				// For loop that runs depending on data from the split array 'BusStopID'
+				// For loop that runs depending on data from the split array 'StationID'
 				for (i = 0; i < StationID.Length; i++)
 				{
 					// Connects to the url and downloads all the JSON text
 					// Alters the url by using the code the user
-					// Stores JSON data in the BusStatusObject.cs
+					// Stores JSON data in the TransportJsonParsed.cs
 					HttpClient client = new HttpClient();
 					client.BaseAddress = new Uri("https://data.dublinked.ie/cgi-bin/rtpi/realtimebusinformation?stopid=" + StationID[i] + "&format=json");
 					client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
