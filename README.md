@@ -48,7 +48,7 @@ Adding a transport is the first phase of the program
 
 <a href="https://imgur.com/Uy8LRjL"><img src="https://imgur.com/Uy8LRjL.gif" title="Bus Adding Test"/></a>
 
-### Adding Transport
+### Viewing transport type before adding ID
 
 Trying to view trasnport that hasn't been added
 
