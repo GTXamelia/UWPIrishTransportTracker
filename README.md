@@ -66,6 +66,7 @@ Add additional notes about how to deploy this on a live system
 * [Visual Studio](https://www.visualstudio.com/) - IDE used
 * [Newtonsoft Json.NET](https://www.newtonsoft.com/json) - Json parser for c#
 * [StackOverflow](https://stackoverflow.com/) - Community forum for troubleshooting
+* [TFI API](https://data.gov.ie/dataset/real-time-passenger-information-rtpi-for-dublin-bus-bus-eireann-luas-and-irish-rail) - API used to access transport status
 
 ## Authors
 
