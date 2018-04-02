@@ -2,6 +2,25 @@
 
 A UWP application that allows the user to add any transport type from the TFI API.
 
+## Table of contents
+* [Getting Started](#getting-started)
+	* [Prerequisites](#prerequisites)
+	* [Installing](#installing)
+* [Running the tests](#running-the-tests)
+  * [Adding Transport](#adding-transport)
+  * [Viewing transport type before adding ID](#viewing-transport-type-before-adding-id)
+  * [Adding Transport](#transport-ids)
+  	* [Bus](#bus)
+	* [Train](#train)
+	* [Luas](#luas)
+* [Windows Store Report](#windows-store-report-passed)
+	* [Automatic Windows Review](#automatic-windows-review)
+	* [Manual Windows Review](#manual-windows-review)
+		* [Certification Analysis](#certification-analysis)
+* [Built With](#built-with)
+* [Installing](#Installing)
+* [License](#license)
+
 ## Getting Started
 
 - Create blank visual studio UWP application
@@ -19,19 +38,21 @@ Json parser for c#:
 
 A step by step series of examples that tell you have to get a development env running
 
-Create Visual Studio 2017 Project
+1.Create Visual Studio 2017 Project
 
 ```
 File > New > Project > Visual c# > Blank App (Universal Windows)
 ```
 
-Set-up Git Repository
+2.Set-up Git Repository
 
 ```
 Git init
 Git remote add origin https://github.com/cian2009/UWPIrishTransportTracker.git
 Git pull origin master
 ```
+
+3. Refresh Visual Studio project
 
 ## Running the tests
 
@@ -57,6 +78,32 @@ Trying to view trasnport that hasn't been added
 
 <a href="https://imgur.com/LSu8tZ0"><img src="https://imgur.com/LSu8tZ0.gif" title="Luas Fail Test"/></a>
 
+### Transport IDs
+
+#### Bus
+
+Bus Eireann:
+- 522691 - gHotel Dublin Road (Galway)
+- 522811 - GMIT Dublin Road (Galway)
+- 524351 - Opposite Glenina Heights (Galway)
+
+Dublin Bus:
+- 1234 - Ballyshannon Ave (Dublin)
+- 2456 - St. James's Road (Dublin)
+- 3851 - Station Road (Dublin)
+
+#### Train
+
+- HSTON - Heuston Station (Dublin)
+- GALWY - Céannt Station (Galway)
+- CORK - Kent Station (Cork)
+
+#### Luas
+
+- LUAS1 - Tallaght (Dublin)
+- LUAS10 - Drimnagh (Dublin)
+- LUAS16 - Heuston (Dublin)
+
 ## Windows Store Report (Passed)
 
 ### Automatic Windows Review
@@ -73,7 +120,7 @@ Submission:                |  Certification:
 :-------------------------:|:-------------------------:
 ![](https://imgur.com/zOj6hP6.png)  |  ![](https://imgur.com/GdTz0JL.png)
 
-### Certification Analysis
+#### Certification Analysis
 
 Reading the tip about what should be changed is purely a cosmetic change, for the store page of the application.
 
@@ -90,6 +137,7 @@ This small change is the one which was requested, and why the submission still p
 * [Newtonsoft Json.NET](https://www.newtonsoft.com/json) - Json parser for c#
 * [StackOverflow](https://stackoverflow.com/) - Community forum for troubleshooting
 * [TFI API](https://data.gov.ie/dataset/real-time-passenger-information-rtpi-for-dublin-bus-bus-eireann-luas-and-irish-rail) - API used to access transport status
+* [json2csharp](http://json2csharp.com/) - Converts a JSON object to a c# object
 * [Prototype](https://github.com/cian2009/IrishBusStopTracker) - Built a prototype to test code functionality before UWP development
 
 ## Authors
