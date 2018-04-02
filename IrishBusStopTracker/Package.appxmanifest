@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Package xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10" xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest" xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10" IgnorableNamespaces="uap mp">
-  <Identity Name="45022CianG.IrishTransportTracker" Publisher="CN=D490BE85-7B32-4E28-9F38-4A1709045A00" Version="1.1.1.0" />
+  <Identity Name="45022CianG.IrishTransportTracker" Publisher="CN=D490BE85-7B32-4E28-9F38-4A1709045A00" Version="1.1.2.0" />
   <mp:PhoneIdentity PhoneProductId="e88f4d7a-bb2a-4f3c-8fba-2bc436e2f95b" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
   <Properties>
     <DisplayName>Irish Transport Tracker</DisplayName>
