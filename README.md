@@ -59,9 +59,11 @@ Trying to view trasnport that hasn't been added
 
 ## Windows Store Report (Passed)
 
-Windows Store report shows the application passed certification, with a tip for future submission.
-| --- | --- |
-| <a https://imgur.com/N98Q3yu"><img src="https://imgur.com/N98Q3yu.png" title="Review"/></a> | <a https://imgur.com/zOj6hP6"><img src="https://imgur.com/zOj6hP6.png" title="Submission"/></a> |
+Windows Store report shows the application passed certification, with a tip for future submission. 
+
+Submission:                |  Certification:
+:-------------------------:|:-------------------------:
+![](https://imgur.com/zOj6hP6.png)  |  ![](https://imgur.com/N98Q3yu.png)
 
 ## Built With
 
