@@ -57,6 +57,12 @@ Trying to view trasnport that hasn't been added
 
 <a href="https://imgur.com/LSu8tZ0"><img src="https://imgur.com/LSu8tZ0.gif" title="Luas Fail Test"/></a>
 
+## Windows Store Report (Passed)
+
+Windows Store report shows the application passed certification, with a tip for future submission.
+| --- | --- |
+| <a https://imgur.com/N98Q3yu"><img src="https://imgur.com/N98Q3yu.png" title="Review"/></a> | <a https://imgur.com/zOj6hP6"><img src="https://imgur.com/zOj6hP6.png" title="Submission"/></a> |
+
 ## Built With
 
 * [Visual Studio](https://www.visualstudio.com/) - IDE used
