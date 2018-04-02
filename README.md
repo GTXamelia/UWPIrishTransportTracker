@@ -14,7 +14,7 @@ A UWP application that allows the user to add any transport type from the TFI AP
 	* [Train](#train)
 	* [Luas](#luas)
 * [Windows Store Report](#windows-store-report)
-	* [Submission 1](#Submission-1)
+	* [Submission 1](#Submission-1-passed)
 		* [Automatic Windows Review](#automatic-windows-review)
 		* [Manual Windows Review](#manual-windows-review)
 			* [Certification Analysis](#certification-analysis)
