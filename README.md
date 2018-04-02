@@ -9,7 +9,7 @@ A UWP application that allows the user to add any transport type from the TFI AP
 * [Running the tests](#running-the-tests)
   * [Adding Transport](#adding-transport)
   * [Viewing transport type before adding ID](#viewing-transport-type-before-adding-id)
-  * [Adding Transport](#transport-ids)
+  * [Transport ID Examples](#transport-id-examples)
   	* [Bus](#bus)
 	* [Train](#train)
 	* [Luas](#luas)
@@ -80,7 +80,7 @@ Trying to view trasnport that hasn't been added
 
 <a href="https://imgur.com/LSu8tZ0"><img src="https://imgur.com/LSu8tZ0.gif" title="Luas Fail Test"/></a>
 
-### Transport IDs
+### Transport ID Examples
 
 #### Bus
 
