@@ -59,11 +59,17 @@ Trying to view trasnport that hasn't been added
 
 ## Windows Store Report (Passed)
 
+### Automatic Windows Review
+
+<a href="https://imgur.com/a/AFuHq"><img src="https://imgur.com/a/AFuHq.png" title="Automatic Test"/></a>
+
+### Manual Windows Review
+
 Windows Store report shows the application passed certification, with a tip for future submission. 
 
 Submission:                |  Certification:
 :-------------------------:|:-------------------------:
-![](https://imgur.com/zOj6hP6.png)  |  ![](https://imgur.com/N98Q3yu.png)
+![](https://imgur.com/zOj6hP6.png)  |  ![](https://imgur.com/GdTz0JL.png)
 
 ### Certification Analysis
 
@@ -73,7 +79,7 @@ Image Submitted:           |  Image Change Requested:
 :-------------------------:|:-------------------------:
 ![](https://imgur.com/anhJhIH.png)  |  ![](https://imgur.com/SeAWBEv.png)
 
-Note the change in the picture. The header in the secod is not present and the debug drop down is gone.
+Note the change in the picture. The program header in the second is not present and the debug drop down is gone.
 This small change is the one which was requested, and why the submission still passed.
 
 ## Built With
