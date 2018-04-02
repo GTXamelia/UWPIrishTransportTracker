@@ -67,21 +67,21 @@ Bus Eireann:
 - 524351 - Opposite Glenina Heights (Galway)
 
 Dublin Bus:
-1234 - Ballyshannon Ave (Dublin)
-2456 - St. James's Road (Dublin)
-3851 - Station Road (Dublin)
+- 1234 - Ballyshannon Ave (Dublin)
+- 2456 - St. James's Road (Dublin)
+- 3851 - Station Road (Dublin)
 
 #### Train
 
-HSTON - Heuston Station (Dublin)
-GALWY - Céannt Station (Galway)
-CORK - Kent Station (Cork)
+- HSTON - Heuston Station (Dublin)
+- GALWY - Céannt Station (Galway)
+- CORK - Kent Station (Cork)
 
 #### Luas
 
-LUAS1 - Tallaght (Dublin)
-LUAS10 - Drimnagh (Dublin)
-LUAS16 - Heuston (Dublin)
+- LUAS1 - Tallaght (Dublin)
+- LUAS10 - Drimnagh (Dublin)
+- LUAS16 - Heuston (Dublin)
 
 ## Windows Store Report (Passed)
 
