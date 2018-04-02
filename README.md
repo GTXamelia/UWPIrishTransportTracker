@@ -14,10 +14,11 @@ A UWP application that allows the user to add any transport type from the TFI AP
 	* [Train](#train)
 	* [Luas](#luas)
 * [Windows Store Report](#windows-store-report)
-	* [Submission 1](#Submission-1-passed)
+	* [Submission 1](#submission-1-passed)
 		* [Automatic Windows Review](#automatic-windows-review)
 		* [Manual Windows Review](#manual-windows-review)
 			* [Certification Analysis](#certification-analysis)
+	* [Submission 2](#submission-2-coming-soon)
 * [Built With](#built-with)
 * [Installing](#Installing)
 * [License](#license)
@@ -123,7 +124,7 @@ Submission:                |  Certification:
 :-------------------------:|:-------------------------:
 ![](https://imgur.com/zOj6hP6.png)  |  ![](https://imgur.com/GdTz0JL.png)
 
-##### Certification Analysis
+#### Certification Analysis
 
 Reading the tip about what should be changed is purely a cosmetic change, for the store page of the application.
 
@@ -133,6 +134,8 @@ Image Submitted:           |  Image Change Requested:
 
 Note the change in the picture. The program header in the second is not present and the debug drop down is gone.
 This small change is the one which was requested, and why the submission still passed.
+
+### Submission 2 (Coming soon)
 
 ## Built With
 
