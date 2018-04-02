@@ -4,8 +4,8 @@ A UWP application that allows the user to add any transport type from the TFI AP
 
 ## Table of contents
 * [Getting Started](#getting-started)
-* [Prerequisites](#prerequisites)
-* [Installing](#installing)
+	* [Prerequisites](#prerequisites)
+	* [Installing](#installing)
 * [Running the tests](#running-the-tests)
   * [Adding Transport](#adding-transport)
   * [Viewing transport type before adding ID](#viewing-transport-type-before-adding-id)
