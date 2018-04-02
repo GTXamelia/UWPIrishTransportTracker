@@ -57,6 +57,32 @@ Trying to view trasnport that hasn't been added
 
 <a href="https://imgur.com/LSu8tZ0"><img src="https://imgur.com/LSu8tZ0.gif" title="Luas Fail Test"/></a>
 
+### Transport IDs
+
+#### Bus
+
+Bus Eireann:
+522691 - gHotel Dublin Road (Galway)
+522811 - GMIT Dublin Road (Galway)
+524351 - Opposite Glenina Heights (Galway)
+
+Dublin Bus:
+1234 - Ballyshannon Ave (Dublin)
+2456 - St. James's Road (Dublin)
+3851 - Station Road (Dublin)
+
+#### Train
+
+HSTON - Heuston Station (Dublin)
+GALWY - Céannt Station (Galway)
+CORK - Kent Station (Cork)
+
+#### Luas
+
+LUAS1 - Tallaght (Dublin)
+LUAS10 - Drimnagh (Dublin)
+LUAS16 - Heuston (Dublin)
+
 ## Windows Store Report (Passed)
 
 ### Automatic Windows Review
