@@ -65,6 +65,17 @@ Submission:                |  Certification:
 :-------------------------:|:-------------------------:
 ![](https://imgur.com/zOj6hP6.png)  |  ![](https://imgur.com/N98Q3yu.png)
 
+### Certification Analysis
+
+Reading the tip about what should be changed is purely a cosmetic change, for the store page of the application.
+
+Image Submitted:           |  Image Change Requested:
+:-------------------------:|:-------------------------:
+![](https://imgur.com/anhJhIH.png)  |  ![](https://imgur.com/SeAWBEv.png)
+
+Note the change in the picture. The header in the secod is not present and the debug drop down is gone.
+This small change is the one which was requested, and why the submission still passed.
+
 ## Built With
 
 * [Visual Studio](https://www.visualstudio.com/) - IDE used
