@@ -134,6 +134,7 @@ Image Submitted:           |  Image Change Requested:
 
 Note the change in the picture. The program header in the second is not present and the debug drop down is gone.
 This small change is the one which was requested, and why the submission still passed.
+Have changed this and resent the project for re-certification.
 
 ### Submission 2 (Coming soon)
 
