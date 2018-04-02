@@ -57,10 +57,6 @@ Trying to view trasnport that hasn't been added
 
 <a href="https://imgur.com/LSu8tZ0"><img src="https://imgur.com/LSu8tZ0.gif" title="Luas Fail Test"/></a>
 
-## Deployment
-
-Add additional notes about how to deploy this on a live system
-
 ## Built With
 
 * [Visual Studio](https://www.visualstudio.com/) - IDE used
