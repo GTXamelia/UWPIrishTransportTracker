@@ -138,6 +138,12 @@ Have changed this and resent the project for re-certification.
 
 ### Submission 2 (Coming soon)
 
+#### Automatic Windows Review
+
+#### Manual Windows Review
+
+#### Certification Analysis
+
 ## Built With
 
 * [Visual Studio](https://www.visualstudio.com/) - IDE used
