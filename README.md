@@ -62,9 +62,9 @@ Trying to view trasnport that hasn't been added
 #### Bus
 
 Bus Eireann:
-522691 - gHotel Dublin Road (Galway)
-522811 - GMIT Dublin Road (Galway)
-524351 - Opposite Glenina Heights (Galway)
+- 522691 - gHotel Dublin Road (Galway)
+- 522811 - GMIT Dublin Road (Galway)
+- 524351 - Opposite Glenina Heights (Galway)
 
 Dublin Bus:
 1234 - Ballyshannon Ave (Dublin)
