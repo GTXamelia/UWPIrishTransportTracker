@@ -90,6 +90,7 @@ This small change is the one which was requested, and why the submission still p
 * [Newtonsoft Json.NET](https://www.newtonsoft.com/json) - Json parser for c#
 * [StackOverflow](https://stackoverflow.com/) - Community forum for troubleshooting
 * [TFI API](https://data.gov.ie/dataset/real-time-passenger-information-rtpi-for-dublin-bus-bus-eireann-luas-and-irish-rail) - API used to access transport status
+* [Prototype](https://github.com/cian2009/IrishBusStopTracker) - Built a prototype to test code functionality before UWP development
 
 ## Authors
 
