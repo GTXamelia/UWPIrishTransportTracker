@@ -2,6 +2,18 @@
 
 A UWP application that allows the user to add any transport type from the TFI API.
 
+## Table of contents
+* [Getting Started](#getting-started)
+* [Prerequisites](#Prerequisites)
+* [Installing](#Installing)
+* [Running the tests](#running-the-tests)
+  * [Adding Transport](#adding-transport)
+  * [Viewing transport type before adding ID](#viewing-transport-type-before-adding-id)
+  * [Adding Transport](#transport-ids)
+  	* [Bus](#bus)
+	* [Train](#train)
+	* [Luas](#luas)
+
 ## Getting Started
 
 - Create blank visual studio UWP application
@@ -19,19 +31,21 @@ Json parser for c#:
 
 A step by step series of examples that tell you have to get a development env running
 
-Create Visual Studio 2017 Project
+1.Create Visual Studio 2017 Project
 
 ```
 File > New > Project > Visual c# > Blank App (Universal Windows)
 ```
 
-Set-up Git Repository
+2.Set-up Git Repository
 
 ```
 Git init
 Git remote add origin https://github.com/cian2009/UWPIrishTransportTracker.git
 Git pull origin master
 ```
+
+3. Refresh Visual Studio project
 
 ## Running the tests
 
