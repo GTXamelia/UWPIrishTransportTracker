@@ -172,6 +172,6 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE) f
 
 * StackOverflow - How did people code before you existed
 
-## Store Page
+## Store Page Details
 
 * **[Irish Transport Tracker](https://www.microsoft.com/en-ie/store/p/irish-transport-tracker/9nzt79c9v0cl)** - Store page for application
